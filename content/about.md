@@ -45,8 +45,6 @@ extending with new technologies and **ways of thinking**.
 > School can teach you syntax and algorithms, but real programming teaches you how to think
 > pragmatically and solve problems in the real world.
 
-##### Certificates
-
 #### Leisure
 
 In last years I mostly listen audiobooks, mainly sci-fi, philosophy and history. I really enjoy
@@ -65,7 +63,7 @@ ferratas. Hiking and cycling are also big part of my free time.
 
 I decided to build this website ideally **without JavaScript** and with very **minimalistic
 graphics**. It is inspired by times when the web was simpler, when EDGE was still considered top
-tier of internet browsing, and by the iconic series of websites like
+tier of internet browsing - and not just poor browser, and by the iconic series of websites like
 <a href="https://thebestmotherfucking.website/" target="_blank">The Best Motherfucking Website</a>,
 which celebrate straightforward, no-frills design and content-first approach.
 
