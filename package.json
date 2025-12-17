@@ -1,0 +1,13 @@
+{
+  "name": "alfons-zelicko-website",
+  "private": true,
+  "scripts": {
+    "build": "hugo --minify --gc",
+    "dev": "hugo server",
+    "start": "hugo server"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "prettier-plugin-go-template": "^0.0.15"
+  }
+}

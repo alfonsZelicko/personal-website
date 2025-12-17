@@ -1,0 +1,55 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": false,
+  "quoteProps": "as-needed",
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "arrowParens": "avoid",
+  "proseWrap": "preserve",
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-go-template"],
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "printWidth": 120,
+        "parser": "go-template",
+        "singleQuote": false,
+        "goTemplateBracketSpacing": true,
+        "bracketSameLine": true
+      }
+    },
+    {
+      "files": ["*.md"],
+      "options": {
+        "printWidth": 100,
+        "proseWrap": "always"
+      }
+    },
+    {
+      "files": ["*.scss", "*.css"],
+      "options": {
+        "printWidth": 100,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.json", "*.jsonc"],
+      "options": {
+        "printWidth": 100,
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": ["*.toml"],
+      "options": {
+        "printWidth": 100
+      }
+    }
+  ],
+  "goTemplateBracketSpacing": true
+}

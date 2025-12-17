@@ -1,0 +1,17 @@
+<span class="mail">\<lastName\>.\<firstName\> [at] gmail [dot] com</span>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const el = document.querySelector(".mail");
+      if (!el) return;
+
+      const user = "zelicko.alfons";
+      const domain = "gmail.com";
+      const address = `${user}@${domain}`;
+
+      const link = document.createElement("a");
+      link.href = `mailto:${address}`;
+      link.textContent = address;
+
+      el.replaceWith(link);
+    });
+  </script>

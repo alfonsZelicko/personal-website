@@ -1,0 +1,254 @@
+//
+// Shared helpers
+//
+
+@mixin nav-text {
+  color: var(--color-text-rgb);
+  letter-spacing: 0;
+  transition: color 0.3s ease;
+}
+
+%theme-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: var(--theme-transform, translate(-50%, -50%));
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  color: var(--color-text-rgb);
+}
+
+//
+// Menu base
+//
+
+.top-nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav-title,
+.top-nav-link {
+  @include nav-text;
+}
+
+.top-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.top-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+
+  .is-active > a {
+    color: var(--color-link-active-rgb);
+  }
+}
+
+// Desktop: toggles side by side in one menu item
+.top-nav-item:has(.theme-toggle):has(.contrast-toggle) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+//
+// Theme toggle
+//
+
+.theme-toggle,
+.contrast-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: relative;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.theme-icon,
+.theme-char,
+.contrast-icon,
+.contrast-char {
+  @extend %theme-center;
+}
+
+.theme-icon,
+.contrast-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.theme-char,
+.contrast-char {
+  font-size: 24px;
+  user-select: none;
+}
+
+.theme-icon-moon,
+.theme-char-moon {
+  opacity: 0;
+  --theme-transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+html:has(#theme-toggle:checked) {
+  .theme-icon-sun,
+  .theme-char-sun {
+    opacity: 0;
+    --theme-transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .theme-icon-moon,
+  .theme-char-moon {
+    opacity: 1;
+    --theme-transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+html:has(#contrast-toggle:checked) {
+  .contrast-icon,
+  .contrast-char {
+    --theme-transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+//
+// Mobile menu
+//
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+
+  .hb {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.menu-arrow {
+  display: none;
+}
+
+@include max-md() {
+  .mobile-menu {
+    display: block;
+    width: 28px;
+    height: 28px;
+    color: var(--color-text-rgb);
+
+    &:not(:has(svg)) {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .top-nav-list {
+    transition:
+      opacity 0.3s ease-out,
+      transform 0.3s ease-out,
+      visibility 0.3s;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+
+    padding-left: 0;
+
+    background-color: var(--color-bg-rgb);
+    border-top: 1px solid var(--color-border-rgb);
+    border-bottom: 1px solid var(--color-border-rgb);
+    box-shadow: 0 0 25px color-mix(in srgb, black 10%, transparent);
+  }
+
+  .menu-arrow {
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 26px;
+    width: 16px;
+    height: 8px;
+    color: var(--color-border-rgb);
+    filter: drop-shadow(0 -1px 0 var(--color-border-rgb));
+    opacity: 0;
+    transition:
+      opacity 0.3s ease-out,
+      color 0.2s ease-in-out;
+  }
+
+  .top-nav-right:has(#menu-toggle:checked) {
+    #top-nav-items {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+
+      .menu-arrow {
+        opacity: 1;
+      }
+    }
+  }
+
+  .top-nav-item {
+    display: block;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid color-mix(in srgb, var(--color-quote-rgb) 20%, transparent);
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.1);
+    }
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    // When multiple toggles are in one menu item, display them side by side
+    &:has(.theme-toggle):has(.contrast-toggle) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+
+      .top-nav-link {
+        padding: 16px 12px;
+        width: auto;
+      }
+    }
+
+    .top-nav-link.theme-toggle {
+      width: 100%;
+    }
+  }
+  .top-nav-item:last-child {
+    border-top: 1px solid var(--color-border-rgb);
+  }
+
+  .top-nav-link {
+    display: block;
+    padding: 16px 24px;
+  }
+}

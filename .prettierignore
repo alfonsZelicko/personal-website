@@ -1,0 +1,57 @@
+# Build outputs
+public/
+build/
+resources/
+resources/_gen/
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# IDE and editor files
+.vscode/
+.kiro/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Hugo specific
+.hugo_build.lock
+hugo/
+
+# Git
+.git/
+
+# Deployment
+.vercel/
+.netlify/
+
+# Lock files and generated files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Minified files
+*.min.js
+*.min.css
+*.min.html
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Static assets that shouldn't be formatted
+static/css/styles.css
+static/js/*.min.js

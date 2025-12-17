@@ -1,0 +1,5 @@
+{{ range .Site.Params.social }}
+  {{ if eq .name "Github" }}
+    {{ .url }}
+  {{ end }}
+{{ end }}

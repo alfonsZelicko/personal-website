@@ -1,0 +1,232 @@
+// Variables and mixins are imported globally in style.scss
+
+//
+// Headings
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading-rgb);
+  font-weight: 600;
+  margin: 3.2rem 0 1.4rem 0;
+  letter-spacing: 0.024em;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.6em;
+}
+h4 {
+  font-size: 1.4em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1em;
+}
+
+@include max-md() {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  h5 {
+    font-size: 1.2em;
+  }
+  h6 {
+    font-size: 1em;
+  }
+}
+
+//
+// Body text
+//
+
+a {
+  font-weight: 600;
+  color: var(--color-link-rgb);
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: var(--color-link-active-rgb);
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin: 1.8rem 0;
+  text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.05);
+}
+
+blockquote:not(.alert) {
+  border-left: 2px solid var(--color-quote-rgb);
+  padding-left: 1.6rem;
+  font-style: italic;
+
+  p {
+    color: var(--color-quote-rgb);
+  }
+}
+
+//
+// ALERT BLOCKQUOTES
+//
+
+blockquote.alert {
+  padding: 0;
+  border: 2px solid var(--color-quote-rgb);
+  background: var(--color-code-bg-rgb);
+  border-radius: 1.4rem;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+
+  margin: 1rem -3.2rem;
+
+  .alert-heading {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    background-color: var(--color-quote-rgb);
+    border-radius: 1.2rem 1.2rem 0 0;
+  }
+
+  .alert-heading-emoji {
+    margin: 0.4rem 0;
+    width: 3.2rem;
+    text-align: center;
+  }
+
+  .alert-heading-text {
+    margin: 0.4rem 0;
+  }
+
+  > p {
+    padding: 1.6rem 3.2rem;
+    margin: 0;
+  }
+
+  @include max-md() {
+    margin: 1rem -1.6rem;
+    .alert-heading-emoji {
+      width: 2.8rem;
+    }
+    > p {
+      padding: 1.2rem;
+    }
+  }
+}
+
+// Alert styles simplified for Hugo compatibility
+blockquote.alert-tip {
+  border: 2px solid #a5d6a7;
+  background: #e8f5e8;
+  .alert-heading {
+    background: #a5d6a7;
+    color: #222;
+    font-weight: bold;
+  }
+}
+
+blockquote.alert-note {
+  border: 2px solid #90caf9;
+  background: #e3f2fd;
+  .alert-heading {
+    background: #90caf9;
+    color: #222;
+    font-weight: bold;
+  }
+}
+
+blockquote.alert-info {
+  border: 2px solid #7986cb;
+  background: #e8eaf6;
+  .alert-heading {
+    background: #7986cb;
+    color: #222;
+    font-weight: bold;
+  }
+}
+
+blockquote.alert-warning {
+  border: 2px solid #ffcc80;
+  background: #fff8e1;
+  .alert-heading {
+    background: #ffcc80;
+    color: #222;
+    font-weight: bold;
+  }
+}
+
+blockquote.alert-caution {
+  border: 2px solid #ffab91;
+  background: #fff3e0;
+  .alert-heading {
+    background: #ffab91;
+    color: #222;
+    font-weight: bold;
+  }
+}
+
+blockquote.alert-danger {
+  border: 2px solid #ef9a9a;
+  background: #ffebee;
+  .alert-heading {
+    background: #ef9a9a;
+    color: #222;
+    font-weight: bold;
+  }
+}
+
+//
+// Code
+//
+
+pre {
+  padding: 2.4rem 2rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 2.4rem -2rem;
+
+  @include max-md() {
+    margin: 2.4rem 0;
+  }
+}
+
+code {
+  color: var(--color-code-text-rgb);
+  background-color: var(--color-code-bg-rgb);
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+.highlight {
+  line-height: 1.6;
+
+  code {
+    color: unset;
+    background-color: unset;
+    padding: 0;
+    font-weight: 400;
+  }
+}

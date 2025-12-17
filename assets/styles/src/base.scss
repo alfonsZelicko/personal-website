@@ -1,0 +1,141 @@
+// Variables and mixins are imported globally in style.scss
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+:root {
+  // Default: Low contrast colors (warm theme)
+  --color-bg-rgb: rgb(#{$color-bg-low-rgb});
+  --color-text-rgb: rgb(#{$color-text-low-rgb});
+  --color-heading-rgb: rgb(#{$color-heading-low-rgb});
+  --color-link-rgb: rgb(#{$color-link-low-rgb});
+  --color-link-active-rgb: rgb(#{$color-link-active-low-rgb});
+  --color-code-text-rgb: rgb(#{$color-code-text-low-rgb});
+  --color-code-bg-rgb: rgb(#{$color-code-bg-low-rgb});
+  --color-quote-rgb: rgb(#{$color-quote-low-rgb});
+  --color-border-rgb: rgb(#{$color-quote-low-rgb});
+  --color-quote-rgb-values: #{$color-quote-low-rgb};
+}
+
+// High contrast mode (checkbox controlled)
+html:has(#contrast-toggle:checked) {
+  --color-bg-rgb: rgb(#{$color-bg-high-rgb});
+  --color-text-rgb: rgb(#{$color-text-high-rgb});
+  --color-heading-rgb: rgb(#{$color-heading-high-rgb});
+  --color-link-rgb: rgb(#{$color-link-high-rgb});
+  --color-link-active-rgb: rgb(#{$color-link-active-high-rgb});
+  --color-code-text-rgb: rgb(#{$color-code-text-high-rgb});
+  --color-code-bg-rgb: rgb(#{$color-code-bg-high-rgb});
+  --color-quote-rgb: rgb(#{$color-quote-high-rgb});
+  --color-border-rgb: rgb(#{$color-quote-high-rgb});
+  --color-quote-rgb-values: #{$color-quote-high-rgb};
+}
+
+// Dark mode for low contrast (default)
+html:has(#theme-toggle:checked) {
+  --color-bg-rgb: rgb(#{$color-bg-dark-low-rgb});
+  --color-text-rgb: rgb(#{$color-text-dark-low-rgb});
+  --color-heading-rgb: rgb(#{$color-heading-dark-low-rgb});
+  --color-link-rgb: rgb(#{$color-link-dark-low-rgb});
+  --color-link-active-rgb: rgb(#{$color-link-active-dark-low-rgb});
+  --color-code-text-rgb: rgb(#{$color-code-text-dark-low-rgb});
+  --color-code-bg-rgb: rgb(#{$color-code-bg-dark-low-rgb});
+  --color-quote-rgb: rgb(#{$color-quote-dark-low-rgb});
+  --color-border-rgb: rgb(#{$color-quote-dark-low-rgb});
+  --color-quote-rgb-values: #{$color-quote-dark-low-rgb};
+}
+
+// Dark mode for high contrast (both checkboxes checked)
+html:has(#contrast-toggle:checked):has(#theme-toggle:checked) {
+  --color-bg-rgb: rgb(#{$color-bg-dark-high-rgb});
+  --color-text-rgb: rgb(#{$color-text-dark-high-rgb});
+  --color-heading-rgb: rgb(#{$color-heading-dark-high-rgb});
+  --color-link-rgb: rgb(#{$color-link-dark-high-rgb});
+  --color-link-active-rgb: rgb(#{$color-link-active-dark-high-rgb});
+  --color-code-text-rgb: rgb(#{$color-code-text-dark-high-rgb});
+  --color-code-bg-rgb: rgb(#{$color-code-bg-dark-high-rgb});
+  --color-quote-rgb: rgb(#{$color-quote-dark-high-rgb});
+  --color-border-rgb: rgb(#{$color-quote-dark-high-rgb});
+  --color-quote-rgb-values: #{$color-quote-dark-high-rgb};
+}
+
+body {
+  padding-left: calc(100vw - 100%); // hack to prevent movign content by scrollbar
+
+  display: flex;
+  color: var(--color-text-rgb);
+  background-color: var(--color-bg-rgb);
+
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 1.8em;
+  font-weight: 400;
+
+  letter-spacing: 0.032em;
+  line-height: 1.8em;
+
+  @include max-md() {
+    font-size: 1.4em;
+    line-height: 1.6em;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $container-max-width;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+  margin-top: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.centered {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+//
+// Print
+//
+@media print {
+  @page {
+    size: auto;
+    margin: 0;
+  }
+  nav,
+  footer {
+    display: none !important;
+  }
+  html {
+    font-size: 36%;
+    padding: 32px;
+  }
+  .content {
+    margin-top: -24px;
+  }
+}

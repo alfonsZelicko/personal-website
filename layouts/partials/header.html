@@ -1,0 +1,123 @@
+{{ $keepItSimple := .Site.Params.keepItSimple }}
+<section class="container">
+  <nav class="top-nav">
+    <div class="top-nav-left">
+      <a class="top-nav-title" href="{{ .Site.BaseURL }}">
+        {{ .Site.Title }}
+      </a>
+    </div>
+    <div class="top-nav-right">
+      <input hidden type="checkbox" id="menu-toggle" />
+      <input hidden type="checkbox" id="theme-toggle" checked />
+      <input hidden type="checkbox" id="contrast-toggle" />
+      {{ with .Site.Menus.main }}
+        <label for="menu-toggle" class="mobile-menu">
+          {{ if $keepItSimple }}
+            Menu
+          {{ else }}
+            {{ partial "icons/menu.html" . }}
+          {{ end }}
+        </label>
+        <ul id="top-nav-items" class="top-nav-list">
+          {{ partial "icons/arrow.html" . }}
+          {{ range sort . }}
+            {{ $isActive := false }}
+            {{ if eq $.Page.RelPermalink .URL }}
+              {{ $isActive = true }}
+            {{ else if and (ne .URL "/") (hasPrefix $.Page.RelPermalink .URL) }}
+              {{ $isActive = true }}
+            {{ else if and (eq .URL "/") (eq $.Page.Type "homepage") }}
+              {{ $isActive = true }}
+            {{ end }}
+            <li class="top-nav-item {{ if $isActive }}is-active{{ end }}">
+              <a class="top-nav-link" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+          <li class="top-nav-item">
+            <label
+              class="top-nav-link theme-toggle"
+              for="theme-toggle"
+              aria-label="Toggle dark mode"
+              title="Switch between light and dark theme">
+              {{ if $keepItSimple }}
+                <span class="theme-char theme-icon-sun">☀</span><span class="theme-char theme-icon-moon">☾</span>
+              {{ else }}
+                {{ partial "icons/sun.html" . }}{{ partial "icons/moon.html" . }}
+              {{ end }}
+            </label>
+            <label
+              class="top-nav-link contrast-toggle"
+              for="contrast-toggle"
+              aria-label="Toggle high contrast"
+              title="Switch between low and high contrast colors">
+              {{ if $keepItSimple }}
+                <span class="contrast-char">◐</span>
+              {{ else }}
+                {{ partial "icons/contrast.html" . }}
+              {{ end }}
+            </label>
+          </li>
+        </ul>
+      {{ end }}
+    </div>
+  </nav>
+</section>
+
+<script>
+  (() => {
+    function setupToggle({ id, storageKey, titleOn, titleOff, defaultChecked = false }) {
+      const toggle = document.getElementById(id);
+      const label = document.querySelector(`label[for="${id}"]`);
+      if (!toggle || !label) return;
+
+      // Get saved state or use default
+      if (storageKey) {
+        const saved = localStorage.getItem(storageKey);
+        toggle.checked = saved ? saved === "true" : defaultChecked;
+      } else {
+        toggle.checked = defaultChecked;
+      }
+
+      const updateTitle = () => {
+        label.title = toggle.checked ? titleOn : titleOff;
+      };
+
+      updateTitle();
+
+      toggle.addEventListener("change", () => {
+        if (storageKey) {
+          localStorage.setItem(storageKey, toggle.checked.toString());
+        }
+        updateTitle();
+      });
+    }
+
+    const themeToggleConfig = {
+      id: "theme-toggle",
+      storageKey: "theme",
+      defaultChecked: true, // dark mode by default
+      titleOn: "Switch to Light mode",
+      titleOff: "Switch to Dark mode",
+    };
+
+    const contastToggleConfig = {
+      id: "contrast-toggle",
+      storageKey: "contrast",
+      defaultChecked: false, // low contrast by default
+      titleOn: "Turn OFF High Contrast",
+      titleOff: "Turn ON High Contrast",
+    };
+
+    const menuToggleConfig = {
+      id: "menu-toggle",
+      storageKey: null,
+      defaultChecked: false, // menu closed by default
+      titleOn: "Close Menu",
+      titleOff: "Open Menu",
+    };
+
+    setupToggle(themeToggleConfig);
+    setupToggle(contastToggleConfig);
+    setupToggle(menuToggleConfig);
+  })();
+</script>

@@ -1,0 +1,21 @@
+// Variables and mixins are imported globally in style.scss
+
+// Global link class for content (not just navigation)
+span.mail {
+  color: var(--color-quote-rgb) !important;
+  font-weight: 600;
+}
+
+.block-experience {
+  h4 {
+    margin-bottom: 0.4rem;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+  ul {
+    margin-top: 0;
+    margin-bottom: 2.4rem;
+  }
+}
