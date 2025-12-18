@@ -34,10 +34,10 @@ My technical background started early, with my first small programs and Excel ma
 elementary school. In high school I focused on
 <a href="https://www.spst.cz/" target="_blank">computer systems</a> and later studied
 <a href="https://www.susg.cz/" target="_blank">graphic design</a> as a distance program. At
-university, my studies continued in <a href="https://www.fit.vut.cz/.cs" target="_blank">computer
-systems</a> and <a href="https://www.vspj.cz/cs/" target="_blank">economics &amp; management</a>.
-Over time, these areas naturally blended into a single skill set, which I keep developing and
-extending with new technologies and **ways of thinking**.
+university, my studies continued in <a href="https://www.fit.vut.cz/.cs" target="_blank">applied
+informatics</a> and <a href="https://www.vspj.cz/cs/" target="_blank">economics &amp;
+management</a>. Over time, these areas naturally blended into a single skill set, which I keep
+developing and extending with new technologies and **ways of thinking**.
 
 > I believe programmer must keep running to stay in same place, and front-end developer needs even
 > motorcycle to keep up with speed of changes.
