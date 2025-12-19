@@ -36,7 +36,7 @@ The development environment will be accessible on `http://localhost:1313`.
 ## Production
 
 As Hugo is a static website builder, you can just host the website on any hosting service. To build
-the static files, run `make build` or manually `hugo --minify --gc -b https://alfonszelicko.com`.
+the static files, run `make build` or manually `hugo --minify --gc -b <domain>`.
 
 The built files will be in the `public` folder, ready for deployment.
 
