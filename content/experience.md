@@ -8,6 +8,8 @@ when I can **stay with one company for years**. I value building **long-term syn
 and having enough time to truly master the domain. For me, it’s about professional growth and
 **never leaving a job unfinished**.
 
+During the years I developed a **prefered dev environment** - more about [here](/environment).
+
 ### TL;DR Summary
 
 | Period             | Role                     | Company / Project          | Key Stack                                   |
