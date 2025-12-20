@@ -1,9 +1,8 @@
 // Variables and mixins are imported globally in style.scss
 
 // Global link class for content (not just navigation)
-span.mail {
-  color: var(--color-quote-rgb) !important;
-  font-weight: 600;
+.link {
+  color: var(--color-link-rgb);
 }
 
 .block-experience {

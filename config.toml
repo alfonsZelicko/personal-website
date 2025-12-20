@@ -31,17 +31,14 @@ unsafe = true
     name = "Email"
     weight = 1
     url = "/contact"
-    className = "no-replace"
 [[params.social]]
     name = "Github"
     weight = 2
     url = "https://github.com/alfonsZelicko"
-    className = ""
 [[params.social]]
     name = "LinkedIn"
     weight = 4
     url = "https://www.linkedin.com/in/alfons-zelicko-7a8645182/"
-    className = ""
 
 # Menu links
 [[menu.main]]

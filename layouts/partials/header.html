@@ -10,6 +10,57 @@
       <input hidden type="checkbox" id="menu-toggle" />
       <input hidden type="checkbox" id="theme-toggle" checked />
       <input hidden type="checkbox" id="contrast-toggle" />
+      <script>
+        (() => {
+          const setupToggle = ({ _id, storageKey, titleOn, titleOff }) => {
+            const id = _id + "-toggle";
+            const toggle = document.getElementById(id);
+            const label = document.querySelector(`label[for="${id}"]`);
+            if (!toggle || !label) return;
+
+            if (storageKey) {
+              const saved = localStorage.getItem(storageKey);
+              if (saved !== null) {
+                toggle.checked = saved === "true";
+              }
+            }
+
+            const updateTitle = () => {
+              label.title = toggle.checked ? titleOn : titleOff;
+            };
+
+            updateTitle();
+
+            toggle.addEventListener("change", () => {
+              if (storageKey) {
+                localStorage.setItem(storageKey, toggle.checked);
+              }
+              updateTitle();
+            });
+          };
+
+          setupToggle({
+            id: "theme",
+            storageKey: "theme",
+            titleOn: "Switch to Light mode",
+            titleOff: "Switch to Dark mode",
+          });
+
+          setupToggle({
+            id: "contrast",
+            storageKey: "contrast",
+            titleOn: "Turn OFF High Contrast",
+            titleOff: "Turn ON High Contrast",
+          });
+
+          setupToggle({
+            id: "menu",
+            storageKey: null,
+            titleOn: "Close Menu",
+            titleOff: "Open Menu",
+          });
+        })();
+      </script>
       {{ with .Site.Menus.main }}
         <label for="menu-toggle" class="mobile-menu">
           {{ if $keepItSimple }}
@@ -62,62 +113,3 @@
     </div>
   </nav>
 </section>
-
-<script>
-  (() => {
-    function setupToggle({ id, storageKey, titleOn, titleOff, defaultChecked = false }) {
-      const toggle = document.getElementById(id);
-      const label = document.querySelector(`label[for="${id}"]`);
-      if (!toggle || !label) return;
-
-      // Get saved state or use default
-      if (storageKey) {
-        const saved = localStorage.getItem(storageKey);
-        toggle.checked = saved ? saved === "true" : defaultChecked;
-      } else {
-        toggle.checked = defaultChecked;
-      }
-
-      const updateTitle = () => {
-        label.title = toggle.checked ? titleOn : titleOff;
-      };
-
-      updateTitle();
-
-      toggle.addEventListener("change", () => {
-        if (storageKey) {
-          localStorage.setItem(storageKey, toggle.checked.toString());
-        }
-        updateTitle();
-      });
-    }
-
-    const themeToggleConfig = {
-      id: "theme-toggle",
-      storageKey: "theme",
-      defaultChecked: true, // dark mode by default
-      titleOn: "Switch to Light mode",
-      titleOff: "Switch to Dark mode",
-    };
-
-    const contastToggleConfig = {
-      id: "contrast-toggle",
-      storageKey: "contrast",
-      defaultChecked: false, // low contrast by default
-      titleOn: "Turn OFF High Contrast",
-      titleOff: "Turn ON High Contrast",
-    };
-
-    const menuToggleConfig = {
-      id: "menu-toggle",
-      storageKey: null,
-      defaultChecked: false, // menu closed by default
-      titleOn: "Close Menu",
-      titleOff: "Open Menu",
-    };
-
-    setupToggle(themeToggleConfig);
-    setupToggle(contastToggleConfig);
-    setupToggle(menuToggleConfig);
-  })();
-</script>

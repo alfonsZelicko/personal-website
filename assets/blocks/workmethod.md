@@ -1,23 +1,20 @@
-## Working method
+## Working Method
 
-_Methods I employ to deliver elegant, efficient, readable, understandable and maintainable code that
-adds value to a company and/or product._
-
-- "Always choose the best tool for the job"
-- Cloud and application structure using [The Twelve-Factor App](https://12factor.net/)
-- Software architecture via a simplified version of the principles of
-  [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html),
-  [DDD](https://en.wikipedia.org/wiki/Domain-driven_design) and
-  [Layered Architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
-- Prevention of [technical debt](https://en.wikipedia.org/wiki/Technical_debt), short term and long
-  term
-- Everything (even [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code))
-  in version control (Git/Perforce)
-- Project management via SCRUM/Agile principle, without unnecessary meetings
-- Bringing together Development, Security and Operations through
-  [DevSecOps](https://www.devsecops.org/) and
-  [secure by design](https://en.wikipedia.org/wiki/Secure_by_design).
-- Test-Driven Development (TDD) of domain logic where it makes sense
-- Versioning according to [Semantic Versioning](https://semver.org/)
-- Adhere to the [ACM Code of Ethics](https://www.acm.org/code-of-ethics)
-- Use of free (open-source) software where possible, contributing when possible
+- Methods I employ to deliver elegant, efficient, and maintainable code that adds long-term value to
+  the product.
+- Pragmatic Architecture: Applying Clean Architecture and DDD principles to the front-end to keep
+  business logic independent of UI frameworks.
+- State of Mind: Application structure guided by 12-Factor App principles—ensuring environments are
+  consistent and deployments are boring (in a good way).
+- Quality over Hype: Choosing the right tool for the job, prioritizing stability and performance
+  over the latest industry trends.
+- Technical Debt Management: Proactive prevention of technical debt through continuous refactoring
+  and clear documentation.
+- DevSecOps & Security: Embracing Secure by Design. Front-end isn't just about pixels; it's about
+  sanitization, secure headers, and protecting user data.
+- Modern Versioning: Everything in Git, versioned according to Semantic Versioning, with transparent
+  CI/CD pipelines.
+- Test-Driven Logic: Using TDD for complex domain logic and critical paths where manual testing is
+  not enough.
+- Ethical Engineering: Adhering to the ACM Code of Ethics and supporting Open Source ecosystems
+  whenever possible.

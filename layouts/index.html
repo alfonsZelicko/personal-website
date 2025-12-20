@@ -42,26 +42,10 @@
       {{ with .Site.Params.social }}
         <ul>
           {{ range sort . }}
-            <li><a href="{{ .url }}" target="_blank" class="{{ .className }}">{{ .name }}</a></li>
+            <li><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
           {{ end }}
         </ul>
       {{ end }}
     </div>
   </section>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const el = document.querySelector(".no-replace");
-      if (!el) return;
-
-      const userParts = ["zelicko", ".", "alfons"];
-      const domainParts = ["gmail", ".", "com"];
-      const address = userParts.join("") + "@" + domainParts.join("");
-
-      const link = document.createElement("a");
-      link.href = `mailto:${address}`;
-      link.textContent = el.innerHTML;
-
-      el.replaceWith(link);
-    });
-  </script>
 {{ end }}

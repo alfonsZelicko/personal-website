@@ -1,17 +1,28 @@
-<span class="mail">\<lastName\>.\<firstName\> [at] gmail [dot] com</span>
+<span id="mail-vault" class="link"> zelicko [dot] alfons [at] gmail [dot] com </span>
+
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const el = document.querySelector(".mail");
-      if (!el) return;
+  (() => {
+    const el = document.getElementById("mail-vault");
+    if (!el) return;
 
-      const user = "zelicko.alfons";
-      const domain = "gmail.com";
-      const address = `${user}@${domain}`;
+    el.textContent = "[REVEAL EMAIL ADDRESS]";
+    el.style.cursor = "pointer";
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", "Reveal email address");
 
-      const link = document.createElement("a");
-      link.href = `mailto:${address}`;
-      link.textContent = address;
+    el.addEventListener(
+      "click",
+      () => {
+        const p = ["gmail", "com", "alfons", "zelicko"];
+        const addr = `${p[3]}.${p[2]}@${p[0]}.${p[1]}`;
 
-      el.replaceWith(link);
-    });
-  </script>
+        const a = document.createElement("a");
+        a.href = `mailto:${addr}`;
+        a.textContent = addr;
+
+        el.replaceWith(a);
+      },
+      { once: true }
+    );
+  })();
+</script>

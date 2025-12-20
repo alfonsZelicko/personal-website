@@ -1,104 +1,94 @@
-### Domain focus
++++ 
+title = "Skills and Expertise" 
+slug = "expertise" 
++++
 
-- Web applications / Design
-- frontend-heavy products
-- internal business systems
-- data acquisition (DAQ) systems, Industry 4.0
-- e-commerce platforms...
+### Product & Domain Experience
 
-I have long-term experience delivering software used in production by real users, ranging from
-customer-facing products to internal tools. I place a strong emphasis on usability, maintainability,
-and making pragmatic technical decisions based on real-world needs.
+I am a **front-end specialist** with a full-stack background. I spent my first decade building
+systems from the ground up before the "front-end boom" redefined the industry. This evolution allows
+me to maintain a high-level view of the entire product lifecycle—focusing on usability, long-term
+maintainability, and making **pragmatic technical decisions** based on real-world needs.
 
-### Programming languages
+- **Customer-Facing Products**: I can act as the bridge between a client's vision and the
+  development team—helping to formulate technical requirements, create cost estimates, and ensure
+  the final product solves the actual business problem.
+- **Strategic UI Engineering**: I distinguish between "making a UI change" and "solving a UI
+  problem." I focus on improving user experience while keeping the implementation cost-effective and
+  maintainable.
+- **Industry 4.0**: With years of experience building DAQ systems, I provide a deep understanding of
+  industrial environments, hardware-software integration, and the specific challenges of Industry
+  4.0.
 
-- **JavaScript / TypeScript**
-- **Python**
-- Java
-- PHP, C#
+### Engineering & Frontend Stack
 
-**Historical background:** VBA macros, Pascal, C, C++, Java (academic and early professional years).
+- **Primary**: TypeScript/JavaScript, React (16.8+), HTML/CSS (SCSS, Less)
+- **Secondary/Legacy**: Svelte, Angular, htmx, jQuery (3.0+)
+- **Favorite support**: Material UI/Tailwind/Bootstrap, Tanstack, Nx, Cypress...
 
-My primary focus is on languages suitable for long-lived products and web-based systems, supported
-by a solid understanding of programming fundamentals built over decades.
+The front-end landscape is vast, and I make a conscious effort to maintain a broad overview of how
+different frameworks and technologies solve common problems. This perspective allows me to choose
+the **right tool based on team strengths** rather than just following the latest hype.
 
-> I have a genuine appreciation for maintaining legacy applications from the "pre-standard" era. Of
-> course, greenfield projects are cute—and I love a fresh start—but I’m the guy you can call when
-> the reality of legacy code hits.
+I prefer PWA over **React native**, but in the future I am planning to convert some of my personal
+projects into full Android/iOS apps... all that new possibilities!
 
-### Web & frontend engineering
+> I have a genuine appreciation for maintaining legacy applications from the "pre-modern" era.
+> Greenfield projects are cute, but I’m the guy you call when the reality of legacy code hits and
+> you need to improve usability without breaking business continuity.
 
-- **HTML, CSS, SCSS**
-- **React 16.8+** (Jotai, Zustand, Redux, ...)
-- Svelte, Angular, htmx
-- **jQuery** (legacy and long-term projects, v3.0+)
+> I like apples, but I don't like Apple.
 
-I deliver frontend applications from start to finish, whether collaborating on UI/UX designs or
-working independently using tools like **Material UI** or **Tailwind**. I enjoy modernizing
-interfaces built on legacy technologies to improve usability, maintainability, and the overall user
-experience without breaking business continuity.
+### Back-End & Architecture
 
-> I avoid locking into a single library or technology. I prefer making choices based on the team’s
-> strengths, current trends, and the long-term maintainability of the codebase.
+- **Languages**: Currently primary focus on **Python** and **TypeScript/JS** (Node.js), with a solid
+  professional background in Java (Spring Boot)
+- **Foundations**: Once upon a time I spent several years maintaining legacy projects in _Pascal_
+  and _C/C++_, later _PHP_
 
-### Backend & Architecture
-
-I focus on backend architecture and proper layering, ensuring each part of the system handles its
-specific responsibilities correctly. While I have a strong conceptual grasp of how a robust backend
-should be structured to keep layers separated, I consider hands-on implementation in specific
-frameworks a supporting skill rather than my primary daily focus. My experience includes building
-APIs and services using **Java (Spring Boot)**, **Python (Django)**, **PHP**, and **Node.js**.
+I can architect and deliver back-end services, but my core focus has shifted entirely to the
+front-end. Today, I’m most effective as architectural support—ensuring seamless API integration and
+actually meaningful error handling rather than coding the back-end from scratch.
 
 > I can deliver Node.js services, but I still believe JavaScript belongs where God intended: on the
 > client side. The recurring
 > [NPM supply chain attacks](https://www.blackduck.com/blog/recent-npm-software-supply-chain-attack-security-lessons.html)
-> only reinforce my caution regarding JS on the server >:-)
+> only reinforce my caution regarding JS on the server >:-).
 
 ### Data & Persistence
 
 Since the database was often the client’s choice, I learned to treat it as a swappable component. I
 focus on portable data modeling that works across relational, NoSQL, or cloud-native systems,
-avoiding vendor-specific "hacks" unless a bottleneck truly demands the right tool for the job.
+avoiding vendor-specific "hacks" unless a bottleneck truly demands a specialized solution.
 
-> SQLite, Redis, Firebase, DynamoDB —these are just tools to me. Each has its purpose, and we should
-> always be prepared to switch to the one that fits our needs better, if the specs change.
-
-### Experimental Lab
-
-- **Tools:** Python, PyTorch, MCP (Model Context Protocol)
-
-I enjoy exploring the practical limits of AI and modern prototyping. Rather than following hype, I
-prefer hands-on experimentation to understand how these technologies can be integrated into
-real-world applications.
-
-> Lately, I’ve been building an "AI storyteller for D&D" as a POC. It’s a mix of Django, htmx, and
-> MCP, incorporating AI voices and custom context to see how far we can push interactive
-> storytelling today.
+> SQLite, Redis, Firebase, DynamoDB — these are just tools to me. Each has its purpose, and we
+> should always be prepared to switch to the one that fits our needs better, if the specs change.
 
 ### Infrastructure & Deployment
 
-- **OS**: Linux (Debian, Ubuntu, Red Hat environments), Windows
-- **CI/CD**: GitHub Actions, GitLab CI, Jenkins, TeamCity
-- **Tools**: Docker, Nginx, Apache, AWS exposure...
+- **Scripting & OS**: OS-agnostic approach using Bash and Batch (.bat)
+- **CI/CD**: **GitHub Actions**, **GitLab CI**, Jenkins, **TeamCity**
+- **Tools**: Docker, Nginx, Apache, Basic AWS exposure
 
 I am not a dedicated DevOps engineer, but I am fully self-sufficient when it comes to managing my
 own projects. I can navigate infrastructure boundaries, set up pipelines, and handle deployments
-independently.
+independently... but I prefer not to :-)
 
-> I’m the kind of developer who can dive into a DevOps pull request to fix a blocker or find a
-> deployment bug when the ops team is busy. I don't wait for things to be fixed; I help fix them so
-> the product can keep moving... **but i preffer not to** :-)
+> I like apples, but I dont like Apple
 
-### Leadership & product responsibilities
+### Team & Process Leadership
 
-- **Team & Growth**: Mentoring, onboarding developers, and unblocking technical hurdles
-- **Business Bridge**: Customer communication, software sales, pre-sales, and technical consulting
-- **Problem Solving**: Navigating complex cross-team dependencies and aligning technical solutions
-  with business goals
+- **Team Lead**: Mentoring, onboarding, technical decision-making, and unblocking daily hurdles
+- **Agile & Workflow**: Full lifecycle management (Scrum, Waterfall)
+- **Team Dynamics**: Identifying "Bus Factor" risks, stabilizing teams and more based on context
+- **Stakeholder communication**: Roadmap execution and technical consulting
 
-I enjoy the intersection of high-level architecture and real-world business needs. I can talk to a
-stakeholder about ROI and then turn around and guide a team through a complex implementation.
+When leading, I drive a culture of developer satisfaction and shared ownership. My goal is a stable
+team with no "heroes," high knowledge redundancy, and code written with our "future selves" in mind.
 
-> I’ve spent enough time in pre-sales and customer meetings to know that the most elegant technical
-> solution is worthless if it doesn't solve the customer's actual problem—or if it's too expensive
-> to maintain.
+> Full Agile is pretty expansive, but can help to find/identify problems -> then i prefer to switch
+> in some lightweight mutation of it.
+
+---
+
+{{< mdfile file="assets/blocks/workmethod.md" >}}

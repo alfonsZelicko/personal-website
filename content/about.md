@@ -5,7 +5,7 @@ slug = "about"
 
 #### Introduction
 
-My name is Alfons Zelicko, software developer focused mainly on front-end and **user oriented**
+My name is Alfons Zelicko, a software developer focused mainly on front-end and **user oriented**
 applications. I am open for freelance or consultancy projects, start-up help or web development. If
 the project would be really interesting, long term, and with **chance to meet colleagues in
 person**, I am also not afraid of full time job.
@@ -39,8 +39,8 @@ informatics</a> and <a href="https://www.vspj.cz/cs/" target="_blank">economics 
 management</a>. Over time, these areas naturally blended into a single skill set, which I keep
 developing and extending with new technologies and **ways of thinking**.
 
-> I believe programmer must keep running to stay in same place, and front-end developer needs even
-> motorcycle to keep up with speed of changes.
+> I believe a programmer must keep running just to stay in the same place, and a front-end developer
+> needs a motorcycle to keep up with the speed of change.
 
 > School can teach you syntax and algorithms, but real programming teaches you how to think
 > pragmatically and solve problems in the real world.
@@ -67,7 +67,7 @@ tier of internet browsing - and not just poor browser, and by the iconic series 
 <a href="https://thebestmotherfucking.website/" target="_blank">The Best Motherfucking Website</a>,
 which celebrate straightforward, no-frills design and content-first approach.
 
-> This website is around 62 KB, fully responsive, and compatible with all modern browsers. All web
-> is build in about 25 ms (with minifcation), most of UX works without JS
+> This website is around 62 KB, fully responsive, and compatible with all modern browsers. The
+> entire site is built in about 25 ms (with minification), most of UX works without JS
 
 > This web was developed using the static website generator Hugo (written in Golang).
