@@ -55,3 +55,6 @@ yarn-error.log*
 # Static assets that shouldn't be formatted
 static/css/styles.css
 static/js/*.min.js
+
+# MarkUp link render repair
+layouts/_default/_markup/render-link.html

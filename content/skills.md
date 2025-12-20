@@ -1,6 +1,6 @@
 +++ 
 title = "Skills and Expertise" 
-slug = "expertise" 
+slug = "skills" 
 +++
 
 ### Product & Domain Experience
@@ -91,4 +91,4 @@ team with no "heroes," high knowledge redundancy, and code written with our "fut
 
 ---
 
-{{< mdfile file="assets/blocks/workmethod.md" >}}
+{{< mdfile file="content/blocks/workmethod.md" >}}

@@ -1,14 +1,12 @@
 // Hugo-compatible imports
 @import "normalize.scss";
 
-@import "src/_vars.scss"; // Variables
-@import "src/_responsive.scss"; // Responsive mixins
-@import "src/base.scss"; // Base styles, including layout etc.
-@import "src/typography.scss"; // Typography setup
+@import "src/_vars.scss";
+@import "src/_responsive.scss";
+@import "src/base.scss";
+@import "src/typography.scss";
+@import "src/navigation.scss";
+@import "src/table.scss";
+@import "src/list.scss";
 
-@import "src/navigation.scss"; // Navbar styling
-@import "src/table.scss"; // Tables styling
-@import "src/list.scss"; // Styles for list page
-@import "src/post.scss"; // Blogpost specific code
-
-@import "src/misc.scss"; // Misc styling for specific blocks etc
+@import "src/misc.scss";

@@ -10,57 +10,6 @@
       <input hidden type="checkbox" id="menu-toggle" />
       <input hidden type="checkbox" id="theme-toggle" checked />
       <input hidden type="checkbox" id="contrast-toggle" />
-      <script>
-        (() => {
-          const setupToggle = ({ _id, storageKey, titleOn, titleOff }) => {
-            const id = _id + "-toggle";
-            const toggle = document.getElementById(id);
-            const label = document.querySelector(`label[for="${id}"]`);
-            if (!toggle || !label) return;
-
-            if (storageKey) {
-              const saved = localStorage.getItem(storageKey);
-              if (saved !== null) {
-                toggle.checked = saved === "true";
-              }
-            }
-
-            const updateTitle = () => {
-              label.title = toggle.checked ? titleOn : titleOff;
-            };
-
-            updateTitle();
-
-            toggle.addEventListener("change", () => {
-              if (storageKey) {
-                localStorage.setItem(storageKey, toggle.checked);
-              }
-              updateTitle();
-            });
-          };
-
-          setupToggle({
-            id: "theme",
-            storageKey: "theme",
-            titleOn: "Switch to Light mode",
-            titleOff: "Switch to Dark mode",
-          });
-
-          setupToggle({
-            id: "contrast",
-            storageKey: "contrast",
-            titleOn: "Turn OFF High Contrast",
-            titleOff: "Turn ON High Contrast",
-          });
-
-          setupToggle({
-            id: "menu",
-            storageKey: null,
-            titleOn: "Close Menu",
-            titleOff: "Open Menu",
-          });
-        })();
-      </script>
       {{ with .Site.Menus.main }}
         <label for="menu-toggle" class="mobile-menu">
           {{ if $keepItSimple }}
@@ -107,6 +56,55 @@
                 {{ partial "icons/contrast.html" . }}
               {{ end }}
             </label>
+            <script>
+              (() => {
+                const setupToggle = ({ id, storageKey, titleOn, titleOff }) => {
+                  const toggleId = id + "-toggle";
+                  const toggle = document.getElementById(toggleId);
+                  const label = document.querySelector(`label[for="${toggleId}"]`);
+                  if (!toggle || !label) return;
+
+                  if (storageKey) {
+                    const saved = localStorage.getItem(storageKey);
+                    if (saved !== null) {
+                      toggle.checked = saved === "true";
+                    }
+                  }
+
+                  const updateTitle = () => {
+                    label.title = toggle.checked ? titleOn : titleOff;
+                  };
+
+                  updateTitle();
+
+                  toggle.addEventListener("change", () => {
+                    storageKey && localStorage.setItem(storageKey, toggle.checked);
+                    updateTitle();
+                  });
+                };
+
+                setupToggle({
+                  id: "theme",
+                  storageKey: "theme",
+                  titleOn: "Switch to Light mode",
+                  titleOff: "Switch to Dark mode",
+                });
+
+                setupToggle({
+                  id: "contrast",
+                  storageKey: "contrast",
+                  titleOn: "Turn OFF High Contrast",
+                  titleOff: "Turn ON High Contrast",
+                });
+
+                setupToggle({
+                  id: "menu",
+                  storageKey: null,
+                  titleOn: "Close Menu",
+                  titleOff: "Open Menu",
+                });
+              })();
+            </script>
           </li>
         </ul>
       {{ end }}

@@ -46,9 +46,9 @@ unsafe = true
     weight = 1
     url  = "/about/"
 [[menu.main]]
-    name = "Expertise"
+    name = "Skills"
     weight = 2
-    url = "/expertise/"
+    url = "/skills/"
 [[menu.main]]
     name = "Experience"
     weight = 3

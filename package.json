@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build": "hugo --minify --gc",
-    "dev": "hugo server",
+    "dev": "hugo server --disableFastRender --noHTTPCache --bind 0.0.0.0",
+    "dev:verbose": "hugo server --disableFastRender --noHTTPCache --verbose",
     "start": "hugo server"
   },
   "devDependencies": {
