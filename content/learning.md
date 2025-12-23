@@ -1,3 +1,8 @@
+---
+title: "Learning"
+url: "/experience/learning/"
+---
+
 ## Learning & Research
 
 I treat my learning as a continuous R&D process. While I'm still deciding on the final home for my
@@ -17,35 +22,6 @@ Technologies I am currently play with:
   > I know it's already here - but i dont care :-) I want my own!
 - **Kotlin:** I touched it years ago, but I’m itching to build a proper native mobile app to see how
   the ecosystem has matured.
-
----
-
-### My Framework Stress-Test
-
-I stopped chasing every new framework long ago. Instead, I try to understand the "soul" of the
-technology. Whether it's the latest frontend hype or a new backend engine, I always look for the
-same basic answers:
-
-- **How does it handle change?** _(Is it "pushing" updates or constantly recalculating everything?)_
-- **How do data get to the user?** _(Is it a smooth stream or a clunky "wait-for-load" experience?)_
-- **How does it stay organized?** _(How do different parts of the app talk to each other without
-  creating a mess?)_
-
-If a framework can't give me a clear, pragmatic answer to these, it’s just more syntax to
-memorize—and I’m not interested in that. I’d rather master the principles that stay the same while
-the tools change.
-
-#### How I learn new yechnology
-
-1. **Why & What:** Why does it exist? What pain point does it solve? (Don't touch the code yet).
-2. **The "Hate-Test":** Search for _"Why [Tech] sucks"_ on Reddit/X. Find the architectural
-   "gotchas" early.
-3. **The First Contact:** Standard "Hello World" and installation.
-4. **Mind Mapping:** Dive into core concepts. Identify unique patterns and "learning debt."
-5. **Reverse Engineering:** Break the official demos. See how the system reacts to chaos.
-6. **Targeted Deep Dive:** Read the heavy API docs only after feeling the practical friction.
-7. **Micro-Project:** Build something real. Solve routing, forms, and data fetching.
-8. **Synthesis:** Connect it to the universal mental model. **Project + Notes = Retention.**
 
 ---
 

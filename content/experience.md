@@ -32,7 +32,7 @@ After years of shifting between critical infrastructure and high-stakes broadcas
 decided to take a step back and focus on my most important "long-term project": **my son**. However,
 I’ve repurposed my professional drive into exploring the bleeding edge of AI, treating it as a new
 frontier for system orchestration. I am working on few projects - more about them in
-[learning page](/learning) and i am planning to make a few new.
+[learning page](/experience/learning) and i am planning to make a few new.
 
 #### The Next Chapter: Looking for a Team
 

@@ -1,4 +1,4 @@
-### Chyron-Hego s.r.o. | Senior Frontend Engineer
+### ChyronHego Czech, s.r.o. | Senior Frontend Engineer
 
 _2012 - 2018_ ~ **Broadcast Graphics & Interactive Media (3+ years)**
 

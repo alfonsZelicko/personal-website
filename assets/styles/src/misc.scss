@@ -1,6 +1,12 @@
 // Variables and mixins are imported globally in style.scss
 
 // Global link class for content (not just navigation)
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-text-rgb);
+}
+
 .link {
   color: var(--color-link-rgb);
 }

@@ -1,0 +1,48 @@
+{{ define "title" }}Notes · {{ .Site.Title }}{{ end }}
+
+{{ define "content" }}
+  <section class="container page list">
+    <header>
+      <h1>My 'personal' Notes</h1>
+    </header>
+    This is where I store notes on tech, articles, videos, and books that caught my attention. It helps me organize my
+    thoughts—and maybe it'll help you too.
+
+    <div class="notes-intro">
+      {{ $notesPage := $.Site.GetPage "/notes" }}
+      {{ if $notesPage }}
+        {{ $notesPage.Content }}
+      {{ end }}
+    </div>
+
+    {{ $current := .RelPermalink }}
+
+
+    <div class="note-filter">
+      <a href="/notes/" {{ if eq $current "/notes/" }}class="active"{{ end }}>All</a>
+
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+          |
+          <a
+            href="{{ .RelPermalink }}"
+            {{ if eq $current .RelPermalink }}class="filter-item active"{{ end }}
+            >{{ .Title }}</a
+          >
+        {{ end }}
+      {{ end }}
+
+    </div>
+
+    <ul>
+      {{ range .Pages.ByDate.Reverse }}
+        <li>
+          <span>{{ .Date.Format "2006-01-02" }}</span>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+      {{ else }}
+        <p>No notes found in this category yet.</p>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}

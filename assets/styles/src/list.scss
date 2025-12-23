@@ -1,6 +1,13 @@
 // Variables and mixins are imported globally in style.scss
 
 .list {
+  .note-filter {
+    width: 100%;
+    text-align: center;
+    a:not(.active) {
+      color: var(--color-text-rgb)
+    }
+  }
   ul {
     list-style: none;
     margin: 4rem 0;
@@ -12,13 +19,19 @@
       align-items: center;
       flex-direction: row-reverse;
       padding: 0.4rem 0;
-      border-bottom: 1px solid #bbb;
+      border-bottom: 1px solid color-mix(in srgb, var(--color-quote-rgb) 20%, transparent);
+      &:first-child {
+        border-top: 1px solid color-mix(in srgb, var(--color-quote-rgb) 20%, transparent);
+      }
 
       span {
         display: block;
         width: 100%;
         max-width: 20rem;
         margin-left: 3rem;
+        text-align: right;
+        color: var(--color-quote-rgb);
+        font-style: italic;
       }
 
       a {

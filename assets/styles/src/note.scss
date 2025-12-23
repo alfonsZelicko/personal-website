@@ -1,0 +1,23 @@
+// Variables and mixins are imported globally in style.scss
+
+article.note {
+  max-width: $blogpost-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+}
+
+.note-categories, .note-tags {
+  a {
+    color: var(--color-quote-rgb);
+    font-weight: 100;
+
+  }
+  a::before {
+    content: "#"
+  }
+}

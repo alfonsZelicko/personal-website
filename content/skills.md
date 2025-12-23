@@ -28,10 +28,12 @@ maintainability, and making **pragmatic technical decisions** based on real-worl
 
 The front-end landscape is vast, and I make a conscious effort to maintain a broad overview of how
 different frameworks and technologies solve common problems. This perspective allows me to choose
-the **right tool based on team strengths** rather than just following the latest hype.
+the **right tool [based on team strengths](http://mikhailian.mova.org/node/284)** rather than just
+following the latest hype.
 
 I prefer PWA over **React native**, but in the future I am planning to convert some of my personal
-projects into full Android/iOS apps... all that new possibilities!
+projects into [full Android/iOS apps](experience/learning/#future-tech-radar)... all that new
+possibilities!
 
 > I have a genuine appreciation for maintaining legacy applications from the "pre-modern" era.
 > Greenfield projects are cute, but I’m the guy you call when the reality of legacy code hits and
@@ -50,8 +52,8 @@ I can architect and deliver back-end services, but my core focus has shifted ent
 front-end. Today, I’m most effective as architectural support—ensuring seamless API integration and
 actually meaningful error handling rather than coding the back-end from scratch.
 
-> I can deliver Node.js services, but I still believe JavaScript belongs where God intended: on the
-> client side. The recurring
+> I can deliver Node.js services, but I still believe **JavaScript belongs where God intended**: on
+> the client side. The recurring
 > [NPM supply chain attacks](https://www.blackduck.com/blog/recent-npm-software-supply-chain-attack-security-lessons.html)
 > only reinforce my caution regarding JS on the server >:-).
 

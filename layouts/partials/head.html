@@ -1,0 +1,46 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {{ with site.Params.author }}<meta name="author" content="{{ . }}" />{{ end }}
+  {{ if eq .Type "blog" }}
+    {{ with .Params.metadescription }}<meta name="description" content="{{ . }}" />{{ end }}
+    {{ with .Params.metakeywords }}<meta name="keywords" content="{{ . }}" />{{ end }}
+  {{ else }}
+    {{ with site.Params.description }}<meta name="description" content="{{ . }}" />{{ end }}
+    {{ with site.Params.keywords }}<meta name="keywords" content="{{ . }}" />{{ end }}
+  {{ end }}
+
+
+  <base href="{{ .Permalink }}" />
+  <title>{{ block "title" . }}{{ site.Title }}{{ end }}</title>
+
+  <link rel="canonical" href="{{ .Permalink }}" />
+
+  <!-- Preconnect to Google Fonts for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Load fonts with font-display: swap for better performance -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Mono:400,600,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,500,700&display=swap" />
+
+  {{ $options := (dict "targetPath" "css/style.min.css" "outputStyle" "compressed") }}
+  {{ $style := resources.Get "styles/style.scss" | toCSS $options | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    href="{{ .Site.BaseURL }}notes/index.xml"
+    title="Alfons Zelicko - Notes RSS" />
+
+  {{ with site.Params.favicon }}
+    <link rel="icon" type="image/png" href="{{ . | absURL }}" sizes="32x32" />
+  {{ end }}
+
+  {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ site.Title }}" />
+    <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ site.Title }}" />
+  {{ end }}
+</head>

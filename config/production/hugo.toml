@@ -1,0 +1,2 @@
+# config/production/hugo.toml
+baseurl = "https://alfonszelicko.github.io/personal-website/"

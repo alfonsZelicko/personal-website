@@ -1,0 +1,59 @@
+{{ define "title" }}
+  {{ .Title }} ·
+  {{ .Site.Title }}
+{{ end }}
+
+{{ define "content" }}
+  <section class="container page">
+    <article class="note">
+      <header>
+        <h1>{{ .Title }}</h1>
+
+        <div class="note-meta">
+          <p><strong>Date:</strong> {{ .Date.Format "January 2, 2006" }}</p>
+          {{ if .Params.categories }}
+            <p class="note-categories">
+              <strong>Categories:</strong>
+              {{ with .GetTerms "categories" }}
+                {{ $catLinks := slice }}
+                {{ range .ByTitle }}
+                  {{ $catLinks = $catLinks | append (printf `<a href="%s">%s</a>` .RelPermalink .LinkTitle) }}
+                {{ end }}
+                <span>
+                  {{ delimit $catLinks ", " | safeHTML }}
+                </span>
+              {{ end }}
+            </p>
+          {{ end }}
+
+          {{ if .Params.tags }}
+            <p class="note-tags">
+              <strong>Tags:</strong>
+              {{ $tagLinks := slice }}
+              {{ range .Params.tags }}
+                {{ $url := printf "/tags/%s/" (. | urlize) }}
+                {{ $tagLinks = $tagLinks | append (printf `<a href="%s">%s</a>` $url .) }}
+              {{ end }}
+
+
+              <span>
+                {{ delimit $tagLinks ", " | safeHTML }}
+              </span>
+            </p>
+          {{ end }}
+        </div>
+      </header>
+
+      <hr />
+
+      <div class="note-content">
+        {{ .Content }}
+      </div>
+
+      <hr />
+      <nav>
+        <a href="/notes/">← Back to Notes</a>
+      </nav>
+    </article>
+  </section>
+{{ end }}

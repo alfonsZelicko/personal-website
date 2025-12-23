@@ -1,3 +1,15 @@
++++
+date = "2025-09-14"
+title = "Web Tech Description"
+slug = "web-description"
+categories = ["philosophy"]
+tags = []
+
+[params]
+metadescription = "Introduction to my new web/notes"
+metakeywords = "alfons, zelicko, alfons zelicko, personal website"
++++
+
 # Technical Aspects of the WebSite
 
 I decided to treat this portfolio as a technical statement rather than just a business card. In a
@@ -82,37 +94,29 @@ html:has(#theme-toggle:checked) {
 </script>
 ```
 
-### 2. Visual Curation: Less is More
+### 2. Design: Less Noise, More SVG
 
-When a website has almost no traditional "graphics," every single remaining element carries more
-weight. This intentional absence of clutter creates a stage for subtle details.
+When a website has almost no _traditional graphics_, every single remaining element carries more
+weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
 
-- **The Icons**: I used inline SVGs with native SMIL animations (`<animate>`). Because the rest of
-  the site is so quiet, the tiny rotation of the sun or the morphing of the menu button becomes a
-  focal point rather than a distraction.
-- **Typography**: I chose **Noto Sans Mono** and **Anonymous Pro**. These fonts evoke a "terminal"
-  or "typewriter" feel that aligns with the engineering focus, while the `font-display: swap`
-  ensures they load without blocking the content.
-- **Warm Palettes**: I prioritized visual ergonomics. The "low contrast" mode uses a paper-like
-  cream background (`rgb(235, 225, 200)`) to reduce eye strain during long reading sessions - if
-  somebody has these ambitions. :-)
+- **SVG over Images**: Instead of loading heavy image assets, I used inline SVGs. To keep things
+  lightweight, I used native SMIL animations (`<animate>`) directly inside the SVG code. This means
+  no complex CSS keyframes or bulky JS libraries—just high-performance, native icon transitions like
+  the rotating sun or the morphing menu.
+- **Visual Ergonomics**: I prioritized readability over flashiness. The typography (Noto Sans Mono
+  and Anonymous Pro) evokes a terminal-like feel, and the "low contrast" mode uses a warm,
+  paper-like cream background to reduce eye strain.
+- **Speed as a Feature**: The site is optimized to feel instant, even on a shitty connection that
+  would make a modern SPA crumble. It's a nod to a time when speed was a necessity, not a luxury...
+  when **EDGE was a fast internet connection**, not a poor Browser :-)
 
-### 3. SVG as the Only "Graphic"
-
-Instead of loading heavy image assets, I used inline SVGs.
-
-- **SMIL Animations**: Instead of complex CSS keyframes or JS animation libraries, I used the native
-  `<animate>` tag inside SVGs. This allows for elegant, high-performance icon transitions—like the
-  rotating sun or the morphing hamburger menu—that are part of the asset itself.
-- **Low internet connection**: The site is optimized to be fast enough to feel "instant" even on
-  connections that would make a modern SPA crumble. It's a nod to a time when speed was a necessity,
-  not a luxury.
-
-### 4. The Stats
+### 3. The Stats
 
 - **Build Time**: ~25ms (Hugo is incredibly fast)
 - **Page Weight**: ~62 KB (it's 83x less than facebook welcome page)
 - **Lighthouse Score**: 100/100/100/100
 
-This web isn't just about speed; it's about meaningful engineering. It’s proof that you don't need a
-massive framework to create a responsive, accessible, and visually pleasing experience.
+> Big thanks to the legends behind [motherfuckingwebsite.com](https://motherfuckingwebsite.com),
+> [bettermotherfuckingwebsite.com]https://(bettermotherfuckingwebsite.com), and
+> [thebestmotherfucking.website](https://thebestmotherfucking.website/). Your work first made me
+> laugh, then made me think, and eventually helped me find my way back to the basics.

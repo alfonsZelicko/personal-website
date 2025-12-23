@@ -59,9 +59,8 @@
             <script>
               (() => {
                 const setupToggle = ({ id, storageKey, titleOn, titleOff }) => {
-                  const toggleId = id + "-toggle";
-                  const toggle = document.getElementById(toggleId);
-                  const label = document.querySelector(`label[for="${toggleId}"]`);
+                  const toggle = document.getElementById(id);
+                  const label = document.querySelector(`label[for="${id}"]`);
                   if (!toggle || !label) return;
 
                   if (storageKey) {
@@ -84,14 +83,14 @@
                 };
 
                 setupToggle({
-                  id: "theme",
+                  id: "theme-toggle",
                   storageKey: "theme",
                   titleOn: "Switch to Light mode",
                   titleOff: "Switch to Dark mode",
                 });
 
                 setupToggle({
-                  id: "contrast",
+                  id: "contrast-toggle",
                   storageKey: "contrast",
                   titleOn: "Turn OFF High Contrast",
                   titleOff: "Turn ON High Contrast",

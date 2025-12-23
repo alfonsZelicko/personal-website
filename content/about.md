@@ -64,11 +64,12 @@ ferratas. Hiking and cycling are also big part of my free time.
 
 #### Website
 
-I decided to build [this website](/website) ideally **without JavaScript** and with very
-**minimalistic graphics**. It is inspired by times when the web was simpler, when EDGE was still
-considered top tier of internet browsing - and not just poor browser, and by the iconic series of
-websites like <a href="https://thebestmotherfucking.website/" target="_blank">The Best Motherfucking
-Website</a>, which celebrate straightforward, no-frills design and content-first approach.
+I decided to build [this website](/notes/web-description/) ideally **without JavaScript** and with
+very **minimalistic graphics**. It is inspired by times when the web was simpler, when EDGE was
+still considered top tier of internet browsing - and not just poor browser, and by the iconic series
+of websites like <a href="https://thebestmotherfucking.website/" target="_blank">The Best
+Motherfucking Website</a>, which celebrate straightforward, no-frills design and content-first
+approach.
 
 > This website is around 62 KB, fully responsive, and compatible with all modern browsers. The
 > entire site is built in about 25 ms (with minification), most of UX works without JS

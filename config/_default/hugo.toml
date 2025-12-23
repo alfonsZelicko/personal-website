@@ -1,0 +1,27 @@
+baseurl = "/"
+title = "Alfons Zelicko"
+languageCode = "en"
+timeZone = "Europe/Prague"
+# canonifyurls = true
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.parser.attribute]
+    block = true
+  [markup.goldmark.extensions]
+    table = true
+    footnote = true
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "index"
+
+[permalinks]
+  categories = "/notes/:slug/"

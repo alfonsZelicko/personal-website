@@ -4,6 +4,7 @@
 .idea/
 hugo/
 public/
+resources/
 build/
 resources/_gen/
 node_modules/
