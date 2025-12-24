@@ -2,7 +2,7 @@
 date = "2025-09-14"
 title = "Web Tech Description"
 slug = "web-description"
-categories = ["philosophy"]
+categories = ["philosophy", "guide"]
 tags = []
 
 [params]
@@ -41,9 +41,7 @@ html:has(#theme-toggle:checked) {
 ```js
 // minimalistic version of saving the theme/contrast state
 (() => {
-  const keys = ["theme", "contrast"];
-
-  keys.forEach(key => {
+  ["theme", "contrast"].forEach(key => {
     const el = document.getElementById(`${key}-toggle`);
     if (!el) return;
 
@@ -116,7 +114,6 @@ weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
 - **Page Weight**: ~62 KB (it's 83x less than facebook welcome page)
 - **Lighthouse Score**: 100/100/100/100
 
-> Big thanks to the legends behind [motherfuckingwebsite.com](https://motherfuckingwebsite.com),
-> [bettermotherfuckingwebsite.com]https://(bettermotherfuckingwebsite.com), and
-> [thebestmotherfucking.website](https://thebestmotherfucking.website/). Your work first made me
-> laugh, then made me think, and eventually helped me find my way back to the basics.
+> Special thanks to the minds behind [motherfuckingwebsite.com](https://motherfuckingwebsite.com)
+> and its successors. Your work amused me, then caught me off guard, and ultimately helped me
+> rethink how I build for the web.
