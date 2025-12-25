@@ -2,10 +2,12 @@
   "name": "alfons-zelicko-website",
   "private": true,
   "scripts": {
+    "start": "hugo server",
+    "dev": "hugo server",
+    "dev:open": "hugo server --disableFastRender --noHTTPCache --open",
     "build": "hugo --minify --gc",
-    "dev": "hugo server --disableFastRender --noHTTPCache --bind 0.0.0.0",
-    "dev:verbose": "hugo server --disableFastRender --noHTTPCache --verbose",
-    "start": "hugo server"
+    "format": "prettier --write .",
+    "check": "prettier --check ."
   },
   "devDependencies": {
     "prettier": "^3.7.4",

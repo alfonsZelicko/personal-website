@@ -1,0 +1,2 @@
+# config/production/hugo.yaml
+baseurl: "my_future_web_url"

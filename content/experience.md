@@ -1,7 +1,7 @@
-+++
-title = "Professional work experience"
-slug = "experience"
-+++
+---
+title: "Professional work experience"
+slug: "experience"
+---
 
 Having experienced both the freelance world and full-time roles, I’ve learned that I thrive most
 when I can **stay with one company for years**. I value building **long-term synergy with a team**
@@ -18,7 +18,7 @@ During the years I developed a **prefered dev environment** - more about [here](
 | **2021 – 2024**    | Senior Frontend Engineer | **ChyronHego**             | **React**, **JS/TS**, **Nx** (Monorepos)    |
 | **2018 – 2021**    | Solution Architect / Dev | **Nuvia a.s.**             | **Java/WildFly**, Industry 4.0, SQL, DevOps |
 | **2012 – 2018**    | Full-stack Freelancer    | **Digital Nomad**          | PHP/JS, SEO, **Graphic Design**             |
-| **2010 – 2012**    | Software Engineer        | **Red Hat**                | JBoss, Java, Linux, QA Automation           |
+| **2010 – 2012**    | Software Engineer        | **Red-Hat**                | JBoss, Java, Linux, QA Automation           |
 
 ---
 
@@ -46,8 +46,8 @@ prioritizes clarity over hype (and occasionally over-engineers his fridge), **le
 
 ---
 
-{{< mdfile file="content/blocks/work-experience.md" >}}
+{{< mdfile file="blocks/work-experience.md" >}}
 
 ---
 
-{{< mdfile file="content/blocks/education.md" >}}
+{{< mdfile file="blocks/education.md" >}}

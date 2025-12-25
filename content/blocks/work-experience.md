@@ -1,3 +1,7 @@
++++
+headless = true
++++
+
 ### ChyronHego Czech, s.r.o. | Senior Frontend Engineer
 
 _2012 - 2018_ ~ **Broadcast Graphics & Interactive Media (3+ years)**
@@ -25,6 +29,11 @@ _2018 - 2021_ ~ **Industry 4.0 & Specialized Monitoring Systems (3 years)**
   FE/BE boundaries and introducing DevOps workflows (TeamCity, YouTrack) to replace manual,
   disorganized processes.
 
+  > This [web about DAQIS](https://daqis.cz/) is quite old; I built it in about two days using
+  > [minimal graphic tools](https://www.photopea.com/) and without _proper knowledge_ of the SW
+  > sector (at that time). The very fact that it is still here without any changes (or at least an
+  > added language mutation) speaks volumes ;-(
+
 ### The Digital Nomad Era | Full-stack Freelancer
 
 _2012 - 2018_ ~ **Global**
@@ -41,11 +50,22 @@ _2012 - 2018_ ~ **Global**
   was a win-win: they gained a modern, scalable approach to development, and I mastered the art of
   "Remote-First" engineering.
 
-### Red Hat | Software Engineer (Intern to Junior Dev)
+> Much of my work from that era deserves a rewrite, but _why fix what isn't broken?_
+> [detska-doktorka.eu](https://www.detska-doktorka.eu/) is 10 years old, yet it's fully responsive
+> and runs on a simple, custom CMS. It’s a _pro bono_ project with a modernized backend and updated
+> jQuery—it works, I still like the design, so why touch it? :-)
+
+### Red-Hat | Software Engineer (Intern to Junior Dev)
 
 _2010 - 2012_ ~ **JBoss Ecosystem**
 
 - **Engineering Boot Camp:** My first exposure to professional, large-scale engineering. I
   specialized in reproducing and debugging complex issues within the JBoss environment.
 - **Open Source Discipline:** Learned the importance of rigorous testing and documentation within a
-  world-class team, forming the foundation of my pragmatic approach to code.
+  world-class team, forming the foundation of my pragmatic approach to code.[^1]
+
+> This was my **second real job experience** (the first was an internship with
+> [Pohoda](https://www.stormware.cz/)). In just one month there, I learned more about teamwork,
+> programming, and software engineering than I had in the previous few years. During my time there,
+> they were even voted the "Best Employer" in the Czech Republic. **It was a dream job** - for a
+> while.

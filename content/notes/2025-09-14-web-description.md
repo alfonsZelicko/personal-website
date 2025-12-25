@@ -1,14 +1,13 @@
-+++
-date = "2025-09-14"
-title = "Web Tech Description"
-slug = "web-description"
-categories = ["philosophy", "guide"]
-tags = []
-
-[params]
-metadescription = "Introduction to my new web/notes"
-metakeywords = "alfons, zelicko, alfons zelicko, personal website"
-+++
+---
+date: "2025-09-14"
+title: "Web Tech Description"
+slug: "web-description"
+categories: ["philosophy", "guide"]
+tags: []
+params:
+  metadescription: "Introduction to my new web/notes"
+  metakeywords: "alfons, zelicko, alfons zelicko, personal website"
+---
 
 # Technical Aspects of the WebSite
 
@@ -16,30 +15,31 @@ I decided to treat this portfolio as a technical statement rather than just a bu
 world of multi-megabyte JavaScript bundles, I wanted to see how far I could go with "dumb" HTML and
 clever CSS.
 
-### 1. The "Zero JS" State
+### 1. Switching dark/light mode
 
 The primary goal was **Progressive Enhancement**. The website is fully functional, readable, and
-navigable even if you disable JavaScript entirely.
+navigable even if you **disable JavaScript entirely**.
 
-- **The Checkbox Hack**: Using hidden `<input type="checkbox">` elements and the `:checked` CSS
-  pseudo-class, I built the theme switcher, contrast toggle, and mobile menu without any UI logic in
-  JS.
-- **The Logic**:
+- **The Checkbox Hack**: Using hidden `<input type="checkbox">` elements (and placing some labels
+  somewhere, ofc) and the `:checked` CSS pseudo-class, I built the theme switcher, contrast toggle,
+  and mobile menu without any UI logic in JS.
 
 ```scss
 // Simplified example of how it works
 html:has(#theme-toggle:checked) {
   --bg-color: #{$color-bg-dark-low-rgb};
   --text-color: #{$color-text-dark-low-rgb};
+  ...
 }
 ```
+
+### 2. JS only as a Progressive Enhancement
 
 - **Persistent State**: I added a tiny vanilla JS script (which could be 14 lines, but I made it 52
   to handle proper accessibility titles and aria-labels) only to "remember" user preferences in
   localStorage. If it fails, the site simply defaults to the "warm dark" mode. No big deal.
 
 ```js
-// minimalistic version of saving the theme/contrast state
 (() => {
   ["theme", "contrast"].forEach(key => {
     const el = document.getElementById(`${key}-toggle`);
@@ -92,7 +92,7 @@ html:has(#theme-toggle:checked) {
 </script>
 ```
 
-### 2. Design: Less Noise, More SVG
+### 3. Design: Less Noise, More SVG
 
 When a website has almost no _traditional graphics_, every single remaining element carries more
 weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
@@ -108,7 +108,7 @@ weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
   would make a modern SPA crumble. It's a nod to a time when speed was a necessity, not a luxury...
   when **EDGE was a fast internet connection**, not a poor Browser :-)
 
-### 3. The Stats
+### 4. The Stats
 
 - **Build Time**: ~25ms (Hugo is incredibly fast)
 - **Page Weight**: ~62 KB (it's 83x less than facebook welcome page)

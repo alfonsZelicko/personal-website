@@ -1,14 +1,13 @@
-+++
-date = "2025-07-13"
-title = "Hello World - Welcome to My Notes"
-slug = "hello-world-notes"
-categories = ["design", "programming", "philosophy"]
-tags = []
-
-[params]
-metadescription = "Let's make internet great again"
-metakeywords = "no javascript, javascript, pure css, simple web"
-+++
+---
+date: "2025-07-13"
+title: "Hello World - Welcome to My Notes"
+slug: "hello-world-notes"
+categories: ["design", "programming", "philosophy"]
+tags: []
+params:
+  metadescription: "Let's make internet great again"
+  metakeywords: "no javascript, javascript, pure css, simple web"
+---
 
 Welcome to my _Notes_ section! This is where I'll be sharing my thoughts, discoveries, and guides on
 various topics.

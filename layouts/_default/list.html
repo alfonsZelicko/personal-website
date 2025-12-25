@@ -18,7 +18,7 @@
     {{ $current := .RelPermalink }}
 
 
-    <div class="note-filter">
+    <div class="list-filter">
       <a href="/notes/" {{ if eq $current "/notes/" }}class="active"{{ end }}>All</a>
 
       {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
@@ -37,8 +37,9 @@
     <ul>
       {{ range .Pages.ByDate.Reverse }}
         <li>
-          <span>{{ .Date.Format "2006-01-02" }}</span>
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+          <span>{{ .Date.Format "2006-01-02" }}</span>
         </li>
       {{ else }}
         <p>No notes found in this category yet.</p>

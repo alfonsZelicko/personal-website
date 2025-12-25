@@ -7,21 +7,27 @@ url: "/experience/learning/"
 
 I treat my learning as a continuous R&D process. While I'm still deciding on the final home for my
 public repositories (the classic GitLab vs. GitHub dilemma), my main focus is currently on building
-a [Notes](/notes) section—a place to synthesize my findings and architectural rants.
+a [Notes](/notes) section—a place to synthesize my findings and architectural rants - here I will
+try to make some kind of "tech report from my perspective" about the project from my
+[Future Tech Radar](/experience/learning#future-tech-radar) section.
 
 ### Future Tech Radar
 
 Technologies I am currently play with:
 
-- **Model Context Protocol (MCP):** I believe this is a game-changer for "UI-less" apps. Imagine
-  asking your system: _"Set an alert if the production KPI on line XY drops below 80%"_ without
-  touching a dashboard. My early PoCs are extremely promising.
-- **Python/Django Deep Dive:** I'm pushing my Django skills further by building a **D&D Narrator**—a
-  system for generating nuanced, pseudo-random location descriptions using custom MCP tools for data
-  retrieval.
+- **[Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP):** I
+  believe this is a game-changer for "UI-less" apps. Imagine asking your system: _"Set an alert if
+  the production KPI on line XY drops below 80%"_ without touching a dashboard. My early PoCs are
+  extremely promising.
+- **Python/[Django](https://www.djangoproject.com/) Deep Dive:** I'm pushing my Django skills
+  further by building a **D&D Narrator**—a system for generating nuanced, pseudo-random location
+  descriptions using custom MCP tools for data retrieval.
+- **[htmx](https://htmx.org/):** ... mostly as a part of my _Narrator project_
   > I know it's already here - but i dont care :-) I want my own!
-- **Kotlin:** I touched it years ago, but I’m itching to build a proper native mobile app to see how
-  the ecosystem has matured.
+- **[Kotlin](https://kotlinlang.org/):** I touched it years ago, but I’m itching to build a proper
+  native mobile app to see how the ecosystem has matured.
+- **3D Print:** Its inventing a wheel -> but i want more integrate this technology into my
+  life/process of creation
 
 ---
 
@@ -29,7 +35,9 @@ Technologies I am currently play with:
 
 _Satisfaction score (★☆☆☆☆) based on my current experience._
 
-The number of stars says how much i was satisfy with tech i choosed
+The number of stars says how much i was satisfy with tech i choosed. Every project in this section
+is "not done and mostly it will be not" - its just a
+[Micro-Project](/notes/new-tech-in-eight-steps/#how-i-learn-new-technology) for testing purpose.
 
 - **AI Audiobook Director:** Building a complex pipeline for _professional_ book translation and
   multi-voice narration.
@@ -60,7 +68,14 @@ The number of stars says how much i was satisfy with tech i choosed
   - **Quick orientation:** As a tool for quick orientation in a new project, it’s AWESOME and a
     massive time-saver! It’s also perfect for writing documentation and handling all the tedious
     tasks we usually hate.
-    - _copilot_: ★★★☆☆, _openAI_: ★★★☆☆, _claude_: ★★★★☆,
+  - **Skill burning:** Skill burning: I have no plans to adopt this approach in my work. I notice it
+    erodes my own programming skills at every level — writing code, reading code, reasoning about
+    it, and making decisions. That said, it’s a great tool for translating bugs and for reading or
+    generating documentation.
+  - **Pretty fast evolution:** I’m generally skeptical of every “new and definitely better than
+    ever” release, even though real progress is clearly happening. My star system here can be pretty
+    outdated, and it's very personal. Keep it in mind.
+    - _copilot_: ★★★☆☆, _openAI_: ★★☆☆☆, _claude_: ★★★★☆,
 
 - **The Hardware Renaissance:** Surprisingly, I’ve rediscovered a love for hardware through
   **Raspberry Pi**. Although electronics bored me in high school, I now find joy in building

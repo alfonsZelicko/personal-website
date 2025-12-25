@@ -1,0 +1,16 @@
+main:
+  - name: "About"
+    weight: 1
+    url: "/about/"
+  - name: "Skills"
+    weight: 2
+    url: "/skills/"
+  - name: "Experience"
+    weight: 3
+    url: "/experience/"
+  - name: "Notes"
+    weight: 4
+    url: "/notes/"
+  - name: "Contact"
+    weight: 5
+    url: "/contact/"

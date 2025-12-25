@@ -1,14 +1,13 @@
-+++
-date = "2025-11-23"
-title = "How to learn new framerowrk/library in 8 steps"
-slug = "new-tech-in-eight-steps"
-categories = ["guide", "programming"]
-tags = []
-
-[params]
-metadescription = "How to learn every new library/framework fast"
-metakeywords = "framerowk, learning, library, quick learning"
-+++
+---
+date: "2025-11-23"
+title: "How to learn new framerowrk/library in 8 steps"
+slug: "new-tech-in-eight-steps"
+categories: ["guide", "programming"]
+tags: []
+params:
+  metadescription: "How to learn every new library/framework fast"
+  metakeywords: "framerowk, learning, library, quick learning"
+---
 
 ### My Framework Stress-Test
 

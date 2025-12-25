@@ -1,13 +1,15 @@
 // Variables and mixins are imported globally in style.scss
 
 .list {
-  .note-filter {
+  .list-filter {
     width: 100%;
     text-align: center;
+
     a:not(.active) {
-      color: var(--color-text-rgb)
+      color: var(--color-text-rgb);
     }
   }
+
   ul {
     list-style: none;
     margin: 4rem 0;
@@ -15,42 +17,43 @@
 
     li {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      flex-direction: row-reverse;
+      justify-content: space-between;
       padding: 0.4rem 0;
       border-bottom: 1px solid color-mix(in srgb, var(--color-quote-rgb) 20%, transparent);
+
       &:first-child {
         border-top: 1px solid color-mix(in srgb, var(--color-quote-rgb) 20%, transparent);
       }
 
+      a {
+        flex: 1 1 auto;
+        min-width: 0;
+        color: var(--color-text-rgb);
+        line-height: 1.1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
       span {
-        display: block;
-        width: 100%;
-        max-width: 20rem;
-        margin-left: 3rem;
+        flex: 0 0 5.5rem;
+        margin-left: 1rem;
         text-align: right;
         color: var(--color-quote-rgb);
         font-style: italic;
-      }
-
-      a {
-        color: var(--color-text-rgb);
-        line-height: 1.1;
+        white-space: nowrap;
       }
     }
 
     @include max-md() {
       li {
-        flex-direction: column;
-        align-items: flex-start;
-        border-bottom: none;
         padding: 0.6rem 0;
+        // layout zůstává stejný i na mobilu
+      }
 
-        span {
-          margin-left: 0;
-          font-size: 1.2rem;
-        }
+      span {
+        font-size: 1.2rem;
       }
     }
   }

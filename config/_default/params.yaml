@@ -1,0 +1,16 @@
+author: "Alfons Zelicko"
+info: "Software, Design, D&D"
+description: "My name is Alfons Zelicko, I am a software developer"
+keywords: "alfons zelicko, alfons, zelicko"
+favicon: "/images/favicon.png"
+
+social:
+  - name: "Email"
+    weight: 1
+    url: "/contact"
+  - name: "Github"
+    weight: 2
+    url: "https://github.com/alfonsZelicko"
+  - name: "LinkedIn"
+    weight: 3
+    url: "https://www.linkedin.com/in/alfons-zelicko-7a8645182/"

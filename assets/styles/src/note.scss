@@ -9,15 +9,21 @@ article.note {
   -webkit-font-smoothing: antialiased !important;
   -moz-font-smoothing: antialiased !important;
   text-rendering: optimizelegibility !important;
-}
 
-.note-categories, .note-tags {
-  a {
-    color: var(--color-quote-rgb);
-    font-weight: 100;
-
+  .note-meta {
+    margin: 1.8rem 0;
+    p {
+      margin: 0;
+    }
   }
-  a::before {
-    content: "#"
+  .note-categories,
+  .note-tags {
+    a {
+      color: var(--color-quote-rgb);
+      font-weight: 100;
+    }
+    a::before {
+      content: "#";
+    }
   }
 }

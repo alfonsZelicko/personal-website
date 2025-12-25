@@ -1,0 +1,33 @@
+baseurl: "/"
+title: "Alfons Zelicko"
+languageCode: "en"
+timeZone: "Europe/Prague"
+canonifyurls: true
+
+markup:
+  defaultMarkdownHandler: "goldmark"
+  goldmark:
+    parser:
+      attribute:
+        block: true
+    extensions:
+      table: true
+      footnote: true
+    renderer:
+      unsafe: true
+
+outputs:
+  home: ["HTML"]
+  section: ["HTML"]
+  page: ["HTML"]
+
+outputFormats:
+  RSS:
+    mediatype: "application/rss"
+    baseName: "index"
+
+permalinks:
+  categories: "/notes/:slug/"
+
+server:
+  port: 1313

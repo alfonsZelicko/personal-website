@@ -1,7 +1,7 @@
-+++
-title = "About me"
-slug = "about"
-+++
+---
+title: "About me"
+slug: "about"
+---
 
 #### Introduction
 
@@ -71,5 +71,11 @@ of websites like <a href="https://thebestmotherfucking.website/" target="_blank"
 Motherfucking Website</a>, which celebrate straightforward, no-frills design and content-first
 approach.
 
-> This website is around 62 KB, fully responsive, and compatible with all modern browsers. The
-> entire site is built in about 25 ms (with minification), most of UX works without JS
+#### A little disclaimer
+
+> Often, halfway through a movie, I realize I forgot to turn on subtitles. I don't really need them
+> to understand, but when it comes to writing creative or nuanced English - not just "technical
+> documentation"-I still feel the friction.
+
+**Every idea here is either my own or curated from the world of books and web.** I only use AI to
+polish the phrasing so my _'Slavic English'_ doesn’t disrupt the flow of the message. :-)

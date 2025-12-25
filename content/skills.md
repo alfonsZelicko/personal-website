@@ -1,7 +1,12 @@
-+++ 
-title = "Skills and Expertise" 
-slug = "skills" 
-+++
+---
+title: "Skills and Expertise"
+slug: "skills"
+---
+
+I won’t list every technology I’m familiar with. Instead, this section reflects what I’ve actually
+worked with, based on **real experience**. I regularly explore and experiment with new technologies
+out of curiosity, but not all of them are listed here. The [Learning section](/experience/learning/)
+includes some of these, although I only started keeping those notes recently.
 
 ### Product & Domain Experience
 
@@ -93,4 +98,4 @@ team with no "heroes," high knowledge redundancy, and code written with our "fut
 
 ---
 
-{{< mdfile file="content/blocks/workmethod.md" >}}
+{{< mdfile file="blocks/workmethod.md" >}}
