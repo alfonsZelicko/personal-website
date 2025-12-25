@@ -58,7 +58,26 @@
             </label>
             <script>
               (() => {
-                const setupToggle = ({ id, storageKey, titleOn, titleOff }) => {
+                [
+                  {
+                    id: "theme-toggle",
+                    storageKey: "isDarkTheme",
+                    titleOn: "Switch to Light mode",
+                    titleOff: "Switch to Dark mode",
+                  },
+                  {
+                    id: "contrast-toggle",
+                    storageKey: "isLowContrast",
+                    titleOn: "Turn OFF High Contrast",
+                    titleOff: "Turn ON High Contrast",
+                  },
+                  {
+                    id: "menu",
+                    storageKey: null,
+                    titleOn: "Close Menu",
+                    titleOff: "Open Menu",
+                  },
+                ].forEach(({ id, storageKey, titleOn, titleOff }) => {
                   const toggle = document.getElementById(id);
                   const label = document.querySelector(`label[for="${id}"]`);
                   if (!toggle || !label) return;
@@ -79,28 +98,13 @@
                   toggle.addEventListener("change", () => {
                     storageKey && localStorage.setItem(storageKey, toggle.checked);
                     updateTitle();
+
+                    window.dispatchEvent(
+                      new CustomEvent("app:prefs-changed", {
+                        detail: { source: id, newValue: toggle.checked },
+                      })
+                    );
                   });
-                };
-
-                setupToggle({
-                  id: "theme-toggle",
-                  storageKey: "theme",
-                  titleOn: "Switch to Light mode",
-                  titleOff: "Switch to Dark mode",
-                });
-
-                setupToggle({
-                  id: "contrast-toggle",
-                  storageKey: "contrast",
-                  titleOn: "Turn OFF High Contrast",
-                  titleOff: "Turn ON High Contrast",
-                });
-
-                setupToggle({
-                  id: "menu",
-                  storageKey: null,
-                  titleOn: "Close Menu",
-                  titleOff: "Open Menu",
                 });
               })();
             </script>

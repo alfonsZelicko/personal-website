@@ -28,6 +28,9 @@ posts - they're my genuine thoughts and discoveries that I want to share.
 I'm planning to add:
 
 - Comment system (mby?)
+  - [x] implement [giscus.app](https://giscus.app/)
+  - [ ] contribute on custom theme for my web :-/ (transparent?/two colors?/add new param for css
+        source?)
 - Tags support
 - Full-text search (with JS)
 

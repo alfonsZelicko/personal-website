@@ -55,5 +55,9 @@
         <a href="/notes/">← Back to Notes</a>
       </nav>
     </article>
+    {{ if ne .Params.comments false }}
+      <hr />
+      {{ partial "giscus.html" . }}
+    {{ end }}
   </section>
 {{ end }}
