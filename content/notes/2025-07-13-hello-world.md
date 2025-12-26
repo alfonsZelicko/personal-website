@@ -1,7 +1,7 @@
 ---
 date: "2025-07-13"
 title: "Hello World - Welcome to My Notes"
-slug: "hello-world"
+slug: "hello-world-notes"
 categories: ["design", "programming", "philosophy"]
 tags: []
 params:
