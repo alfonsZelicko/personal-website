@@ -21,22 +21,20 @@
       justify-content: space-between;
       padding: 0.4rem 0;
       border-bottom: 1px solid color-mix(in srgb, var(--color-quote-rgb) 20%, transparent);
-
-      &:first-child {
-        border-top: 1px solid color-mix(in srgb, var(--color-quote-rgb) 20%, transparent);
-      }
+      position: relative;
+      z-index: 1;
 
       a {
-        flex: 1 1 auto;
         min-width: 0;
         color: var(--color-text-rgb);
         line-height: 1.1;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        padding-right: 1.5rem;
       }
 
-      span {
+      > span:not(.additional-info) {
         flex: 0 0 5.5rem;
         margin-left: 1rem;
         text-align: right;
@@ -44,12 +42,35 @@
         font-style: italic;
         white-space: nowrap;
       }
+
+      span.additional-info {
+        position: absolute;
+        right: 12rem;
+        opacity: 0;
+        transform: translateX(10px);
+        transition: all 0.2s ease-in-out;
+        pointer-events: none;
+        white-space: nowrap;
+        z-index: 2;
+      }
+
+      @include max-md() {
+        span.additional-info {
+          display: none;
+        }
+      }
+
+      &:hover {
+        span.additional-info {
+          opacity: 0.5;
+          transform: translateX(0px);
+        }
+      }
     }
 
     @include max-md() {
       li {
         padding: 0.6rem 0;
-        // layout zůstává stejný i na mobilu
       }
 
       span {

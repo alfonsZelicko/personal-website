@@ -1,0 +1,46 @@
+name: Update Comment Stats
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch and Process Discussion Stats
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 1. Fetch data from GitHub GraphQL
+          gh api graphql -f query='
+            query {
+              repository(owner: "alfonsZelicko", name: "personal-website") {
+                discussions(first: 100) {
+                  nodes {
+                    title
+                    comments { totalCount }
+                    reactions { totalCount }
+                  }
+                }
+              }
+            }' > raw_data.json
+
+          # 2. Transform to flat JSON object for fast O(1) lookup
+          # Handle potential empty repository or no discussions with a safety check
+          cat raw_data.json | jq '.data.repository.discussions.nodes | 
+            if . == null then {} else 
+            reduce .[] as $item ({}; . + { ($item.title): { "comments": $item.comments.totalCount, "reactions": $item.reactions.totalCount } }) 
+            end' > static/comments-stats.json
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add static/comments-stats.json
+          # Only commit if there are changes to avoid failing the workflow
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update comment stats" && git push)

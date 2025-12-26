@@ -39,6 +39,7 @@
         <li>
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 
+          <span class="additional-info" data-path="{{ .RelPermalink }}"></span>
           <span>{{ .Date.Format "2006-01-02" }}</span>
         </li>
       {{ else }}
@@ -46,4 +47,25 @@
       {{ end }}
     </ul>
   </section>
+  <script>
+    (async function () {
+      try {
+        const response = await fetch("/comments-stats.json");
+        const stats = await response.json();
+        console.log("Moje stats z JSONu:", stats);
+
+        document.querySelectorAll(".additional-info").forEach(el => {
+          const path = el.getAttribute("data-path");
+          const commentCount = stats[path] ? stats[path].comments : 0;
+          el.innerText = `(${commentCount} comments)`;
+        });
+      } catch (e) {
+        console.error("Error during loading comments count", e);
+        document.querySelectorAll(".additional-info").forEach(el => (el.style.display = "none"));
+      } finally {
+        // document.querySelectorAll(".additional-info").forEach(el => (el.style.display = "block"));
+        // document.querySelectorAll(".additional-info").forEach(el => (el.style.opacity = 1));
+      }
+    })();
+  </script>
 {{ end }}

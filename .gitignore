@@ -1,12 +1,49 @@
+# --- Hugo Specific ---
+# Lock file created by Hugo to prevent concurrent builds
 .hugo_build.lock
-.vscode/
-.kiro/
-.idea/
-hugo/
+# Build output directory
 public/
+# Hugo's generated resources (images, SCSS)
 resources/
-build/
 resources/_gen/
-node_modules/
-.DS_Store
+# Local cache for remote assets/modules
+.hugo_cache/
+.hugo_modules/
+
+# --- Build & Deployment ---
+# Local build artifacts
+build/
+dist/
+# Deployment service folders
 .vercel
+.netlify
+.kiro/
+
+# --- Node.js ---
+# Dependencies
+node_modules/
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+.pnpm-debug.log*
+
+# --- IDEs & Editors ---
+# VS Code settings
+.vscode/
+# JetBrains IDEs (IntelliJ, WebStorm, etc.)
+.idea/
+# Vim swap files
+*.swp
+
+# --- Operating Systems ---
+# macOS specific
+.DS_Store
+# Windows specific
+Thumbs.db
+desktop.ini
+
+# --- Secrets & Environment Variables ---
+# Never commit secrets to git!
+.env
+.env.*
+*.env
