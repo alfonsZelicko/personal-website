@@ -1,6 +1,10 @@
 {
-  "/notes/hello-world/": {
-    "comments": 5,
-    "last_comment": "2025-12-25T10:00:00Z"
+  "personal-website/notes/hello-world-notes/": {
+    "comments": 1,
+    "reactions": 1
+  },
+  "notes/hello-world-notes/": {
+    "comments": 1,
+    "reactions": 0
   }
 }
