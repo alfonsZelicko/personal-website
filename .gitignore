@@ -47,3 +47,6 @@ desktop.ini
 .env
 .env.*
 *.env
+
+# Testing file
+static/comments-stats.json

@@ -48,24 +48,29 @@
     </ul>
   </section>
   <script>
-    (async function () {
-      try {
-        const response = await fetch("/comments-stats.json");
-        const stats = await response.json();
-        console.log("Moje stats z JSONu:", stats);
+    (() => {
+      fetch('{{ "comments-stats.json" | absURL }}')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok: " + response.statusText);
+          }
+          return response.json();
+        })
+        .then(stats => {
+          console.log("Comments stats loaded:", stats);
 
-        document.querySelectorAll(".additional-info").forEach(el => {
-          const path = el.getAttribute("data-path");
-          const commentCount = stats[path] ? stats[path].comments : 0;
-          el.innerText = `(${commentCount} comments)`;
+          document.querySelectorAll(".additional-info").forEach(el => {
+            const path = el.getAttribute("data-path");
+            const commentCount = (stats[path] && stats[path].comments) ? stats[path].comments : 0;
+            el.innerText = `(${commentCount} comments)`;
+          });
+        })
+        .catch(e => {
+          console.error("Error during loading comments count:", e);
+          document.querySelectorAll(".additional-info").forEach(el => {
+            el.style.display = "none";
+          });
         });
-      } catch (e) {
-        console.error("Error during loading comments count", e);
-        document.querySelectorAll(".additional-info").forEach(el => (el.style.display = "none"));
-      } finally {
-        // document.querySelectorAll(".additional-info").forEach(el => (el.style.display = "block"));
-        // document.querySelectorAll(".additional-info").forEach(el => (el.style.opacity = 1));
-      }
     })();
   </script>
 {{ end }}
