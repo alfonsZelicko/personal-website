@@ -36,7 +36,11 @@
     title="Alfons Zelicko - Notes RSS" />
 
   {{ with site.Params.favicon }}
-    <link rel="icon" type="image/png" href="{{ . | absURL }}" sizes="32x32" />
+    {{ $img := resources.Get . }}
+    {{ if $img }}
+      {{ $icon := $img | fingerprint }}
+      <link rel="icon" type="image/png" href="{{ $icon.Permalink }}" sizes="32x32" />
+    {{ end }}
   {{ end }}
 
   {{ with .OutputFormats.Get "RSS" }}
