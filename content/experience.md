@@ -20,8 +20,6 @@ During the years I developed a **prefered dev environment** - more about [here](
 | **2012 – 2018**    | Full-stack Freelancer    | **Digital Nomad**          | PHP/JS, SEO, **Graphic Design**             |
 | **2010 – 2012**    | Software Engineer        | **Red-Hat**                | JBoss, Java, Linux, QA Automation           |
 
----
-
 ## The Journey
 
 ### Current Mission | Sabbatical & AI Orchestration

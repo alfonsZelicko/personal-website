@@ -8,24 +8,7 @@ worked with, based on **real experience**. I regularly explore and experiment wi
 out of curiosity, but not all of them are listed here. The [Learning section](/experience/learning/)
 includes some of these, although I only started keeping those notes recently.
 
-### Product & Domain Experience
-
-I am a **front-end specialist** with a full-stack background. I spent my first decade building
-systems from the ground up before the "front-end boom" redefined the industry. This evolution allows
-me to maintain a high-level view of the entire product lifecycle—focusing on usability, long-term
-maintainability, and making **pragmatic technical decisions** based on real-world needs.
-
-- **Customer-Facing Products**: I can act as the bridge between a client's vision and the
-  development team—helping to formulate technical requirements, create cost estimates, and ensure
-  the final product solves the actual business problem.
-- **Strategic UI Engineering**: I distinguish between "making a UI change" and "solving a UI
-  problem." I focus on improving user experience while keeping the implementation cost-effective and
-  maintainable.
-- **Industry 4.0**: With years of experience building DAQ systems, I provide a deep understanding of
-  industrial environments, hardware-software integration, and the specific challenges of Industry
-  4.0.
-
-### Engineering & Frontend Stack
+### Frontend Stack
 
 - **Primary**: TypeScript/JavaScript, React (16.8+), HTML/CSS (SCSS, Less)
 - **Secondary/Legacy**: Svelte, Angular, htmx, jQuery (3.0+)
@@ -43,8 +26,6 @@ possibilities!
 > I have a genuine appreciation for maintaining legacy applications from the "pre-modern" era.
 > Greenfield projects are cute, but I’m the guy you call when the reality of legacy code hits and
 > you need to improve usability without breaking business continuity.
-
-> I like apples, but I don't like Apple.
 
 ### Back-End & Architecture
 
@@ -68,9 +49,6 @@ Since the database was often the client’s choice, I learned to treat it as a s
 focus on portable data modeling that works across relational, NoSQL, or cloud-native systems,
 avoiding vendor-specific "hacks" unless a bottleneck truly demands a specialized solution.
 
-> SQLite, Redis, Firebase, DynamoDB — these are just tools to me. Each has its purpose, and we
-> should always be prepared to switch to the one that fits our needs better, if the specs change.
-
 ### Infrastructure & Deployment
 
 - **Scripting & OS**: OS-agnostic approach using Bash and Batch (.bat)
@@ -81,7 +59,22 @@ I am not a dedicated DevOps engineer, but I am fully self-sufficient when it com
 own projects. I can navigate infrastructure boundaries, set up pipelines, and handle deployments
 independently... but I prefer not to :-)
 
-> I like apples, but I dont like Apple
+### Product & Domain Experience
+
+I am a **front-end specialist** with a full-stack background. I spent my first decade building
+systems from the ground up before the "front-end boom" redefined the industry. This evolution allows
+me to maintain a high-level view of the entire product lifecycle—focusing on usability, long-term
+maintainability, and making **pragmatic technical decisions** based on real-world needs.
+
+- **Customer-Facing Products**: I can act as the bridge between a client's vision and the
+  development team—helping to formulate technical requirements, create cost estimates, and ensure
+  the final product solves the actual business problem.
+- **Strategic UI Engineering**: I distinguish between "making a UI change" and "solving a UI
+  problem." I focus on improving user experience while keeping the implementation cost-effective and
+  maintainable.
+- **Industry 4.0**: With years of experience building DAQ systems, I provide a deep understanding of
+  industrial environments, hardware-software integration, and the specific challenges of Industry
+  4.0.
 
 ### Team & Process Leadership
 

@@ -23,7 +23,7 @@ Technologies I am currently play with:
   further by building a **D&D Narrator**—a system for generating nuanced, pseudo-random location
   descriptions using custom MCP tools for data retrieval.
 - **[htmx](https://htmx.org/):** ... mostly as a part of my _Narrator project_
-  > I know it's already here - but i dont care :-) I want my own!
+  > It's a love/hate thing... I am interested mostly because i did similar approach before the Angular arrived.
 - **[Kotlin](https://kotlinlang.org/):** I touched it years ago, but I’m itching to build a proper
   native mobile app to see how the ecosystem has matured.
 - **3D Print:** Its inventing a wheel -> but i want more integrate this technology into my
@@ -68,7 +68,7 @@ is "not done and mostly it will be not" - its just a
   - **Quick orientation:** As a tool for quick orientation in a new project, it’s AWESOME and a
     massive time-saver! It’s also perfect for writing documentation and handling all the tedious
     tasks we usually hate.
-  - **Skill burning:** Skill burning: I have no plans to adopt this approach in my work. I notice it
+  - **Skill burning:** I have no plans to adopt this approach in my work. I notice it
     erodes my own programming skills at every level — writing code, reading code, reasoning about
     it, and making decisions. That said, it’s a great tool for translating bugs and for reading or
     generating documentation.

@@ -18,12 +18,8 @@ the product.
   over the latest industry trends.
 - **Technical Debt Management:** Proactive prevention of technical debt through continuous
   refactoring and clear documentation.
-- **DevSecOps & Security:** Embracing Secure by Design. Front-end isn't just about pixels; it's
-  about sanitization, secure headers, and protecting user data.
 - **Modern Versioning:** Everything in Git, versioned according to
   [Semantic Versioning](https://semver.org/), with transparent CI/CD pipelines and automatic
   changelog generation.
-- **Test-Driven Logic:** Using TDD for complex domain logic and critical paths where manual testing
-  is not enough.
 - **Ethical Engineering:** Adhering to the [ACM Code of Ethics](https://www.acm.org/code-of-ethics)
   and supporting Open Source ecosystems whenever possible.
