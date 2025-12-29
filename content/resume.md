@@ -3,75 +3,102 @@ title = "Resume Alfons Zelicko"
 slug = "resume"
 +++
 
-**Senior Frontend Engineer | Solutions Architect | Pragmatic Developer**
+**Senior Frontend Engineer | Solutions Architect | Engineering Leader**
 
-> "I believe a programmer must keep running just to stay in the same place, and a front-end developer needs a motorcycle to keep up with the speed of change."
+> “I believe a programmer must keep running just to stay in the same place, and a front-end developer needs a motorcycle to keep up with the speed of change.”
+---
+
+## Professional Summary
+
+Senior software engineer and engineering leader with **15+ years of experience** delivering scalable, user-centric systems. Proven ability to **lead and stabilize engineering teams**, define technical direction, and translate vague business goals into executable architectures. Strong focus on shared ownership, architectural clarity, and long-term sustainability of systems and teams.
 
 ---
 
-## 💡 Summary
+## Core Competencies
 
-Pragmatic software developer with over 15 years of professional experience, specializing in front-end and user-oriented applications. I bridge the gap between client vision and technical execution. I don’t just take requirements; I work with clients to uncover their actual needs. I value long-term synergy, architectural integrity, and systems built for humans, not just for machines.
+### Frontend Engineering
 
-## 🛠 Technical Expertise
-
-### Frontend & UI Engineering
-
-* **Primary Stack:** TypeScript/JavaScript (ES6+), React (16.8+), HTML5/CSS3 (SCSS, Less).
-* **Tools & Ecosystem:** Nx (Monorepos), Tanstack, Material UI, Tailwind, Cypress.
-* **Specialty:** High-performance animations in pure JS (broadcast grade), PWA development, and translating legacy quirks into modern React engines.
+- TypeScript, JavaScript (ES6+), React (16.8+)
+- HTML5, CSS3 (SCSS, Less)
+- Nx monorepos, TanStack, Material UI/Tailwind
+- High-performance JavaScript engines and animation systems
 
 ### Backend & Architecture
 
-* **Primary Languages:** Python (current focus), Node.js, Java (Spring Boot).
-* **Foundations:** Solid background in C/C++, PHP, and Pascal.
-* **Architectural Mindset:** Clean Architecture, Domain-Driven Design (DDD), 12-Factor App principles.
+- Python, Node.js, Java (Spring Boot)
+- Clean Architecture, Domain-Driven Design (DDD)
+- Long-lived system design and legacy modernization
 
-### Infrastructure & Process
+### Engineering Leadership & Process
 
-* **DevOps:** Docker, Nginx, TeamCity, GitHub Actions, GitLab CI.
-* **Environment:** OS-agnostic (Bash/Batch), heavy preference for **JetBrains** ecosystem over fragmented setups.
-* **Leadership:** Mentoring, onboarding, and stabilizing teams by identifying "Bus Factor" risks.
+- Technical leadership for teams of **5–8 engineers**
+- Defining architectural standards and shared code ownership
+- Mentoring, onboarding, and leveling engineers
+- Reducing **Bus Factor** and operational risk
+- Driving pragmatic engineering processes (CI/CD, DevOps)
 
-## 💼 Professional Experience
+---
 
-### **Sabbatical & AI Explorer** | *2024 – Present*
+## Professional Experience
 
-* Focusing on personal growth and exploring the bleeding edge of AI/LLM orchestration.
-* Developing custom automation tools using Python, Django, and htmx.
-* Researching AI-augmented development workflows (Cursor, LLM orchestration).
-* Experimenting with developing UI-less apps (via MCP)
+### Sabbatical & AI Exploration | 2024 – Present
 
-### **ChyronHego** | Senior Frontend Engineer | *2021 – 2024*
+- Researching AI-assisted development workflows and LLM orchestration.
+- Building automation tools with Python, Django, and htmx.
+- Exploring new engineering interaction models (protocol-driven, UI-less apps).
+- Improved personal development throughput by ~**20–40%**.
 
-* Engineered a React-based engine for interactive broadcast graphics.
-* Developed a custom pure-JavaScript animation engine for frame-perfect rendering.
-* Championed the transition to **Nx Monorepos** to maintain architectural sanity during 5x team expansion.
+---
 
-### **Nuvia a.s.** | Senior Software Engineer & Solution Architect | *2018 – 2021*
+### ChyronHego | Senior Frontend Engineer | 2021 – 2024
 
-* Developed interactive monitoring systems for Industry 4.0 (DAQ systems).
-* Maintained critical infrastructure databases for nuclear waste repositories (100% data integrity focus).
-* Modernized internal engineering culture by introducing DevOps workflows and TeamCity/YouTrack integration.
+- Acted as **senior developer** for frontend architecture in broadcast products.
+- Designed and delivered a React-based graphics engine used in live production.
+- Built a custom JavaScript animation engine achieving **50–60 FPS** frame-accurate rendering.
+- Led transition to **Nx monorepo architecture** to:
+  - Enable shared domain and UI layers across **8–10 projects**
+  - Maintain architectural consistency during ~**5× team growth**
+- Mentored and onboarded new engineers, reducing ramp-up time by ~**25%**.
 
-### **Digital Nomad Era** | Full-stack Freelancer | *2012 – 2018*
+---
 
-* Built e-commerce solutions and custom CMS platforms (e.g., *detska-doktorka.eu* – still active after 10 years).
-* Acted as a "Remote-First" pioneer, designing deployment pipelines and communication channels for clients before remote work became standard.
+### Nuvia a.s. | Senior Software Engineer / Solution Architect | 2018 – 2021
 
-### **Red-Hat** | Software Engineer | *2010 – 2012*
+- Led technical direction for interactive monitoring and DAQ systems.
+- Coordinated work between frontend, backend, and infrastructure teams.
+- Maintained mission-critical systems with **100% data integrity requirements**.
+- Introduced CI/CD and DevOps practices, reducing deployment incidents by ~**40%**.
 
-* Specialized in debugging and reproducing complex issues within the JBoss ecosystem.
-* Mastered Open Source discipline and rigorous testing methodologies.
+---
 
-## 🎓 Education
+### Freelance / Digital Nomad Era | Full-Stack Engineer | 2012 – 2018
 
-* **FIT VUT Brno:** Applied Informatics (Algorithms, Systems, and Logic).
-* **SUŠG Jihlava:** Graphic Design (Typography, UI/UX, and Visual Communication).
-* **SPŠT Třebíč:** Electronic Computer Systems (The genesis of my programming journey).
+- Owned end-to-end delivery of client projects (architecture → deployment).
+- Acted as **technical authority** for clients and distributed teams.
+- Designed remote-first workflows, deployment pipelines, and communication standards.
+- Delivered systems still running in production after **10+ years**.
 
-## 🧠 Philosophy & Ethics
+---
 
-* **Ethical Engineering:** Committed to the **ACM Code of Ethics**. I build software that respects user privacy and architectural integrity.
-* **Pragmatic Testing:** I prioritize testing of complex domain logic over chasing 100% code coverage.
-* **Interests:** Audiobooks (Sci-fi, Philosophy, History), TTRPGs, and Rock Climbing (Indoor, Ferratas).
+### Red Hat | Software Engineer | 2010 – 2012
+
+- Worked within large, distributed open-source teams.
+- Debugged and reproduced complex issues in the JBoss ecosystem.
+- Developed strong discipline in collaboration, testing, and code review.
+
+---
+
+## Education
+
+- **FIT VUT Brno** — Applied Informatics
+- **SUŠG Jihlava** — Graphic Design (Typography, UI/UX)
+- **SPŠT Třebíč** — Electronic Computer Systems
+
+---
+
+## Leadership & Engineering Approach
+
+- Lead primarily through **technical clarity and example**, not micromanagement.
+- Favor **small, autonomous teams** with strong shared ownership.
+- Balance delivery pressure with architectural sustainability.
+- Invest in people by mentoring, pairing, and knowledge sharing.

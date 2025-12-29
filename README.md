@@ -1,6 +1,6 @@
 # Alfons Zelicko personal website
 
-[DEMO](https://alfonszelicko.github.io/personal-website/)
+[DEMO](https://zelicko.dev)
 
 - it works without JS (but email links will be not visible), dark/light mod or high/low contrast
   will not be persisted in local storage
