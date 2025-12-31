@@ -1,0 +1,21 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "Obrázek" }}
+{{ $width := .Get "w" | default "800" }}
+{{ $resource := resources.Get (printf "images/notes/%s" $src) }}
+
+{{ if $resource }}
+  {{ $optimized := $resource.Resize (printf "%sx webp" $width) }}
+  {{ $maxWidth := printf "%spx" $width }}
+  <figure style="{{ printf "max-width: %spx; margin: 1em auto;" $width | safeCSS }}">
+    <img
+      src="{{ $optimized.RelPermalink }}"
+      alt="{{ $alt }}"
+      style="width: 100%; height: auto; border-radius: 8px;"
+      loading="lazy" />
+    {{ with .Get "caption" }}
+      <figcaption style="text-align: center; font-size: 0.9em; color: #666;">{{ . }}</figcaption>
+    {{ end }}
+  </figure>
+{{ else }}
+  <p style="color: var(--color-error-rgb);">Error: Picture <b>{{ $src }}</b> not found!</p>
+{{ end }}

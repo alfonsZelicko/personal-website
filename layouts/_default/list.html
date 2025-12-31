@@ -49,29 +49,29 @@
   </section>
   <script>
     (() => {
-/*       // JSON contains tomething like this:
-      {
-      "notes/muj-clanek/": {
-        "comments": 2,
-        "reactions": 5,
-        "reaction_details": {
-          "THUMBS_UP": 3,
-          "HEART": 2
-          }
-        },
-        ...
-      }
-      // -> in the future i have plans to implement it properly :-)
-      const emojiMap = {
-        "THUMBS_UP": "👍",
-        "THUMBS_DOWN": "👎",
-        "LAUGH": "😄",
-        "HOORAY": "🎉",
-        "CONFUSED": "😕",
-        "HEART": "❤️",
-        "ROCKET": "🚀",
-        "EYES": "👀"
-      }; */
+      /*       // JSON contains tomething like this:
+            {
+            "notes/muj-clanek/": {
+              "comments": 2,
+              "reactions": 5,
+              "reaction_details": {
+                "THUMBS_UP": 3,
+                "HEART": 2
+                }
+              },
+              ...
+            }
+            // -> in the future i have plans to implement it properly :-)
+            const emojiMap = {
+              "THUMBS_UP": "👍",
+              "THUMBS_DOWN": "👎",
+              "LAUGH": "😄",
+              "HOORAY": "🎉",
+              "CONFUSED": "😕",
+              "HEART": "❤️",
+              "ROCKET": "🚀",
+              "EYES": "👀"
+            }; */
 
       fetch('{{ "comments-stats.json" | absURL }}')
         .then(response => {

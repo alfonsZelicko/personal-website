@@ -2,7 +2,7 @@
 {{- with .Site.GetPage $path -}}
   {{- .RawContent | markdownify -}}
 {{- else -}}
-  <p style="color:rgb(255, 83, 83); font-weight:bold;">
+  <p style="color:var(--color-error-rgb); font-weight:bold;">
     [Debug] Hugo cannot find: {{ $path }} <br />
     Make sure the file exists in /content/ and has '---' frontmatter.
   </p>

@@ -23,6 +23,7 @@ html {
   --color-quote-rgb: rgb(#{$color-quote-low-rgb});
   --color-border-rgb: rgb(#{$color-quote-low-rgb});
   --color-quote-rgb-values: #{$color-quote-low-rgb};
+  --color-error-rgb: rgb(#{$color-error-low-rgb});
 }
 
 // High contrast mode (checkbox controlled)
@@ -37,6 +38,7 @@ html:has(#contrast-toggle:checked) {
   --color-quote-rgb: rgb(#{$color-quote-high-rgb});
   --color-border-rgb: rgb(#{$color-quote-high-rgb});
   --color-quote-rgb-values: #{$color-quote-high-rgb};
+  --color-error-rgb: rgb(#{$color-error-high-rgb});
 }
 
 // Dark mode for low contrast (default)
@@ -51,6 +53,7 @@ html:has(#theme-toggle:checked) {
   --color-quote-rgb: rgb(#{$color-quote-dark-low-rgb});
   --color-border-rgb: rgb(#{$color-quote-dark-low-rgb});
   --color-quote-rgb-values: #{$color-quote-dark-low-rgb};
+  --color-error-rgb: rgb(#{$color-error-dark-low-rgb});
 }
 
 // Dark mode for high contrast (both checkboxes checked)
@@ -65,6 +68,7 @@ html:has(#contrast-toggle:checked):has(#theme-toggle:checked) {
   --color-quote-rgb: rgb(#{$color-quote-dark-high-rgb});
   --color-border-rgb: rgb(#{$color-quote-dark-high-rgb});
   --color-quote-rgb-values: #{$color-quote-dark-high-rgb};
+  --color-error-rgb: rgb(#{$color-error-dark-high-rgb});
 }
 
 body {
