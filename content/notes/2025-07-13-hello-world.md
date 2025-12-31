@@ -14,8 +14,9 @@ various topics.
 
 ## Why Notes Instead of Blog?
 
-I prefer the term "notes" because it feels more casual and authentic. These aren't polished blog
-posts - they're my genuine thoughts and discoveries that I want to share.
+I prefer the term “notes” because it feels more casual and authentic. These aren’t polished blog
+posts—they’re my genuine thoughts and discoveries that I want to share. And unlike the rest of the
+web, I won’t try to use “perfect” English here—rather my own personal variation of it. ]:->
 
 ## Features
 
@@ -28,11 +29,13 @@ posts - they're my genuine thoughts and discoveries that I want to share.
 I'm planning to add:
 
 - Comment system (mby?)
-  - [x] implement [giscus.app](https://giscus.app/)
-  - [ ] contribute on custom theme for my web :-/ (transparent?/two colors?/add new param for css
-        source?)
+  - ✔ implement [giscus.app](https://giscus.app/)
+  - ✖ contribute on custom theme for my web :-/
 - Tags support
-- Full-text search (with JS)
+- ~~Full-text search (with JS)~~
+
+> theme for the discussions: transparent?/two colors?/add new param for external css source? -> the
+> last one would be perfect - i will see what will say authors about this idea
 
 ---
 

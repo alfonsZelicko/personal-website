@@ -16,7 +16,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # 1. Fetch data from GitHub GraphQL
+          # 1. fetching data - now with reaction details
           gh api graphql -f query='
             query {
               repository(owner: "alfonsZelicko", name: "personal-website") {
@@ -24,23 +24,32 @@ jobs:
                   nodes {
                     title
                     comments { totalCount }
-                    reactions { totalCount }
+                    reactions(first: 100) {
+                      nodes { content }
+                      totalCount
+                    }
                   }
                 }
               }
             }' > raw_data.json
 
-          # 2. Transform to flat JSON object for fast O(1) lookup
-          # Handle potential empty repository or no discussions with a safety check
+          # 2. reaction grouping into flat json
+          mkdir -p static
           cat raw_data.json | jq '.data.repository.discussions.nodes | 
             if . == null then {} else 
-            reduce .[] as $item ({}; . + { ($item.title): { "comments": $item.comments.totalCount, "reactions": $item.reactions.totalCount } }) 
+            reduce .[] as $item ({}; . + { 
+              ($item.title): { 
+                "comments": $item.comments.totalCount, 
+                "reactions": $item.reactions.totalCount,
+                "reaction_details": ($item.reactions.nodes | group_by(.content) | map({ (.[0].content): length }) | add)
+              } 
+            }) 
             end' > static/comments-stats.json
 
       - name: Commit and Push
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git add static/comments-stats.json
-          # Only commit if there are changes to avoid failing the workflow
+          # force add -> in case it is in .gitignore - yes, i did it O:-)
+          git add -f static/comments-stats.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update comment stats" && git push)
