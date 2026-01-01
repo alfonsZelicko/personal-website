@@ -1,143 +1,147 @@
 ---
-title: "[cz] I have opinion: htmx suck"
+title: "I have opinion: htmx sucks"
 date: 2025-12-31T14:23:47+01:00
 slug: "2025-12-31-from-1st-date-to-quick-end"
 categories: []
-tags: ["cz", "programming"]
+tags: ["programming"]
 draft: true
 params:
-  metadescription: ""
-  metakeywords: ""
+  metadescription:
+    "My honest look at htmx. From nostalgic love to quick end in reality of modern web dev."
+  metakeywords: "htmx, react, framework, web development, critique"
 ---
 
-## htmx: Cesta od memu k vystřízlivění
+{{< img src="htmx.png" alt="Love on 1st view" caption="I felt nostalgia for something I lost." >}}
 
-_...(aneb proč Lakatoš vyhrál nad bakelitovou károu)_
+Do you know the meme? In 2010 we had PHP and jQuery and everything was simple... and mess. Then came
+2012 and JS wanted to do all the "V" in [MVC](https://en.wikipedia.org/wiki/Model–view–controller).
+But very fast it went crazy and around 2016 React was the whole MVC[^1]. Millions of sub-frameworks,
+everyone from different author, everything works only because of strong will (and hundreds of
+`node_modules`) and prayers after every `npm upgrade`[^2]. And when it breaks, nobody knows why.
+DevTools are not enough for debug, because endless line of anonymous async functions starting
+somewhere in hell just doesn't make sense...
 
-> **Disclaimer**: Původně jsem chtěl tenhle článek napsat anglicky - pro širší publikum. Ale čím víc
-> jsem se v htmx vrtal, tím víc mi v hlavě zněla hláška: „Ku\*va, ani óčko nenásádíš, protože to je
-> udělalbá!“ Pokud nevíte, o čem mluvím, [YouTube](https://www.youtube.com/watch?v=SiUz_akTmcY) vám
-> to vysvětlí. Protože htmx mi toho Lakatoše připomíná víc, než by mi bylo milé a cizojazyčný čtenář
-> by nechápal... nechám v češtině
+... And then **\<htmx\/\>** appeared. It promised exactly what we all wanted: fast, easy to use,
+modern framework.
 
-{{< img src="htmx.png" alt="Love on 1st view" caption="Ucitil jsem nostalgii k necemu, co jsem ztratil" >}}
+{{< img src="new-framework-promise.png" w="420" alt="meme - new framework - inspired by IT" caption="Another new solution for old bugs!" >}}
 
-Znáte ten meme? V roce 2010 jsme měli PHP a jQuery a všechno bylo přímočaré... a bordel. Pak přišel
-rok 2012 a JS si chtěl vzít na starost celé to "V" v
-[MVC](https://cs.wikipedia.org/wiki/Model-view-controller). Jenže velmi rychle se to cele utrhlo ze
-řetězu a někdy kolem 2016 uz React byl cele to MVC[^1]. Miliony sub-frameworku, každý od jiného
-výrobce, všechno drží po kupe silou vůle (a stovek `node_modules`) a motliteb po kazdem
-`npm upgrade`[^2], a když se to rozbije, nikdo neví proč. Na debug chyby nestaci ani DevTool,
-protoze nekonacna rada anonymnich volani asynchronich funkci, zacinajici az nekde v pekle, proste
-nedava smysl...
+### Phase 1: Honeymoon (Delete 15 000 lines of code!)
 
-... A pak se na scéně objevil **htmx**. Sliboval přesně to, co jsme všichni chtěli: rychlej, easy to
-use, moderni framework.
+My journey started with excitement. I saw a talk from
+[DjangoCon 2022](https://www.youtube.com/watch?v=3GObi93tjZI). David Guillo was talking how they
+threw away React, deleted 15 000 lines of code, removed about 250 dependencies and their life was
+better. "No API contracts! No type duplication! Just send HTML fragment and \<htmx\/\> puts it
+there!"
 
-{{< img src="new-framework-promise.png" w="420" alt="meme - novy framework - inspired by IT" caption="Dalsi nove reseni starych chyb na scene!" >}}
+It sounded like salvation. Finally, a framework made to fix mistakes of all previous frameworks...
+No TypeScript overhead, no state on frontend. Just you and your backend. So I tried it with my own
+[framework stress test](/notes/new-tech-in-eight-steps#my-framework-stress-test).
 
-### Fáze 1: Líbánky (Smažte 15 000 řádků kódu!)
+### Phase 2: First cracks in the wall
 
-Moje cesta začala nadšením. Viděl jsem přednášku z
-[DjangoConu 2022](https://www.youtube.com/watch?v=3GObi93tjZI), kde David Guillo barvitě popisoval,
-jak vyhodili React, smazali 15 000 řádků kódu a zbavili (asi ?) 250 zavislosti a jejich život se
-stal barevnějším. „Žádné API kontrakty! Žádná duplicita typů! Prostě pošlete HTML fragment a htmx ho
-tam vlepí!“
+> But then you start building something more than "Hello World". And it starts to be hard.
 
-Znělo to jako spása. Žádný TypeScript overhead, žádné řešení stavu na frontendu. Jen vy a váš
-backend. Tak jsem to zkusil protáhnout vlastním „framework stress testem“.
+First thing that surprised me was **architectural inconsistency**. You find out that `hx-get`
+behaves differently in different places. Sometimes you expect it replaces whole element, sometimes
+only inside. Suddenly you are writing logic inside HTML attributes where it should never be.
 
-### Fáze 2: První trhliny v omítce
+When you need that one click updates three different parts of page which are not connected, this
+"simplicity" starts to hurt. You must use `hx-swap-oob` (out-of-band), which is basically a "GOTO"
+command for HTML. Or you start making strange "HTML puzzles" on server which breaks all clean code.
 
-Jenže pak začnete stavět něco víc než jen „Hello World“. A začne to drhnout.
+#### ...but let's talk real:
 
-První věc, která mě zarazila, byla **architektonická nekonzistence**. Zjistíte, že `hx-get` se v
-různých kontextech chová jinak. Jednou očekáváte, že se přepíše celý element, jindy jen vnitřek, a
-najednou se přistihnete, že do HTML atributů píšete logiku, která by tam nikdy neměla být.
+1.  **"OOB" (Out-of-Band) Hell**
 
-Jakmile potřebujete, aby jedno kliknutí zaktualizovalo tři různé části stránky, které spolu
-nesouvisí, začne ta „jednoduchost“ bolet. Buď musíte používat `hx-swap-oob` (out-of-band), což je v
-podstatě „goto“ příkaz pro HTML, nebo začnete na serveru skládat podivné slepence, které rozbíjejí
-jakoukoli čistotu kódu.
+    In \<htmx\/\>, the "clean way" is that you click a button and it replaces itself with new HTML.
+    But in real app, you click "Add to cart" and you want:
 
-#### ...ale at se bavime vecne:
+- Change text of button.
+- Update cart icon in header.
+- Show notification in corner.
 
-1.  **"OOB" (Out-of-Band) Peklo** V htmx je "čistá cesta" taková, že klikneš na tlačítko a ono se
-    samo nahradí novým HTML. Jenže v reálné aplikaci klikneš na "Přidat do košíku" a chceš:
-    - Změnit text tlačítka.
-    - Aktualizovat ikonku košíku v headeru.
-    - Zobrazit notifikaci v rohu.
+  > Server returns a blob of HTML with `hx-swap-oob="true"` tags. Every tag is like a hidden jump
+  > instruction. **Congratulations, in 2024 you invented GOTO again**, you just call it hypermedia.
 
-      ... V htmx to znamená poslat ze serveru slepenec HTML, kde jsou tyhle tři věci rozházené a
-      označené `hx-swap-oob="true"`.
+2.  **Loss of "Single Source of Truth"**
 
-> "Místo čistého JSONu, který si frontend zpracuje, posíláte ze serveru 'teleporty' kousků HTML.
-> **Gratuluji, právě jste vynalezli GOTO v roce 2024**, jen tomu říkáte hypermedia."
+    In React/Vue you know the state of app is in JS. In \<htmx\/\> the state is... where? A bit in
+    database, a bit in URL, a bit in DOM and a bit in head of programmer who must remember what
+    happens when user clicks Back button in browser.
 
-2. **Ztráta "Single Source of Truth"** V Reactu/Vue víš, že stav aplikace je v JS. V htmx je stav...
-   kde? Trochu v databázi, trochu v URL, trochu v DOMu a trochu v hlavě programátora, který si musí
-   pamatovat, co se stane, když uživatel klikne na Back v prohlížeči.
+3.  **Let's talk about debugging**
 
-> "Zkuste v htmx vyřešit tlačítko 'Zpět', aniž by se vám rozskočila hlava nebo se stránka nevrátila
-> do nějakého polorozpadlého stavu z mezipaměti."
+    **React:** We all know debug in React is masochism. Callstack looks like script for
+    [Tenet](https://www.imdb.com/title/tt6723592/) movie and without
+    [React Dev Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+    you are lost. BUT: it shows you big red error. And when you throw away your pride and copy-paste
+    whole callstack to AI, it actually makes sense...
 
-3. **Debugging v "Network Tabu"** Ladění htmx je jako sledování Matrixu.
+    **\<htmx\/\>:** When something breaks in \<htmx\/\>, you debug three things of chaos at once:
+    _server_, _client_ and _library itself_. You look at Network tab at HTML fragments, then you
+    jump to backend templates and finally you find out this "bug" is native behavior of library
+    which goes against logic and everyone hates it... and all this only if you actually find out it
+    is broken. \<htmx\/\> communicates errors like old married couples after 20 years – it says
+    nothing[^3]...
 
-### Fáze 3: Shock z codebase a vystřízlivění
+### Phase 3: Codebase shock and waking up
 
-Začal jsem pochybovat. Pak jsem ale narazil na texty a videa, které mi potvrdily, že nejsem blázen:
+I started to doubt – what am I doing wrong... But then I found texts and videos which confirmed I am
+not crazy:
 
-1. **Chris Done** a jeho [brilantní kritika](https://chrisdone.com/posts/htmx-critique/): htmx sice
-   maže kód na frontendu, ale za cenu toho, že vytváří neudržitelný propletenec (coupling) mezi
-   serverem a klientem.
-2. **The Primeagen** a jeho [vystřízlivění z htmx](https://www.youtube.com/watch?v=9AtijVV11SA):
-   htmx selhává v momentě, kdy potřebujete synchronizovat stav na klientovi. Což je dneska skoro
-   každý moderní web.
-3. Sám autor v eseji [htmx sucks](https://htmx.org/essays/htmx-sucks/) přiznává, že je to ošklivý
-   hack.
+1. **Chris Done** and his [great critique](https://chrisdone.com/posts/htmx-critique/): \<htmx\/\>
+   deletes code on frontend, but price is that it makes terrible "coupling" between server and
+   client.
+2. **The Primeagen** and his
+   [waking up from \<htmx\/\>](https://www.youtube.com/watch?v=9AtijVV11SA): \<htmx\/\> fails when
+   you need to sync state on client. Which is almost every modern web today.
+3. Author himself in essay [\<htmx\/\> sucks](https://htmx.org/essays/htmx-sucks/) says it is an
+   "ugly hack".
 
-### Fáze 4: Syntéza – Lakatoš vs. Hliníková kára
+### Phase 4: Synthesis
 
-Můj verdikt? htmx je úžasné demo, ale nebezpečný produkt.
+My verdict? \<htmx\/\> is great demo, but dangerous product.
 
-Pojďme si promluvit o **ladění**. Všichni víme, že debugovat React je čistý masochismus. Callstack
-vypadá jako scénář k [Tennet](https://www.csfd.cz/film/693159-tenet/prehled/) a bez
-[React Dev Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-jsi v háji. ALE: ukaze se ti velka cervena chyba a kdyz zahodis hrdost a celej ten callstack zkopcis
-do AI, tak to celkem dava smysl. Jenže u htmx? Tam jsi v háji ještě hlouběji.
+- **Modern stack (React/Next)** is full of JS, last X versions only bring fixes for fixes of their
+  own concepts... but at least you have **diagnostics**. You know where data ends and UI starts.
+- **\<htmx\/\>** is sweet nostalgia. We feel we go back to simplicity, but it is only because we
+  forgot why we ran away so fast before. \<htmx\/\> reminds us that "good old days" were actually
+  mess. It reminds us why we made all modern workflows and frameworks which we now hate with love.
 
-Když se něco rozbije v htmx, ladíš v jeden moment **svatou trojici chaosu**: server, klienta a
-samotnou knihovnu. Koukáš do Network tabu na ty HTML fragmenty, pak skáčeš do backendových šablon a
-nakonec zjistíš, že věc, která tě vytáčí, není chyba, ale **feature**. Feature, kterou už dva roky
-všichni nenávidí, existuje na ni 242 342 hacků, a v praxi ji tím „původním“ způsobem nepoužívá
-nikdo... a to vse za predpokladu, ze zjistis, ze to je rozbite - htmx s tebou chyby komunikuje dost
-podobne jako spolu mluvi pary po 20-ti letech[^1]...
+### Conclusion: Back to brain
 
-- **Moderní stack (React/Next)** sice vypadá jako ten převrtanej Lakatoš, kde teče olej a polovina
-  věcí je tam navíc, ale když se něco rozbije, aspoň máš diagnostiku. Víš, kde končí data a kde
-  začíná UI.
-- **htmx** je hliníková kára. Super na to, když vezeš nákup z Lidlu za roh, ale na dálnici s tím
-  nechceš. Protože na dálnici se ta kára začne klepat, upadne jí kolo a ty zjistíš, že tvůj „návrat
-  ke kořenům“ je ve skutečnosti jen návrat do éry, kdy jsme sice psali míň kódu, ale víc jsme pili,
-  abychom z toho nezešíleli.
+Don't be drunk from memes. \<htmx\/\> is not revolution. It is a nostalgic trip which reminded us
+that HTML is powerful, but also showed us why we actually built modern frameworks.
 
-### Závěr: Návrat k rozumu
+I have a confession: Once upon a time, I wrote my own framework very similar to \<htmx\/\>. It was
+back in the days of Angular 0.8. It was built around jQuery and the core of the whole thing was
+basically just `$.load()`...
 
-Nenechte se opít memy. htmx není revoluce. Je to nostalgický výlet, který nám připomněl, že HTML je
-mocné, ale taky nám ukázal, proč jsme ty moderní frameworky vlastně postavili.
+```javascript
+// My "revolutionary" framework in 2012
+$("#result").load("ajax/test.html");
+```
 
-Budu htmx dál sledovat? Určitě, ty memy jsou skvělé. Použiju ho na příští velký projekt? Ani
-náhodou. Raději si nechám toho svého Lakatoše. Je sice složitej, ale aspoň vím, že mě nenechá ve
-štychu, když se cesta začne klikatit.
+I think I was not the only one. It feels like someone just found their old project after many years,
+finished it, and then it became overhyped for a moment...
 
-[^1] Na začátku geniální nápad: „uděláme masivní JS framework, server bude jen hloupý dodavač dat a
-žádné skládání HTML“. O chvíli později ještě geniálnější pokračování: „a když už to máme, tak ten
-server stejně zatížíme — poběží na JS a bude to HTML skládat taky“. A vznikl Next.JS
-https://en.wikipedia.org/wiki/Next.js
+```html
+<button hx-get="/ajax/test.html" hx-target="#result">Load</button>
+```
 
-[^2] A ted nemluvim jen o klasicke motlitbe, jestli tam vyvojari OMYLEM nezanesli nejakej
-bordel/nekompatibilitu.. ale stare dobre
-[trojany](https://www.blackduck.com/blog/recent-npm-software-supply-chain-attack-security-lessons.html)
+[^1]:
+    At start, great idea: "we make big JS framework, server will be only stupid data provider and no
+    HTML building". Little later, even better idea: "and when we have it, we put load on server
+    again – it will run on JS and build HTML too". And Next.js was born.
 
-[^] Ano, nasel jsem par videi, kde typek pouzival nejaky specializovany tool, ktery trochu pomuze -
-ale presne jen tolik. TROCHU (dosad si ton z Lakatose: "A je to cele akorat tak NA P\*CU")
+[^2]:
+    And I am not talking only about classic prayer if developers accidentally made some
+    incompatibility... but good old
+    [trojans](https://www.blackduck.com/blog/recent-npm-software-supply-chain-attack-security-lessons.html)
+    which come to stable production and drink all your AWS credits by crypto mining faster than real
+    bugs kill the server.
+
+[^3]:
+    Yes, I found some videos where guy used some special tool which helps a bit – but exactly only
+    that much. A BIT. (Imagine the tractor mechanic voice: "It is all just SH\*T").
