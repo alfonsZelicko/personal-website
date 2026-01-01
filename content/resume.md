@@ -3,14 +3,34 @@ title = "Resume Alfons Zelicko"
 slug = "resume"
 +++
 
-**Senior Frontend Engineer | Solutions Architect | Engineering Leader**
+**Senior Frontend Engineer | Engineering Lead | System Modernizer**
 
-> “I believe a programmer must keep running just to stay in the same place, and a front-end developer needs a motorcycle to keep up with the speed of change.”
+>I focus on greenfield development and the pragmatic modernization of long-lived systems. I help restore technical clarity, establish cohesive frontend architecture and UI, and enable teams to scale in a sustainable, low-disruption way.
+
 ---
 
 ## Professional Summary
 
-Senior software engineer and engineering leader with **15+ years of experience** delivering scalable, user-centric systems. Proven ability to **lead and stabilize engineering teams**, define technical direction, and translate vague business goals into executable architectures. Strong focus on shared ownership, architectural clarity, and long-term sustainability of systems and teams.
+Senior software engineer and technical leader with **15+ years of experience** building and evolving user-facing systems. I work best in environments that are either being built from scratch or need to be carefully modernized. My strength lies in identifying structural bottlenecks (technical and organizational), introducing shared standards, and helping teams evolve how they build software — pragmatically and incrementally.
+
+---
+
+## Engineering Patterns I Bring
+
+- **Incremental modernization**  
+  Improving legacy systems step by step without blocking delivery or forcing risky rewrites.
+
+- **UI & frontend unification**  
+  Establishing shared component libraries and visual language to reduce fragmentation and cognitive load.
+
+- **Shared ownership & knowledge distribution**  
+  Actively reducing bus factor through architectural boundaries, documentation, pairing, and explicit ownership.
+
+- **Bottleneck identification**  
+  Recognizing where tools, workflows, or unclear responsibilities slow teams down — and addressing root causes.
+
+- **Process evolution that sticks**  
+  Introducing changes that teams actually adopt, based on real constraints rather than theory.
 
 ---
 
@@ -20,22 +40,21 @@ Senior software engineer and engineering leader with **15+ years of experience**
 
 - TypeScript, JavaScript (ES6+), React (16.8+)
 - HTML5, CSS3 (SCSS, Less)
-- Nx monorepos, TanStack, Material UI/Tailwind
-- High-performance JavaScript engines and animation systems
+- Nx monorepos, shared component libraries
+- Performance-sensitive UI and animation systems
 
 ### Backend & Architecture
 
 - Python, Node.js, Java (Spring Boot)
-- Clean Architecture, Domain-Driven Design (DDD)
-- Long-lived system design and legacy modernization
+- Clean Architecture, DDD
+- Long-lived system design and legacy evolution
 
-### Engineering Leadership & Process
+### Leadership & Collaboration
 
-- Technical leadership for teams of **5–8 engineers**
-- Defining architectural standards and shared code ownership
-- Mentoring, onboarding, and leveling engineers
-- Reducing **Bus Factor** and operational risk
-- Driving pragmatic engineering processes (CI/CD, DevOps)
+- Technical leadership in teams of **5–8 engineers**
+- Architectural standards and cross-team alignment
+- Mentoring, onboarding, and knowledge sharing
+- CI/CD, DevOps, and delivery process improvement
 
 ---
 
@@ -43,62 +62,69 @@ Senior software engineer and engineering leader with **15+ years of experience**
 
 ### Sabbatical & AI Exploration | 2024 – Present
 
-- Researching AI-assisted development workflows and LLM orchestration.
+- Exploring AI-assisted development workflows and LLM orchestration.
 - Building automation tools with Python, Django, and htmx.
-- Exploring new engineering interaction models (protocol-driven, UI-less apps).
+- Experimenting with protocol-driven and UI-light interaction models.
 - Improved personal development throughput by ~**20–40%**.
 
 ---
 
 ### ChyronHego | Senior Frontend Engineer | 2021 – 2024
 
-- Acted as **senior developer** for frontend architecture in broadcast products.
-- Designed and delivered a React-based graphics engine used in live production.
-- Built a custom JavaScript animation engine achieving **50–60 FPS** frame-accurate rendering.
-- Led transition to **Nx monorepo architecture** to:
-  - Enable shared domain and UI layers across **8–10 projects**
-  - Maintain architectural consistency during ~**5× team growth**
+- Joined during early growth (~18 engineers) and contributed to frontend practices that scaled to ~**120 engineers**.
+- Participated in defining and evolving a **company-wide React-based frontend framework**.
+- Helped establish a shared component library with clear **versioning and upgrade strategy**.
+- Enabled multiple products to evolve in sync instead of fragmenting during rapid organizational growth.
 - Mentored and onboarded new engineers, reducing ramp-up time by ~**25%**.
 
 ---
 
 ### Nuvia a.s. | Senior Software Engineer / Solution Architect | 2018 – 2021
 
-- Led technical direction for interactive monitoring and DAQ systems.
-- Coordinated work between frontend, backend, and infrastructure teams.
-- Maintained mission-critical systems with **100% data integrity requirements**.
-- Introduced CI/CD and DevOps practices, reducing deployment incidents by ~**40%**.
+- Contributed to a transition from **SVN to Git**, improving collaboration and code ownership.
+- Helped introduce clear frontend/backend role boundaries, reducing cross-discipline friction.
+- Identified workflow inefficiencies where backend engineers were blocked by UI concerns and helped redesign responsibilities.
+- This significantly reduced development time, maintenance cost, and reliance on fragile UI hacks.
+- Gradually automated deployment processes to reduce manual steps and operational risk.
 
 ---
 
 ### Freelance / Digital Nomad Era | Full-Stack Engineer | 2012 – 2018
 
-- Owned end-to-end delivery of client projects (architecture → deployment).
-- Acted as **technical authority** for clients and distributed teams.
-- Designed remote-first workflows, deployment pipelines, and communication standards.
+- Owned end-to-end delivery of client projects from architecture to production.
+- Acted as technical authority for clients and distributed teams.
+- Designed remote-first workflows and deployment pipelines.
 - Delivered systems still running in production after **10+ years**.
 
 ---
 
 ### Red Hat | Software Engineer | 2010 – 2012
 
-- Worked within large, distributed open-source teams.
-- Debugged and reproduced complex issues in the JBoss ecosystem.
+- Worked in large, distributed open-source teams.
+- Debugged complex issues in the JBoss ecosystem.
 - Developed strong discipline in collaboration, testing, and code review.
 
 ---
 
 ## Education
 
-- **FIT VUT Brno** — Applied Informatics
-- **SUŠG Jihlava** — Graphic Design (Typography, UI/UX)
-- **SPŠT Třebíč** — Electronic Computer Systems
+- **FIT VUT Brno** — Applied Informatics  
+- **SUŠG Jihlava** — Graphic Design (Typography, UI/UX)  
+- **SPŠT Třebíč** — Electronic Computer Systems  
 
 ---
 
-## Leadership & Engineering Approach
+## Leadership & Working Style
 
-- Lead primarily through **technical clarity and example**, not micromanagement.
-- Favor **small, autonomous teams** with strong shared ownership.
-- Balance delivery pressure with architectural sustainability.
-- Invest in people by mentoring, pairing, and knowledge sharing.
+- Lead through **technical clarity and example**, not micromanagement.
+- Prefer **direct, transparent communication** and clear ownership.
+- Thrive in environments focused on constructive discussion and shared responsibility.
+- Balance delivery pressure with long-term system and team sustainability.
+
+---
+
+## Languages
+
+- Czech — native  
+- English — fluent (daily professional use)
+- German - able to speak/understeand

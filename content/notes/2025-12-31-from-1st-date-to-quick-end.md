@@ -2,9 +2,8 @@
 title: "I have opinion: htmx sucks"
 date: 2025-12-31T14:23:47+01:00
 slug: "2025-12-31-from-1st-date-to-quick-end"
-categories: []
-tags: ["programming"]
-draft: true
+categories: ["programming"]
+tags: ["programming", "htmx", "react", "frontend"]
 params:
   metadescription:
     "My honest look at htmx. From nostalgic love to quick end in reality of modern web dev."
@@ -108,6 +107,8 @@ My verdict? \<htmx\/\> is great demo, but dangerous product.
 - **\<htmx\/\>** is sweet nostalgia. We feel we go back to simplicity, but it is only because we
   forgot why we ran away so fast before. \<htmx\/\> reminds us that "good old days" were actually
   mess. It reminds us why we made all modern workflows and frameworks which we now hate with love.
+
+  {{< img w="500" src="frontend-evolution.png" alt="evolution of FE" caption="Last few years we just fight for the fight..." >}}
 
 ### Conclusion: Back to brain
 

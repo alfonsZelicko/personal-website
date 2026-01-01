@@ -1,10 +1,14 @@
 {
   "personal-website/notes/hello-world-notes/": {
     "comments": 1,
-    "reactions": 1
+    "reactions": 1,
+    "reaction_details": {
+      "ROCKET": 1
+    }
   },
   "notes/hello-world-notes/": {
     "comments": 1,
-    "reactions": 0
+    "reactions": 0,
+    "reaction_details": null
   }
 }
