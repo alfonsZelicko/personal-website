@@ -73,7 +73,12 @@
               "EYES": "👀"
             }; */
 
-      fetch('{{ "comments-stats.json" | absURL }}')
+      /* I am not proud on this hack - somebody help me? :-) problem is, imho, with Hugo - ALWAYS adds full url from `baseurl` config
+      `fetch('{{ "comments-stats.json" | absURL }}')` || `fetch('{{ "comments-stats.json" | relURL }}')` not working
+       */
+      const statsUrl = window.location.origin + "/comments-stats.json";
+
+      fetch(statsUrl)
         .then(response => {
           if (!response.ok) {
             throw new Error("Network response was not ok: " + response.statusText);
@@ -86,7 +91,7 @@
           document.querySelectorAll(".additional-info").forEach(el => {
             let path = el.getAttribute("data-path") || "";
             path = path.startsWith("/") ? path.slice(1) : path;
-            const commentCount = (stats[path] && stats[path].comments) ? stats[path].comments : 0;
+            const commentCount = stats[path] && stats[path].comments ? stats[path].comments : 0;
             el.innerText = `(${commentCount} comments)`;
           });
         })

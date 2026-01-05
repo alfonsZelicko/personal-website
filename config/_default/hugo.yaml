@@ -2,7 +2,7 @@ baseurl: "/"
 title: "Alfons Zelicko"
 languageCode: "en"
 timeZone: "Europe/Prague"
-canonifyurls: true
+canonifyURLs: false
 
 markup:
   defaultMarkdownHandler: "goldmark"

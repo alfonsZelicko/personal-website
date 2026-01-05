@@ -1,0 +1,37 @@
+/* Giscus Light Theme - matching zelicko.dev */
+main {
+  --color-prettylights-syntax-comment: #928374;
+  --color-prettylights-syntax-constant: #473c2d;
+  --color-prettylights-syntax-entity: #a05a1e;
+  --color-prettylights-syntax-storage-modifier-import: #473c2d;
+  --color-prettylights-syntax-entity-tag: #493a2b;
+  --color-prettylights-syntax-keyword: #a05a1e;
+  --color-prettylights-syntax-string: #473c2d;
+  --color-prettylights-syntax-variable: #a05a1e;
+
+  --color-fg-default: rgb(71, 60, 45); /* $color-text-low-rgb */
+  --color-fg-muted: rgba(71, 60, 45, 0.8);
+  --color-fg-subtle: rgba(71, 60, 45, 0.6);
+  --color-canvas-default: rgb(235, 225, 200); /* $color-bg-low-rgb */
+  --color-canvas-overlay: rgb(220, 210, 185); /* $color-code-bg-low-rgb */
+  --color-canvas-inset: rgb(220, 210, 185);
+  --color-canvas-subtle: rgb(220, 210, 185);
+  --color-border-default: rgba(71, 60, 45, 0.15);
+  --color-border-muted: rgba(71, 60, 45, 0.1);
+
+  --color-accent-fg: rgb(160, 90, 30); /* $color-link-low-rgb */
+  --color-accent-emphasis: rgb(190, 110, 40); /* $color-link-active-low-rgb */
+
+  --color-btn-text: rgb(71, 60, 45);
+  --color-btn-bg: rgb(220, 210, 185);
+  --color-btn-border: rgba(71, 60, 45, 0.2);
+  --color-btn-hover-bg: rgb(210, 200, 175);
+
+  --color-btn-primary-bg: rgb(160, 90, 30);
+  --color-btn-primary-text: rgb(235, 225, 200);
+
+  --color-btn-primary-hover-bg: rgb(190, 110, 40); /* $color-link-active-low-rgb */
+  --color-btn-primary-hover-border: rgb(160, 90, 30);
+  --color-btn-primary-disabled-text: rgba(235, 225, 200, 0.5);
+  --color-btn-primary-disabled-bg: rgba(160, 90, 30, 0.6);
+}

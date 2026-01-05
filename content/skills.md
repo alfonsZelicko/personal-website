@@ -3,40 +3,33 @@ title: "Skills and Expertise"
 slug: "skills"
 ---
 
-I won’t list every technology I’m familiar with. Instead, this section reflects what I’ve actually
-worked with, based on **real experience**. I regularly explore and experiment with new technologies
-out of curiosity, but not all of them are listed here. The [Learning section](/experience/learning/)
-includes some of these, although I only started keeping those notes recently.
+This section reflects technologies I’ve used in **real projects**, not everything I’ve ever tried. I
+regularly explore new tools out of curiosity; some appear in the
+[Learning section](/experience/learning/), which I started documenting only recently.
 
 ### Frontend Stack
 
-- **Primary**: TypeScript/JavaScript, React (16.8+), HTML/CSS (SCSS, Less)
-- **Secondary/Legacy**: Svelte, Angular, htmx, jQuery (3.0+)
-- **Favorite support**: Material UI/Tailwind/Bootstrap, Tanstack, Nx, Cypress...
+- **Primary**: **TypeScript**/JavaScript, **React** (16.8+), HTML/CSS (SCSS, Less)
+- **Secondary/Legacy**: Svelte, Angular, htmx, **jQuery** (3.0+)
+- **Supporting tools**: **Material UI**, Tailwind, Bootstrap, TanStack, **Nx**, Cypress, Jest, ...
 
-The front-end landscape is vast, and I make a conscious effort to maintain a broad overview of how
-different frameworks and technologies solve common problems. This perspective allows me to choose
-the **right tool [based on team strengths](http://mikhailian.mova.org/node/284)** rather than just
-following the latest hype.
+I keep a broad overview of the frontend ecosystem to choose the
+[right tool for the team](http://mikhailian.mova.org/node/284), not the latest trend. I generally
+prefer PWAs over React Native, though I plan to evolve some personal projects into native mobile
+apps.
 
-I prefer PWA over **React native**, but in the future I am planning to convert some of my personal
-projects into [full Android/iOS apps](experience/learning/#future-tech-radar)... all that new
-possibilities!
-
-> I have a genuine appreciation for maintaining legacy applications from the "pre-modern" era.
+> I have a genuine appreciation for maintaining legacy applications from the “pre-modern” era.
 > Greenfield projects are cute, but I’m the guy you call when the reality of legacy code hits and
 > you need to improve usability without breaking business continuity.
 
 ### Back-End & Architecture
 
-- **Languages**: Currently primary focus on **Python** and **TypeScript/JS** (Node.js), with a solid
-  professional background in Java (Spring Boot)
-- **Foundations**: Once upon a time I spent several years maintaining legacy projects in _Pascal_
-  and _C/C++_, later _PHP_
+- **Languages**: Primarily **Python** and **TypeScript/JS (Node.js)**, with strong experience in
+  Java (Spring Boot)
+- **Foundations**: Earlier work in Pascal, C/C++, and PHP
 
-I can architect and deliver back-end services, but my core focus has shifted entirely to the
-front-end. Today, I’m most effective as architectural support—ensuring seamless API integration and
-actually meaningful error handling rather than coding the back-end from scratch.
+While I can deliver backend services, my focus is now frontend-oriented architecture—API design,
+integration, and meaningful error handling rather than backend-heavy development.
 
 > I can deliver Node.js services, but I still believe **JavaScript belongs where God intended**: on
 > the client side. The recurring
@@ -45,49 +38,38 @@ actually meaningful error handling rather than coding the back-end from scratch.
 
 ### Data & Persistence
 
-Since the database was often the client’s choice, I learned to treat it as a swappable component. I
-focus on portable data modeling that works across relational, NoSQL, or cloud-native systems,
-avoiding vendor-specific "hacks" unless a bottleneck truly demands a specialized solution.
+I treat databases as replaceable components and focus on portable data models that work across
+relational, NoSQL, and cloud systems, avoiding vendor lock-in unless performance truly requires it.
 
 ### Infrastructure & Deployment
 
-- **Scripting & OS**: OS-agnostic approach using Bash and Batch (.bat)
-- **CI/CD**: **GitHub Actions**, **GitLab CI**, Jenkins, **TeamCity**
-- **Tools**: Docker, Nginx, Apache, Basic AWS exposure
+- **Scripting**: Bash, Batch (.bat), OS-agnostic
+- **CI/CD**: GitHub Actions, GitLab CI, Jenkins, TeamCity
+- **Tools**: Docker, Nginx, Apache, basic AWS
 
-I am not a dedicated DevOps engineer, but I am fully self-sufficient when it comes to managing my
-own projects. I can navigate infrastructure boundaries, set up pipelines, and handle deployments
-independently... but I prefer not to :-)
+Not a DevOps specialist, but fully self-sufficient with pipelines and deployments—preferably as
+little as possible.
 
 ### Product & Domain Experience
 
-I am a **front-end specialist** with a full-stack background. I spent my first decade building
-systems from the ground up before the "front-end boom" redefined the industry. This evolution allows
-me to maintain a high-level view of the entire product lifecycle—focusing on usability, long-term
-maintainability, and making **pragmatic technical decisions** based on real-world needs.
+I’m a **frontend specialist with a full-stack background**. Years of building systems end-to-end
+allow me to focus on usability, maintainability, and **pragmatic technical decisions**.
 
-- **Customer-Facing Products**: I can act as the bridge between a client's vision and the
-  development team—helping to formulate technical requirements, create cost estimates, and ensure
-  the final product solves the actual business problem.
-- **Strategic UI Engineering**: I distinguish between "making a UI change" and "solving a UI
-  problem." I focus on improving user experience while keeping the implementation cost-effective and
-  maintainable.
-- **Industry 4.0**: With years of experience building DAQ systems, I provide a deep understanding of
-  industrial environments, hardware-software integration, and the specific challenges of Industry
-  4.0.
+- **Customer-facing products**: Translating business needs into clear technical solutions
+- **Strategic UI engineering**: Solving UX problems, not just changing visuals
+- **Industry 4.0**: Deep experience with DAQ systems and industrial environments
 
 ### Team & Process Leadership
 
-- **Team Lead**: Mentoring, onboarding, technical decision-making, and unblocking daily hurdles
-- **Agile & Workflow**: Full lifecycle management (Scrum, Waterfall)
-- **Team Dynamics**: Identifying "Bus Factor" risks, stabilizing teams and more based on context
-- **Stakeholder communication**: Roadmap execution and technical consulting
+- **Team leadership**: Mentoring, onboarding, decision-making
+- **Process**: Scrum, Waterfall, lifecycle ownership
+- **Team stability**: Reducing bus factor, improving knowledge sharing
+- **Stakeholders**: Roadmaps, consulting, execution
 
-When leading, I drive a culture of developer satisfaction and shared ownership. My goal is a stable
-team with no "heroes," high knowledge redundancy, and code written with our "future selves" in mind.
+I aim for stable teams with shared ownership, no single points of failure, and code written for our
+future selves.
 
-> Full Agile is pretty expansive, but can help to find/identify problems -> then i prefer to switch
-> in some lightweight mutation of it.
+> Full Agile helps identify problems; I usually switch to a lighter, context-driven variant.
 
 ---
 

@@ -1,4 +1,14 @@
 {
+  "headers": [
+    {
+      "source": "/(.*).json",
+      "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+    },
+    {
+      "source": "/(.*).css",
+      "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+    }
+  ],
   "build": {
     "env": {
       "HUGO_VERSION": "0.143.1"

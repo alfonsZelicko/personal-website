@@ -3,12 +3,13 @@ title: "Professional work experience"
 slug: "experience"
 ---
 
-Having experienced both the freelance world and full-time roles, I’ve learned that I thrive most
-when I can **stay with one company for years**. I value building **long-term synergy with a team**
-and having enough time to truly master the domain. For me, it’s about professional growth and
-**never leaving a job unfinished**.
+Having worked as both a freelancer and a full-time engineer, I’ve learned that I do my best when I
+can **stay with one company long term**. I value building **deep team synergy** and having time to
+truly master the domain. For me, it’s about sustained growth and **seeing things through to
+completion**.
 
-During the years I developed a **prefered dev environment** - more about [here](/environment).
+During the years I developed a **prefered dev environment** - more about
+[here](/notes/2026-01-02-dev-environment).
 
 ### TL;DR Summary
 
@@ -26,21 +27,19 @@ During the years I developed a **prefered dev environment** - more about [here](
 
 _2024 – Present_
 
-After years of shifting between critical infrastructure and high-stakes broadcast engineering, I
-decided to take a step back and focus on my most important "long-term project": **my son**. However,
-I’ve repurposed my professional drive into exploring the bleeding edge of AI, treating it as a new
-frontier for system orchestration. I am working on few projects - more about them in
-[learning page](/experience/learning) and i am planning to make a few new.
+After years in critical infrastructure and broadcast engineering, I stepped back to focus on my most
+important long-term project: **my son**. In parallel, I redirected my professional energy toward AI,
+exploring it as a new frontier for system orchestration. I’m currently working on several projects
+(see the [learning page](/experience/learning)) and planning more.
 
 #### The Next Chapter: Looking for a Team
 
-While personal projects keep me sharp, **I miss the impact of a professional environment** and the
-logic of systems that operate at scale. I’m ready to end my sabbatical for an opportunity where
-engineering **decisions actually matter**.
+Personal projects keep me sharp, but I miss the impact of working in a professional environment and
+building systems at scale. I’m ready to return for a role where engineering decisions truly matter.
 
-I'm looking for a team that values pragmatic, sustainable builds—whether we are starting from
-scratch or untangling a complex legacy system. If you need an engineer who thinks in systems,
-prioritizes clarity over hype (and occasionally over-engineers his fridge), **let’s talk!**
+I’m looking for a team that values pragmatic, sustainable solutions—whether building **from
+scratch** or **untangling legacy systems**. If you need a system-oriented engineer who prioritizes
+clarity over hype, **let’s talk!**
 
 ---
 

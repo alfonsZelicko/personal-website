@@ -1,18 +1,39 @@
 <script>
-  window.sendToGiscus = function (config) {
+  const sendToGiscus = config => {
     const iframe = document.querySelector("iframe.giscus-frame");
     if (iframe?.contentWindow) {
       iframe.contentWindow.postMessage({ giscus: { setConfig: config } }, "https://giscus.app");
     }
   };
 
+  const themeDark = "https://www.zelicko.dev/css/giscus-dark.css";
+  const themeLight = "https://www.zelicko.dev/css/giscus-light.css";
+
+  window.addEventListener("message", event => {
+    if (event.origin !== "https://giscus.app") return;
+    if (!(typeof event.data === "object" && event.data.giscus)) return;
+
+    const isDarkTheme = localStorage.getItem("isDarkTheme") === "true";
+    sendToGiscus({ theme: isDarkTheme ? themeDark : themeLight });
+  });
+
   window.addEventListener("app:prefs-changed", event => {
     const { source, newValue } = event.detail;
     if (source === "theme-toggle") {
-      const newTheme = newValue ? "gruvbox_dark" : "gruvbox_light";
-      window.sendToGiscus({ theme: newTheme });
+      const newTheme = newValue ? themeDark : themeLight;
+      sendToGiscus({ theme: newTheme });
     }
   });
+
+  (() => {
+    const isDarkTheme = localStorage.getItem("isDarkTheme") === "true";
+    const initialTheme = isDarkTheme ? themeDark : themeLight;
+
+    const script = document.getElementById("giscus-script");
+    if (script) {
+      script.setAttribute("data-theme", initialTheme);
+    }
+  })();
 </script>
 
 <script
@@ -26,19 +47,7 @@
   data-reactions-enabled="1"
   data-emit-metadata="0"
   data-input-position="bottom"
-  data-theme="gruvbox_dark"
+  data-theme="https://www.zelicko.dev/css/giscus-dark.css"
   id="giscus-script"
   crossorigin="anonymous"
   async></script>
-
-<script>
-  (() => {
-    const isDarkTheme = localStorage.getItem("isDarkTheme") !== "false";
-    const giscusTheme = isDarkTheme ? "gruvbox_dark" : "gruvbox_light";
-    const script = document.getElementById("giscus-script");
-
-    if (script && script.getAttribute("data-theme") !== giscusTheme) {
-      script.setAttribute("data-theme", giscusTheme);
-    }
-  })();
-</script>
