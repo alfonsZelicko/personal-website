@@ -1,7 +1,7 @@
 ---
 title: "I have opinion: htmx sucks"
 date: 2025-12-31T14:23:47+01:00
-slug: "2025-12-31-from-1st-date-to-quick-end"
+slug: "i-try-htmx-so-you-no-need"
 categories: ["programming"]
 tags: ["programming", "htmx", "react", "frontend"]
 params:

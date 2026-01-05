@@ -1,6 +1,6 @@
 ---
 date: "2025-09-14"
-title: "Web Tech Description"
+title: "Website Technological Description"
 slug: "web-description"
 categories: ["philosophy", "guide"]
 tags: []
