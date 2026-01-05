@@ -6,8 +6,16 @@
     }
   };
 
-  const themeDark = "https://www.zelicko.dev/css/giscus-dark.css";
-  const themeLight = "https://www.zelicko.dev/css/giscus-light.css";
+  {{ $themeDark  := "css/giscus-dark.css" | absURL }}
+  {{ $themeLight := "css/giscus-light.css" | absURL }}
+
+  {{ if hugo.IsServer }}
+    {{ $themeDark  = "gruvbox_dark" }}
+    {{ $themeLight = "gruvbox_light" }}
+  {{ end }}
+
+  const themeDark  = "{{ $themeDark | safeJS }}";
+  const themeLight = "{{ $themeLight | safeJS }}";
 
   window.addEventListener("message", event => {
     if (event.origin !== "https://giscus.app") return;
@@ -47,7 +55,7 @@
   data-reactions-enabled="1"
   data-emit-metadata="0"
   data-input-position="bottom"
-  data-theme="https://www.zelicko.dev/css/giscus-dark.css"
+  data-theme="{{ "css/giscus-dark.css" | absURL }}"
   id="giscus-script"
   crossorigin="anonymous"
   async></script>
