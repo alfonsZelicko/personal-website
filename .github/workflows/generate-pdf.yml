@@ -32,7 +32,7 @@ jobs:
           perl -0777 -pe 's/\+\+\+.*?\+\+\+\s*//s' resume.md > clean_resume.md
           md-to-pdf clean_resume.md --stylesheet ../assets/styles/resume.pdf.css --pdf-options '{ "format": "A4", "margin": "0", "printBackground": true }'
           rm clean_resume.md
-          mv clean_resume.pdf resume.pdf
+          mv clean_resume.pdf ../static/resume.pdf
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
