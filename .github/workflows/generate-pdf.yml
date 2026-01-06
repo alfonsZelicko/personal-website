@@ -1,0 +1,50 @@
+name: Build Resume PDF
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'resume.md'
+      - 'resume.pdf.css'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install md-to-pdf
+        run: npm install -g md-to-pdf
+
+      - name: Clean Markdown and Generate PDF
+        run: |
+          perl -0777 -pe 's/\+\+\+.*?\+\+\+\s*//s' resume.md > clean_resume.md
+          md-to-pdf clean_resume.md --stylesheet ../assets/styles/resume.pdf.css --pdf-options '{ "format": "A4", "margin": "0", "printBackground": true }'
+          rm clean_resume.md
+          mv clean_resume.pdf resume.pdf
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: resume.pdf
+
+      - name: Commit and Push PDF
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add resume.pdf
+          # when are no changes, this won't fail the build
+          git commit -m "docs: sync resume.pdf [skip ci]" || echo "No changes to commit"
+          git push
