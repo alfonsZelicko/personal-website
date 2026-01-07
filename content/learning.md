@@ -17,13 +17,16 @@ Technologies I am currently play with:
 
 - **[Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP):** I
   believe this is a game-changer for "UI-less" apps. Imagine asking your system: _"Set an alert if
-  the production KPI on line XY drops below 80%"_ without touching a dashboard. My early PoCs are
+  the production KPI on a line XY drops below 80%"_ without touching a dashboard. My early PoCs are
   extremely promising.
+- **[TanStack](https://tanstack.com/) Library:** I am walking around this library a long time, and
+  it seems like it is starting to be a new "standard" to make React actually a useful Framework
 - **Python/[Django](https://www.djangoproject.com/) Deep Dive:** I'm pushing my Django skills
   further by building a **D&D Narrator**—a system for generating nuanced, pseudo-random location
   descriptions using custom MCP tools for data retrieval.
 - **[htmx](https://htmx.org/):** ... mostly as a part of my _Narrator project_
-  > It's a love/hate thing... I am interested mostly because i did similar approach before the Angular arrived.
+  > It's a love/hate thing... I am interested mostly because i did similar approach before the
+  > Angular arrived.
 - **[Kotlin](https://kotlinlang.org/):** I touched it years ago, but I’m itching to build a proper
   native mobile app to see how the ecosystem has matured.
 - **3D Print:** Its inventing a wheel -> but i want more integrate this technology into my
@@ -68,10 +71,10 @@ is "not done and mostly it will be not" - its just a
   - **Quick orientation:** As a tool for quick orientation in a new project, it’s AWESOME and a
     massive time-saver! It’s also perfect for writing documentation and handling all the tedious
     tasks we usually hate.
-  - **Skill burning:** I have no plans to adopt this approach in my work. I notice it
-    erodes my own programming skills at every level — writing code, reading code, reasoning about
-    it, and making decisions. That said, it’s a great tool for translating bugs and for reading or
-    generating documentation.
+  - **Skill burning:** I have no plans to adopt this approach in my work. I notice it erodes my own
+    programming skills at every level — writing code, reading code, reasoning about it, and making
+    decisions. That said, it’s a great tool for translating bugs and for reading or generating
+    documentation.
   - **Pretty fast evolution:** I’m generally skeptical of every “new and definitely better than
     ever” release, even though real progress is clearly happening. My star system here can be pretty
     outdated, and it's very personal. Keep it in mind.

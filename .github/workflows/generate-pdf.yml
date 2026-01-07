@@ -5,8 +5,9 @@ on:
     branches:
       - main
     paths:
-      - 'resume.md'
-      - 'resume.pdf.css'
+      - 'content/resume.md'
+      - 'assets/styles/resume.pdf.css'
+      - '.github/workflows/generate-pdf.yml'
   workflow_dispatch:
 
 jobs:
@@ -29,10 +30,10 @@ jobs:
 
       - name: Clean Markdown and Generate PDF
         run: |
-          perl -0777 -pe 's/\+\+\+.*?\+\+\+\s*//s' resume.md > clean_resume.md
-          md-to-pdf clean_resume.md --stylesheet ../assets/styles/resume.pdf.css --pdf-options '{ "format": "A4", "margin": "0", "printBackground": true }'
-          rm clean_resume.md
-          mv clean_resume.pdf ../static/resume.pdf
+          perl -0777 -pe 's/\+\+\+.*?\+\+\+\s*//s' content/resume.md > content/clean_resume.md
+          md-to-pdf content/clean_resume.md --stylesheet assets/styles/resume.pdf.css --pdf-options '{ "format": "A4", "margin": "0", "printBackground": true }'
+          rm content/clean_resume.md
+          mv content/clean_resume.pdf static/resume.pdf
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
@@ -44,7 +45,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add resume.pdf
-          # when are no changes, this won't fail the build
-          git commit -m "docs: sync resume.pdf [skip ci]" || echo "No changes to commit"
+          git add static/resume.pdf
+          git commit -m "docs: sync static resume pdf [skip ci]" || echo "No changes to commit"
           git push
