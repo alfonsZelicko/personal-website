@@ -24,9 +24,9 @@ Technologies I am currently play with:
 - **Python/[Django](https://www.djangoproject.com/) Deep Dive:** I'm pushing my Django skills
   further by building a **D&D Narrator**—a system for generating nuanced, pseudo-random location
   descriptions using custom MCP tools for data retrieval.
-- **[htmx](https://htmx.org/):** ... mostly as a part of my _Narrator project_
-  > It's a love/hate thing... I am interested mostly because i did similar approach before the
-  > Angular arrived.
+- ~~**[htmx](https://htmx.org/):** ... mostly as a part of my _Narrator project_~~
+  > It's a love/hate thing... and I already know: hate for me :-)
+  > [Here](/notes/i-try-htmx-so-you-no-need) is why
 - **[Kotlin](https://kotlinlang.org/):** I touched it years ago, but I’m itching to build a proper
   native mobile app to see how the ecosystem has matured.
 - **3D Print:** Its inventing a wheel -> but i want more integrate this technology into my

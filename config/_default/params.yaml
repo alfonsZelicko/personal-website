@@ -8,12 +8,16 @@ social:
   - name: "Email"
     weight: 1
     url: "/contact"
+    target: "_self"
   - name: "Github"
     weight: 2
     url: "https://github.com/alfonsZelicko"
+    target: "_blank"
   - name: "LinkedIn"
     weight: 3
     url: "https://www.linkedin.com/in/alfons-zelicko-7a8645182/"
+    target: "_blank"
   - name: "CV"
     weight: 4
     url: "/resume.pdf"
+    target: "_blank"
