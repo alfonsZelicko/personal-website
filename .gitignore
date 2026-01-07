@@ -47,6 +47,3 @@ desktop.ini
 .env
 .env.*
 *.env
-
-# resume will be generated on server as artifact
-static/resume.pdf

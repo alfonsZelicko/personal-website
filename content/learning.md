@@ -19,7 +19,7 @@ Technologies I am currently play with:
   believe this is a game-changer for "UI-less" apps. Imagine asking your system: _"Set an alert if
   the production KPI on a line XY drops below 80%"_ without touching a dashboard. My early PoCs are
   extremely promising.
-- **[TanStack](https://tanstack.com/) Library:** I am walking around this library a long time, and
+- **[TanStack Library](https://tanstack.com/):** I am walking around this library a long time, and
   it seems like it is starting to be a new "standard" to make React actually a useful Framework
 - **Python/[Django](https://www.djangoproject.com/) Deep Dive:** I'm pushing my Django skills
   further by building a **D&D Narrator**—a system for generating nuanced, pseudo-random location
