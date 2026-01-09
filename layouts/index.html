@@ -4,12 +4,14 @@
       text-align: center;
     }
     .home h1 {
-      margin-bottom: 1.6rem;
+      margin-bottom: 0;
     }
-    .home h2 {
+    .home p {
+      font-family: "Special Elite", system-ui;
       font-size: 2.4rem;
       margin-top: 0;
-      margin-bottom: 3.6rem;
+      margin-bottom: 2rem;
+      color: var(--color-quote-rgb);
     }
     .home ul {
       list-style: none;
@@ -24,9 +26,13 @@
       margin: 0 0.6rem;
     }
 
-    @media screen and (max-width: 1000px) {
-      h2 {
-        font-size: 1.2em !important;
+    @media screen and (max-width: 800px) {
+      .home p {
+        font-size: 1.2em;
+      }
+
+      .home li a {
+        margin: 0 0.2rem;
       }
     }
   </style>
@@ -34,7 +40,7 @@
   <section class="container centered">
     <div class="home">
       <h1>{{ .Site.Params.author }}</h1>
-      <h2>{{ .Site.Params.info }}</h2>
+      <p>{{ .Site.Params.info }}</p>
       {{ with .Site.Params.social }}
         <ul>
           {{ range sort . }}

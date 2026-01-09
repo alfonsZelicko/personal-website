@@ -7,7 +7,7 @@ This section reflects technologies I’ve used in **real projects**, not everyth
 regularly explore new tools out of curiosity; some appear in the
 [Learning section](/experience/learning/), which I started documenting only recently.
 
-### Frontend Stack
+## Frontend Stack
 
 - **Primary**: **TypeScript**/JavaScript, **React** (16.8+), HTML/CSS (SCSS, Less)
 - **Secondary/Legacy**: Svelte, Angular, htmx, **jQuery** (3.0+)
@@ -22,7 +22,7 @@ apps.
 > Greenfield projects are cute, but I’m the guy you call when the reality of legacy code hits and
 > you need to improve usability without breaking business continuity.
 
-### Back-End & Architecture
+## Back-End & Architecture
 
 - **Languages**: Primarily **Python** and **TypeScript/JS (Node.js)**, with strong experience in
   Java (Spring Boot)
@@ -36,12 +36,12 @@ integration, and meaningful error handling rather than backend-heavy development
 > [NPM supply chain attacks](https://www.blackduck.com/blog/recent-npm-software-supply-chain-attack-security-lessons.html)
 > only reinforce my caution regarding JS on the server >:-).
 
-### Data & Persistence
+## Data & Persistence
 
 I treat databases as replaceable components and focus on portable data models that work across
 relational, NoSQL, and cloud systems, avoiding vendor lock-in unless performance truly requires it.
 
-### Infrastructure & Deployment
+## Infrastructure & Deployment
 
 - **Scripting**: Bash, Batch (.bat), OS-agnostic
 - **CI/CD**: GitHub Actions, GitLab CI, Jenkins, TeamCity
@@ -50,7 +50,7 @@ relational, NoSQL, and cloud systems, avoiding vendor lock-in unless performance
 Not a DevOps specialist, but fully self-sufficient with pipelines and deployments—preferably as
 little as possible.
 
-### Product & Domain Experience
+## Product & Domain Experience
 
 I’m a **frontend specialist with a full-stack background**. Years of building systems end-to-end
 allow me to focus on usability, maintainability, and **pragmatic technical decisions**.
@@ -59,7 +59,7 @@ allow me to focus on usability, maintainability, and **pragmatic technical decis
 - **Strategic UI engineering**: Solving UX problems, not just changing visuals
 - **Industry 4.0**: Deep experience with DAQ systems and industrial environments
 
-### Team & Process Leadership
+## Team & Process Leadership
 
 - **Team leadership**: Mentoring, onboarding, decision-making
 - **Process**: Scrum, Waterfall, lifecycle ownership

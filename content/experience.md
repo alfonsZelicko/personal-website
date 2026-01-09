@@ -11,7 +11,7 @@ completion**.
 During the years I developed a **prefered dev environment** - more about
 [here](/notes/2026-01-02-dev-environment).
 
-### TL;DR Summary
+## TL;DR Summary
 
 | Period             | Role                     | Company / Project          | Key Stack                                   |
 | :----------------- | :----------------------- | :------------------------- | :------------------------------------------ |
@@ -39,7 +39,7 @@ building systems at scale. I’m ready to return for a role where engineering de
 
 I’m looking for a team that values pragmatic, sustainable solutions—whether building **from
 scratch** or **untangling legacy systems**. If you need a system-oriented engineer who prioritizes
-clarity over hype, **let’s talk!**
+clarity over a hype, **let’s talk!**
 
 ---
 

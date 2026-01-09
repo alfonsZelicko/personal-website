@@ -11,8 +11,8 @@ html {
   font-size: 62.5%;
 }
 
+// Default: Low contrast colors (warm theme)
 :root {
-  // Default: Low contrast colors (warm theme)
   --color-bg-rgb: rgb(#{$color-bg-low-rgb});
   --color-text-rgb: rgb(#{$color-text-low-rgb});
   --color-heading-rgb: rgb(#{$color-heading-low-rgb});
@@ -72,7 +72,7 @@ html:has(#contrast-toggle:checked):has(#theme-toggle:checked) {
 }
 
 body {
-  padding-left: calc(100vw - 100%); // hack to prevent movign content by scrollbar
+  padding-left: calc(100vw - 100%); // hack to prevent moving content by scrollbar
 
   display: flex;
   color: var(--color-text-rgb);
