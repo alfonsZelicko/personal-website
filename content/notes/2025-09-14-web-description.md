@@ -22,14 +22,14 @@ navigable even if you **disable JavaScript entirely**.
   somewhere, ofc) and the `:checked` CSS pseudo-class, I built the theme switcher, contrast toggle,
   and mobile menu without any UI logic in JS.
 
-```scss
-// Simplified example of how it works
-html:has(#theme-toggle:checked) {
-  --bg-color: #{$color-bg-dark-low-rgb};
-  --text-color: #{$color-text-dark-low-rgb};
-  ...
-}
-```
+  ```scss
+  // Simplified example of how it works
+  html:has(#theme-toggle:checked) {
+    --bg-color: #{$color-bg-dark-low-rgb};
+    --text-color: #{$color-text-dark-low-rgb};
+    ...
+  }
+  ```
 
 ## 2. JS only as a Progressive Enhancement
 
@@ -37,21 +37,21 @@ html:has(#theme-toggle:checked) {
   to handle proper accessibility titles and aria-labels) only to "remember" user preferences in
   localStorage. If it fails, the site simply defaults to the "warm dark" mode. No big deal.
 
-```js
-(() => {
-  ["theme", "contrast"].forEach(key => {
-    const el = document.getElementById(`${key}-toggle`);
-    if (!el) return;
+  ```js
+  (() => {
+    ["theme", "contrast"].forEach(key => {
+      const el = document.getElementById(`${key}-toggle`);
+      if (!el) return;
 
-    const saved = localStorage.getItem(key);
-    if (saved !== null) el.checked = saved === "true";
+      const saved = localStorage.getItem(key);
+      if (saved !== null) el.checked = saved === "true";
 
-    el.addEventListener("change", () => {
-      localStorage.setItem(key, el.checked);
+      el.addEventListener("change", () => {
+        localStorage.setItem(key, el.checked);
+      });
     });
-  });
-})();
-```
+  })();
+  ```
 
 > feel free to 'inspire yourself' from this approach - we need less JS on the web :-)
 
@@ -59,36 +59,36 @@ html:has(#theme-toggle:checked) {
   Extracting the address requires JavaScript execution or simulated user interaction, so even
   relatively advanced bots (e.g. using Puppeteer or Playwright) face additional friction.
 
-```html
-<span id="mail-vault" class="link"> zelicko [dot] alfons [at] gmail [dot] com </span>
+  ```html
+  <span id="mail-vault" class="link"> zelicko [dot] alfons [at] gmail [dot] com </span>
 
-<script>
-  (() => {
-    const el = document.getElementById("mail-vault");
-    if (!el) return;
+  <script>
+    (() => {
+      const el = document.getElementById("mail-vault");
+      if (!el) return;
 
-    el.textContent = "[REVEAL EMAIL ADDRESS]";
-    el.style.cursor = "pointer";
-    el.setAttribute("role", "button");
-    el.setAttribute("aria-label", "Reveal email address");
+      el.textContent = "[REVEAL EMAIL ADDRESS]";
+      el.style.cursor = "pointer";
+      el.setAttribute("role", "button");
+      el.setAttribute("aria-label", "Reveal email address");
 
-    el.addEventListener(
-      "click",
-      () => {
-        const p = ["gmail", "com", "alfons", "zelicko"];
-        const addr = `${p[3]}.${p[2]}@${p[0]}.${p[1]}`;
+      el.addEventListener(
+        "click",
+        () => {
+          const p = ["gmail", "com", "alfons", "zelicko"];
+          const addr = `${p[3]}.${p[2]}@${p[0]}.${p[1]}`;
 
-        const a = document.createElement("a");
-        a.href = `mailto:${addr}`;
-        a.textContent = addr;
+          const a = document.createElement("a");
+          a.href = `mailto:${addr}`;
+          a.textContent = addr;
 
-        el.replaceWith(a);
-      },
-      { once: true }
-    );
-  })();
-</script>
-```
+          el.replaceWith(a);
+        },
+        { once: true }
+      );
+    })();
+  </script>
+  ```
 
 ## 3. Design: Less Noise, More SVG
 
@@ -105,6 +105,18 @@ weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
 - **Speed as a Feature**: The site is optimized to feel instant, even on a shitty connection that
   would make a modern SPA crumble. It's a nod to a time when speed was a necessity, not a luxury...
   when **EDGE was a fast internet connection**, not a poor Browser :-)
+- **Special Elite**: The largest asset on this page. I’ve wanted to use this font on a website for a
+  long time, so I decided to use it here - on my own.
+- **view-transition**: I added this CSS property to make page transitions smoother. The default fade
+  effect works well enough for me. It’s a relatively new CSS feature, and in browsers that don’t
+  support it, the page behaves as usual.
+  ```css
+  @view-transition {
+    navigation: auto;
+  }
+  ```
+- **link underline animation**: The basic underline fits the _philosophy of the basic web_, but it
+  was too hard to resist adding something a little more elegant.
 
 ## 4. The Stats
 
