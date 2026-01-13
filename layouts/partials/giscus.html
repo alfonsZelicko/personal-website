@@ -34,7 +34,7 @@
   });
 
   (() => {
-    const isDarkTheme = localStorage.getItem("isDarkTheme") === "true";
+    const isDarkTheme = document.getElementById("theme-toggle").checked;
     const initialTheme = isDarkTheme ? themeDark : themeLight;
 
     const script = document.getElementById("giscus-script");

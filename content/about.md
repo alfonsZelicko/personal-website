@@ -35,7 +35,7 @@ continuously expand this toolkit with new technologies and **ways of thinking**.
 
 ## Leisure
 
-In last years I mostly listen audiobooks, mainly sci-fi, philosophy and history. I really enjoy
+In last years I mostly listen to audiobooks, mainly sci-fi, philosophy, and history. I really enjoy
 discussions and debates, and I even competed in them in the past. Among authors I like most are
 people such as [Yuval Noah Harari](https://www.ynharari.com/book/sapiens-2) or
 [Noam Chomsky](https://chomsky.info/books/).
@@ -44,13 +44,13 @@ people such as [Yuval Noah Harari](https://www.ynharari.com/book/sapiens-2) or
 > chair with a glass of water, while someone like Niall Ferguson sits opposite in a leather armchair
 > with a cup of Earl Grey, and they argue about whether the West is good or bad…
 
-I also like playing TTRPG games, some video games, and I do climbing – indoor walls, rocks and via
-ferratas. Hiking and cycling are also big part of my free time.
+I also like playing TTRPG games, some video games, and I do climbing – indoor walls, rocks, and via
+ferratas. Hiking and cycling are also a big part of my free time.
 
 ## Website
 
-This site was built [without JavaScript](/notes/web-description/) and minimal graphics, inspired by
-early web simplicity and content-first icons like
+This site was built [without JavaScript](/notes/web-description/) and with minimal graphics,
+inspired by early web simplicity and content-first icons like
 [The Best Motherfucking Website](https://thebestmotherfucking.website/).
 
 ## Disclaimer

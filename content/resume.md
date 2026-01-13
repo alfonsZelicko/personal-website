@@ -24,19 +24,19 @@ pragmatically and incrementally.
 
 ## Engineering Patterns I Bring
 
-- **Incremental modernization** Improving legacy systems step by step without blocking delivery or
+- **Incremental modernization:** Improving legacy systems step by step without blocking delivery or
   forcing risky rewrites.
 
-- **UI & frontend unification** Establishing shared component libraries and visual language to
+- **UI & frontend unification:** Establishing shared component libraries and visual language to
   reduce fragmentation and cognitive load.
 
-- **Shared ownership & knowledge distribution** Actively reducing bus factor through architectural
+- **Shared ownership & knowledge distribution:** Actively reducing bus factor through architectural
   boundaries, documentation, pairing, and explicit ownership.
 
-- **Bottleneck identification** Recognizing where tools, workflows, or unclear responsibilities slow
-  teams down — and addressing root causes.
+- **Bottleneck identification:** Recognizing where tools, workflows, or unclear responsibilities
+  slow teams down — and addressing root causes.
 
-- **Process evolution that sticks** Introducing changes that teams actually adopt, based on real
+- **Process evolution that sticks:** Introducing changes that teams actually adopt, based on real
   constraints rather than theory.
 
 ---
@@ -45,16 +45,16 @@ pragmatically and incrementally.
 
 ### Frontend Engineering
 
-- TypeScript, JavaScript (ES6+), React (16.8+)
-- HTML5, CSS3 (SCSS, Less)
+- TypeScript (5+ years), JavaScript (15+ years), React (6+ years)
+- HTML5, CSS3, SCSS, Less (18+ years)
 - Nx monorepos, shared component libraries
 - Performance-sensitive UI and animation systems
 
 ### Backend & Architecture
 
-- Python, Node.js, Java (Spring Boot)
-- Clean Architecture, DDD
-- Long-lived system design and legacy evolution
+- Node.js (5+ years), Java / Spring Boot (4+ years), Python (1+ year)
+- Clean Architecture, DDD, Long-lived system design
+- Legacy evolution and modernization strategies
 
 ### Leadership & Collaboration
 
@@ -101,7 +101,8 @@ pragmatically and incrementally.
 
 ### Freelance / Digital Nomad Era | Full-Stack Engineer | 2012 – 2018
 
-- Owned end-to-end delivery of client projects from architecture to production.
+- Owned end-to-end delivery of client projects using everything from jQuery and Vanilla JS to early
+  Angular/React.
 - Acted as technical authority for clients and distributed teams.
 - Designed remote-first workflows and deployment pipelines.
 - Delivered systems still running in production after **10+ years**.
@@ -119,13 +120,27 @@ pragmatically and incrementally.
 ## Education
 
 - **FIT VUT Brno** — Applied Informatics
+- **VSP Jihlava** — Informatics & Management
 - **SUŠG Jihlava** — Graphic Design (Typography, UI/UX)
 - **SPŠT Třebíč** — Electronic Computer Systems
 
 ---
 
+## Professional Mindset & Soft Skills
+
+- **Product-Oriented Engineering:** High intuition for balancing technical complexity with real
+  business value and project goals.
+- **Maintenance & Scalability:** Focused on writing clean, self-documenting code and proactively
+  eliminating technical debt based on past experience.
+- **Tech Leadership:** Skilled in guiding technical discussions and providing high-impact feedback
+  through constructive Peer Reviews.
+- **Pragmatic Problem-Solving:** Efficiently tackling non-trivial bugs and performance bottlenecks
+  with a focus on the most effective path.
+- **Continuous Learning:** Driven to master new domains (e.g., Python/Svelte/OpenAI/...) to keep the
+  tech stack modern and competitive.
+
 ## Languages
 
 - Czech — native
 - English — fluent (daily professional use)
-- German - able to speak/understeand
+- German — able to speak/understand
