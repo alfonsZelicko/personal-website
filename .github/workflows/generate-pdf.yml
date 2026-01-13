@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
-          path: resume.pdf
+          path: static/resume.pdf
 
       - name: Commit and Push PDF
         run: |
