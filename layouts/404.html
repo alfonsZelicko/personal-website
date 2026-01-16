@@ -20,6 +20,10 @@
       animation-delay: 0.2s;
     }
 
+    p {
+      margin: 0;
+    }
+
     p.msg {
       animation: glitch-0 1s linear infinite;
       animation-delay: 0.4s;
@@ -167,7 +171,8 @@
     <div class="error">
       <h1 title="404">404</h1>
       <h2 title="Page Not Found">Page Not Found</h2>
-      <p class="msg">This page does not exist.<br /><a href="{{ .Site.BaseURL }}">Go to homepage</a></p>
+      <p class="msg">This page does not exist.</p>
+      <p><a href="{{ .Site.BaseURL }}">⭠ Go to Homepage</a></p>
     </div>
   </section>
 {{ end }}
