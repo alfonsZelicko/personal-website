@@ -84,6 +84,12 @@ a {
     background: currentColor;
     transform: translateX(-50%) scaleX(0);
     transition: transform 0.1s cubic-bezier(0.8, 0, 0.2, 1);
+
+    .top-nav-list & {
+      @include max-md() {
+        display: none;
+      }
+    }
   }
 
   &:hover,

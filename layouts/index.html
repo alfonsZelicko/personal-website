@@ -21,7 +21,30 @@
     .home li {
       display: inline-block;
       position: relative;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+      transition-delay: calc(300ms + (sibling-index() * 80ms));
+
+      @starting-style {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
     }
+
+    .info {
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+      transition-delay: calc((sibling-index()) * 150ms);
+
+      @starting-style {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+    }
+
     .home li a {
       margin: 0 0.6rem;
     }
@@ -39,8 +62,8 @@
 
   <section class="container centered">
     <div class="home">
-      <h1>{{ .Site.Params.author }}</h1>
-      <p>{{ .Site.Params.info }}</p>
+      <h1 class="info">{{ .Site.Params.author }}</h1>
+      <p class="info">{{ .Site.Params.info }}</p>
       {{ with .Site.Params.social }}
         <ul>
           {{ range sort . }}

@@ -10,6 +10,8 @@ slug = "resume"
 > restore technical clarity, establish cohesive frontend architecture and UI, and enable teams to
 > scale in a sustainable, low-disruption way.
 
+> web: www.zelicko.dev
+
 ---
 
 ## Professional Summary

@@ -24,6 +24,16 @@
       position: relative;
       z-index: 1;
 
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+      transition-delay: calc((sibling-index()) * 50ms);
+
+      @starting-style {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
       a {
         min-width: 0;
         color: var(--color-text-rgb);

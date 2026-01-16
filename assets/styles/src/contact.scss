@@ -1,0 +1,118 @@
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 2px solid rgba(var(--color-text-rgb), 0.1);
+  border-radius: 12px;
+  background-color: rgba(var(--color-code-bg-rgb), 0.3); // Jemné podbarvení z code-bg
+
+  p {
+    margin-bottom: 1.5rem;
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+    transition-delay: calc((sibling-index()) * 50ms);
+
+    @starting-style {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+
+  label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: var(--color-heading-rgb);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    line-height: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--color-quote-rgb);
+    background-color: transparent;
+    color: var(--color-text-rgb);
+    font-family: inherit;
+    font-size: 1.2rem;
+    transition: background-color 0.2s ease-out;
+    
+    &:hover {
+      border: 1px solid var(--color-link-rgb);
+    }
+
+    &:focus {
+      outline: none;
+      z-index: 2; 
+      border-color: var(--color-link-rgb);
+      background-color: rgba(128, 128, 128, 0.1);
+    }
+
+    &::placeholder {
+      color: rgba(var(--color-text-rgb), 0.4);
+    }
+  }
+
+  textarea {
+    min-height: 160px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+
+  button {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: transparent;
+    border: 1px solid var(--color-quote-rgb);
+    color: var(--color-text-rgb);
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-link-active-rgb);
+      border: 1px solid var(--color-link-rgb);
+    }
+
+    &:active {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  #form-status {
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-text-rgb);
+    transition: transform 0.3s ease;
+    transform: rotateX(90deg);
+    
+    &.error {
+      color: var(--color-error-rgb);
+    }
+    
+    &.show-message {
+      transform: rotateX(0deg);
+    }
+  }
+}
+.email-address {
+  text-align: center;
+  transition:
+    opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-delay: 1s;
+
+
+  @starting-style {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}

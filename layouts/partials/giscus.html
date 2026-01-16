@@ -1,5 +1,6 @@
 <script>
   const sendToGiscus = config => {
+    console.log('wtf');
     const iframe = document.querySelector("iframe.giscus-frame");
     if (iframe?.contentWindow) {
       iframe.contentWindow.postMessage({ giscus: { setConfig: config } }, "https://giscus.app");
@@ -21,7 +22,7 @@
     if (event.origin !== "https://giscus.app") return;
     if (!(typeof event.data === "object" && event.data.giscus)) return;
 
-    const isDarkTheme = localStorage.getItem("isDarkTheme") === "true";
+    const isDarkTheme = document.getElementById("theme-toggle").checked;
     sendToGiscus({ theme: isDarkTheme ? themeDark : themeLight });
   });
 

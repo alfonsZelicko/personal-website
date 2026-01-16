@@ -13,7 +13,6 @@
   --pal-code-bg-low-l: rgb(#{$color-code-bg-low-rgb});
   --pal-quote-low-l: rgb(#{$color-quote-low-rgb});
   --pal-quote-vals-low-l: #{$color-quote-low-rgb};
-  --pal-error-low-l: rgb(#{$color-error-low-rgb});
 
   // Low Contrast - Dark (Default)
   --pal-bg-low-d: rgb(#{$color-bg-dark-low-rgb});
@@ -25,7 +24,6 @@
   --pal-code-bg-low-d: rgb(#{$color-code-bg-dark-low-rgb});
   --pal-quote-low-d: rgb(#{$color-quote-dark-low-rgb});
   --pal-quote-vals-low-d: #{$color-quote-dark-low-rgb};
-  --pal-error-low-d: rgb(#{$color-error-dark-low-rgb});
 
   // High Contrast - Light
   --pal-bg-high-l: rgb(#{$color-bg-high-rgb});
@@ -37,7 +35,6 @@
   --pal-code-bg-high-l: rgb(#{$color-code-bg-high-rgb});
   --pal-quote-high-l: rgb(#{$color-quote-high-rgb});
   --pal-quote-vals-high-l: #{$color-quote-high-rgb};
-  --pal-error-high-l: rgb(#{$color-error-high-rgb});
 
   // High Contrast - Dark
   --pal-bg-high-d: rgb(#{$color-bg-dark-high-rgb});
@@ -49,7 +46,9 @@
   --pal-code-bg-high-d: rgb(#{$color-code-bg-dark-high-rgb});
   --pal-quote-high-d: rgb(#{$color-quote-dark-high-rgb});
   --pal-quote-vals-high-d: #{$color-quote-dark-high-rgb};
-  --pal-error-high-d: rgb(#{$color-error-dark-high-rgb});
+  
+  --pal-error-universal: rgb(#{$color-error-universal-rgb});
+
 }
 
 //
@@ -67,7 +66,7 @@
   --color-quote-rgb: var(--pal-quote-#{$type});
   --color-border-rgb: var(--pal-quote-#{$type});
   --color-quote-rgb-values: var(--pal-quote-vals-#{$type});
-  --color-error-rgb: var(--pal-error-#{$type});
+  --color-error-rgb: var(--pal-error-universal);
 }
 
 :root {
@@ -99,6 +98,7 @@ html:has(#contrast-toggle:checked):has(#theme-toggle:checked) {
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -135,6 +135,8 @@ img {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  
+  padding-top: 60px;
 }
 
 .content {

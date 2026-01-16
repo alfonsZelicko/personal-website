@@ -22,11 +22,11 @@ hours.
 - **[JetBrains Ecosystem](https://www.jetbrains.com/):** My daily drivers (**WebStorm**, **IntelliJ
   IDEA**, **PyCharm**). Ready for heavy development immediately after installation.
 - **CI/CD & Task Tracking:** I prefer **YouTrack** and **TeamCity** for their seamless
-  interconnection. I can handle Jira and GitHub Actions, but I find the Atlassian ecosystem
+  interconnection. I can handle _Jira_ and _GitHub Actions_, but I find the _Atlassian ecosystem_
   stagnant—it's a company living off its history rather than modern innovation.
 - **[Kiro Code](https://kiro.ai/):** Currently my go-to for AI-assisted workflow. Its **Spec-driven
-  mode** is superior to Cursor; it enforces discipline by requiring a solid specification before any
-  code generation.
+  mode** is superior to _Cursor/JetBrains_; it enforces discipline by requiring a solid
+  specification before any code generation.
 - **Secondary Tools:**
   - **[VS Code](https://code.visualstudio.com/):** A backup solution. Overrated for heavy lifting,
     and the lack of native middle-click support is a personal pet peeve.
@@ -35,7 +35,8 @@ hours.
 
 ## Software & Workflow
 
-- **Browser Extensions:** My essential Chrome kit includes **React DevTools**,
+- **Browser Extensions:** My essential Chrome kit includes
+  [React DevTools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi),
   [WhatFont](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm),
   and
   [Dimensions](https://chromewebstore.google.com/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj)
@@ -46,15 +47,15 @@ hours.
     screenshots.
   - [Total Commander](https://www.ghisler.com/) Yes, I still use it. I own a lifetime license, and
     I'm proud of it.
-  - **WSL2:** The only reason I can still tolerate working on Windows, although I am using just
-    basics.
+  - [WSL2](https://learn.microsoft.com/en-us/windows/wsl/): The only reason I can still tolerate
+    working on Windows, although I am using just basics.
 - **Git:** I prefer the **CLI** for speed and basic operations, but I always switch to the
   **JetBrains built-in tools** for complex merges or cherry-picking.
 - **Time Tracking & DB:** I leverage native JetBrains plugins for time tracking and database
   management directly in the IDE to keep my workflow unified.
 - **Graphics:** [Photopea](https://www.photopea.com/) is my first choice for quick edits. If a task
-  requires more than that, it’s a job for a dedicated designer. I know my way around Illustrator,
-  but I prefer to stay in the dev zone.
+  requires more than that, it’s a job for a dedicated designer. I know my way around
+  _Photoshop/Illustrator_, but I prefer to stay in the dev zone.
 
 ## Hardware & Ergonomics
 

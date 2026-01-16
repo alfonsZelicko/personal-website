@@ -349,3 +349,26 @@ template {
 [hidden] {
   display: none;
 }
+
+/**
+   * Repaired some issues with browser styles after choosing prepared content
+   */
+
+/* Target Chrome autofill */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 1000px var(--color-bg-rgb);
+  box-shadow: inset 0 0 0 1000px var(--color-bg-rgb);
+  -webkit-text-fill-color: var(--color-text-rgb);
+  transition: box-shadow 0s, background-color 0s; /* no need for absurd durations */
+}
+
+/* Optional: include hover/focus for completeness */
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: inset 0 0 0 1000px var(--color-bg-rgb);
+  box-shadow: inset 0 0 0 1000px var(--color-bg-rgb);
+  -webkit-text-fill-color: var(--color-text-rgb);
+}
