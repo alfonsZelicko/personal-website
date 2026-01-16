@@ -30,7 +30,7 @@ the final product feels effortless for the user.
 Beyond client work, I constantly prototype new ideas—see my latest experiments on the
 [learning page](/learning).
 
-> My greatest satisfaction comes when software feels intuitive and effortless for users.
+> My greatest satisfaction comes when software feels intuitive and useful for users.
 
 ## Career
 

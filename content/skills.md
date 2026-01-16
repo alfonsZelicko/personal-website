@@ -9,8 +9,8 @@ regularly explore new tools out of curiosity; some appear in the
 
 ## Frontend Stack
 
-- **Primary**: **TypeScript[^1]**/JavaScript, **React[^2]** (16.8+), HTML/CSS (SCSS, Less)
-- **Secondary/Legacy**: Svelte, Angular, htmx, **jQuery** (3.0+)
+- **Primary**: **TypeScript[^1]**/JavaScript, **React[^2]**, HTML/CSS (SCSS, Less)
+- **Secondary/Legacy**: Svelte, Angular, htmx, **jQuery**
 - **Supporting tools**: **Material UI**, Tailwind, Bootstrap, TanStack, **Nx**, Cypress, Jest, ...
 
 I keep a broad overview of the frontend ecosystem to choose the
@@ -34,12 +34,15 @@ integration, and meaningful error handling rather than backend-heavy development
 > I can deliver Node.js services, but I still believe **JavaScript belongs where God intended**: on
 > the client side. The recurring
 > [NPM supply chain attacks](https://www.blackduck.com/blog/recent-npm-software-supply-chain-attack-security-lessons.html)
-> only reinforce my caution regarding JS on the server >:-).
+> only reinforce my caution regarding JS on the server ]:-)
 
 ## Data & Persistence
 
 I treat databases as replaceable components and focus on portable data models that work across
 relational, NoSQL, and cloud systems, avoiding vendor lock-in unless performance truly requires it.
+
+> While MongoDB is my go-to choice, I’m genuinely drawn to Redis—finding a project that utilizes it
+> would definitely catch my eye more than a traditional PostgreSQL stack.
 
 ## Infrastructure & Deployment
 
@@ -66,10 +69,11 @@ allow me to focus on usability, maintainability, and **pragmatic technical decis
 - **Team stability**: Reducing bus factor, improving knowledge sharing
 - **Stakeholders**: Roadmaps, consulting, execution
 
-I aim for stable teams with shared ownership, no single points of failure, and code written for our
-future selves.
+I aim for stable teams with shared ownership, no single points of failure, and _code written for our
+future selves_.
 
-> Full Agile helps identify problems; I usually switch to a lighter, context-driven variant.
+> I use Scrum to align teams, then trim it down once things are running smoothly. No point in
+> ceremonies that cost more time than they save.
 
 ---
 
