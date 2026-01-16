@@ -20,6 +20,7 @@ During the years I developed a **prefered dev environment** - more about
 | **2018 – 2021**    | Solution Architect / Dev | **Nuvia a.s.**             | **Java/WildFly**, Industry 4.0, SQL, DevOps |
 | **2012 – 2018**    | Full-stack Freelancer    | **Digital Nomad**          | PHP/JS, SEO, **Graphic Design**             |
 | **2010 – 2012**    | Software Engineer        | **Red-Hat**                | JBoss, Java, Linux, QA Automation           |
+| **2008 – 2009**    | Intern / Programmer      | **Stormware - Pohoda**     | PHP, JS, HTML, CSS, MySQL                   |
 
 ## The Journey
 
@@ -32,7 +33,7 @@ important long-term project: **my son**. In parallel, I redirected my profession
 exploring it as a new frontier for system orchestration. I’m currently working on several projects
 (see the [learning page](/experience/learning)) and planning more.
 
-#### The Next Chapter: Looking for a Team
+#### The Next Chapter: Looking for a {{< word-rotator words="Team,Challenge,New Boss" duration=8 >}}
 
 Personal projects keep me sharp, but I miss the impact of working in a professional environment and
 building systems at scale. I’m ready to return for a role where engineering decisions truly matter.

@@ -4,7 +4,7 @@ slug: "about"
 ---
 
 I’m **Alfons Zelicko**, a software developer specializing in **front-end** with **over 25 years of
-coding experience**. Having seen the industry evolve from basic scripts to complex automated
+coding experience[^1]**. Having seen the industry evolve from basic scripts to complex automated
 systems, I’ve learned to prioritize tools that solve **real problems** over fleeting trends-always
 with a focus on **long-term maintainability**.
 
@@ -14,6 +14,10 @@ with a focus on **long-term maintainability**.
 - **Specialized Micro-apps:** Developing focused, high-performance applications for specific needs.
 - **Technical Consultancy:** Solving complex UI/UX challenges and performance bottlenecks.
 - **Long-term Roles:** Open to dedicated partnerships in deeply collaborative environments.
+
+> While it might be outside my comfort zone, I prefer projects involving technologies I haven’t
+> mastered yet. In front-end, we often just find 'new ways to solve old problems'—so the prospect of
+> learning completely new tech is a huge draw for me.
 
 ---
 
@@ -49,9 +53,9 @@ continuously expand this toolkit with new technologies and **ways of thinking**.
 
 ## Leisure
 
-In last years I mostly listen to audiobooks, mainly sci-fi, philosophy, and history. I really enjoy
-discussions and debates, and I even competed in them in the past. Among authors I like most are
-people such as [Yuval Noah Harari](https://www.ynharari.com/book/sapiens-2) or
+In last years I mostly listened to audiobooks, mainly sci-fi, philosophy, and history. I really
+enjoy discussions and debates, and I even competed in them in the past. Among authors I like most
+are people such as [Yuval Noah Harari](https://www.ynharari.com/book/sapiens-2) or
 [Noam Chomsky](https://chomsky.info/books/).
 
 > I sometimes joke that I would love to see an event where Noam Chomsky sits on a simple wooden
@@ -59,11 +63,11 @@ people such as [Yuval Noah Harari](https://www.ynharari.com/book/sapiens-2) or
 > with a cup of Earl Grey, and they argue about whether the West is good or bad…
 
 I also like playing TTRPG games, some video games, and I do climbing – indoor walls, rocks, and via
-ferratas. Hiking and cycling are also a big part of my free time.
+ferratas[^2]. Hiking and cycling are also a big part of my free time.
 
 ## Website
 
-This site was built [without JavaScript](/notes/web-description/) and with minimal graphics,
+This site was built [without JavaScript](/notes/web-description/) and with minimal graphics[^3],
 inspired by early web simplicity and content-first icons like
 [The Best Motherfucking Website](https://thebestmotherfucking.website/).
 
@@ -77,3 +81,11 @@ This website also serves as my playground for testing new CSS features.
 
 **Every idea here is either my own or curated from the world of books and web.** I only use AI to
 polish the phrasing so my ‘Slavic English’ doesn’t disrupt the flow of the message. :-)
+
+[^1]: 18+ years as a professional.
+
+[^2]:
+    I absolutely love going for a walk with my colleagues along ropes and platforms 200 meters above
+    the ground, with a view of the Alps.
+
+[^3]: Ye - I used more CSS than is necessary for proper work of the web, but I was unable to resist.

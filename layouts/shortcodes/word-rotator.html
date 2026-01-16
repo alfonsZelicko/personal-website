@@ -1,0 +1,50 @@
+{{ $wordsStr := .Get "words" | default "First,Second,Third" }}
+{{ $words := split $wordsStr "," }}
+{{ $count := len $words }}
+{{ $duration := .Get "duration" | default 10 }}
+
+
+<span class="word-rotator-container">
+  <span class="word-rotator-wrapper" style="--word-count: {{ $count }}; --duration: {{ $duration }}s;">
+    <span class="word-rotator-item">{{ index $words (sub $count 1) }}</span>
+    {{ range $words }}
+      <span class="word-rotator-item">{{ . }}</span>
+    {{ end }}
+  </span>
+</span>
+
+<style>
+  .word-rotator-container {
+    display: inline-flex;
+    overflow: hidden;
+    height: 1.1em;
+    vertical-align: bottom;
+  }
+
+  .word-rotator-wrapper {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-1.2em);
+    animation: rotate-words-down var(--duration) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .word-rotator-item {
+    display: block;
+    height: 1.2em;
+    line-height: 1.2em;
+    white-space: nowrap;
+  }
+
+  @keyframes rotate-words-down {
+  {{ $step := div 100 $count }}
+  {{ range $index, $word := $words }}
+  {{ $revIndex := sub $count $index }}
+  {{ $start := mul $index $step }}
+  {{ $hold := add $start (mul $step 0.8) }}
+
+  {{ $start }}% { transform: translateY(calc(-{{ $revIndex }} * 1.2em)); }
+  {{ $hold }}% { transform: translateY(calc(-{{ $revIndex }} * 1.2em)); }
+  {{ end }}
+  100% { transform: translateY(0); }
+  }
+</style>

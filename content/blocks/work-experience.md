@@ -43,3 +43,19 @@ _2010–2012_ ~ **JBoss Ecosystem**
 
 > One month here surpassed years of prior experience; at the time, Red Hat was voted Best Employer
 > in CZ.
+
+### Stormware (Pohoda) | Software Engineer (Intern)
+
+_2008–2009_ ~ **ERP Systems & Web Integration**
+
+- **Strategic Consultations:** Collaborated on technical solutions and cross-platform integrations,
+  including high-level discussions with competitors (Money) to aggregate and align industry-standard
+  ideas.
+- **UI Development:** Crafted and optimized front-end interfaces using PHP, JavaScript, and CSS,
+  ensuring seamless user interaction within the ERP ecosystem.
+- **Quality Assurance:** Responsible for rigorous testing of newly developed modules to maintain
+  high stability in production environments.
+
+> My first real exposure to professional software engineering at scale. While still at university, I
+> learned that building great products is as much about communication and strategy as it is about
+> writing code.

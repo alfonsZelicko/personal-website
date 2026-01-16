@@ -10,13 +10,13 @@ slug = "resume"
 > restore technical clarity, establish cohesive frontend architecture and UI, and enable teams to
 > scale in a sustainable, low-disruption way.
 
-> web: www.zelicko.dev
+> web: **www.zelicko.dev**
 
 ---
 
 ## Professional Summary
 
-Senior software engineer and technical leader with **15+ years of experience** building and evolving
+Senior software engineer and technical leader with **18+ years of experience** building and evolving
 user-facing systems. I work best in environments that are either being built from scratch or need to
 be carefully modernized. My strength lies in identifying structural bottlenecks (technical and
 organizational), introducing shared standards, and helping teams evolve how they build software —
@@ -116,6 +116,16 @@ pragmatically and incrementally.
 - Worked in large, distributed open-source teams.
 - Debugged complex issues in the JBoss ecosystem.
 - Developed strong discipline in collaboration, testing, and code review.
+
+---
+
+### Stormware (Pohoda) | Software Engineer (Intern) | 2008 – 2009
+
+- Collaborated on technical strategies and feature alignment with industry competitors.
+- Developed and optimized front-end components within a complex ERP ecosystem (PHP, JS).
+- Performed rigorous testing and debugging to ensure stability in production-ready modules.
+- At the time, Stormware operated with a dynamic start-up culture, which allowed me to take on
+  responsibilities far beyond a typical internship.
 
 ---
 
