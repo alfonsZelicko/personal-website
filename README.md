@@ -6,8 +6,6 @@
   will not be persisted in local storage and discussions in Notes section will not work as well.
 - it works in all browsers and all resolutions
 
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-
 Alfons Zelicko's personal website built with [Hugo](https://gohugo.io).
 
 ## Development
@@ -26,6 +24,8 @@ Alfons Zelicko's personal website built with [Hugo](https://gohugo.io).
 pnpm install
 
 # Start development server
+pnpm dev
+# or
 hugo server
 ```
 
