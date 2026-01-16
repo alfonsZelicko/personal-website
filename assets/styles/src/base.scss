@@ -48,6 +48,7 @@
   --pal-quote-vals-high-d: #{$color-quote-dark-high-rgb};
   
   --pal-error-universal: rgb(#{$color-error-universal-rgb});
+  --pal-background-hover: #{$color-background-hover};
 
 }
 
@@ -67,6 +68,7 @@
   --color-border-rgb: var(--pal-quote-#{$type});
   --color-quote-rgb-values: var(--pal-quote-vals-#{$type});
   --color-error-rgb: var(--pal-error-universal);
+  --color-bg-hover: var(--pal-background-hover);
 }
 
 :root {

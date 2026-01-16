@@ -3,15 +3,27 @@ title: "About me"
 slug: "about"
 ---
 
-I’m Alfons Zelicko, a software developer focused on front-end and **user-oriented** applications.
-Open to freelance, consultancy, start-up support, or web projects—and occasionally full-time roles
-if the project is long-term and collaborative.
+I’m **Alfons Zelicko**, a software developer specializing in **front-end** with **over 25 years of
+coding experience**. Having seen the industry evolve from basic scripts to complex automated
+systems, I’ve learned to prioritize tools that solve **real problems** over fleeting trends-always
+with a focus on **long-term maintainability**.
 
-## Work
+**I am looking to collaborate on:**
 
-I build interfaces that are **robust and responsive**, collaborating closely with clients to uncover
-**actual needs**. I value **pragmatic engineering**: knowing when to optimize for immediate
-performance and when to create scalable foundations. See current experiments on my
+- **Architecture & Strategy:** Building robust front-end foundations for start-ups and teams.
+- **Specialized Micro-apps:** Developing focused, high-performance applications for specific needs.
+- **Technical Consultancy:** Solving complex UI/UX challenges and performance bottlenecks.
+- **Long-term Roles:** Open to dedicated partnerships in deeply collaborative environments.
+
+---
+
+### Work
+
+I build interfaces that are **robust, responsive, and intuitive**. My approach is rooted in
+**pragmatic engineering**: collaborating closely with clients to uncover actual needs and ensuring
+the final product feels effortless for the user.
+
+Beyond client work, I constantly prototype new ideas—see my latest experiments on the
 [learning page](/learning).
 
 > My greatest satisfaction comes when software feels intuitive and effortless for users.
@@ -33,6 +45,8 @@ continuously expand this toolkit with new technologies and **ways of thinking**.
 > A programmer must keep running to stay in place; a front-end developer needs a motorcycle to keep
 > up with change.
 
+---
+
 ## Leisure
 
 In last years I mostly listen to audiobooks, mainly sci-fi, philosophy, and history. I really enjoy
@@ -52,6 +66,8 @@ ferratas. Hiking and cycling are also a big part of my free time.
 This site was built [without JavaScript](/notes/web-description/) and with minimal graphics,
 inspired by early web simplicity and content-first icons like
 [The Best Motherfucking Website](https://thebestmotherfucking.website/).
+
+This website also serves as my playground for testing new CSS features.
 
 ## Disclaimer
 

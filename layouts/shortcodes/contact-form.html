@@ -1,15 +1,15 @@
 <form action="https://formspree.io/f/xlggdzqp" method="POST" id="contact-form">
   <p>
-    <label> NAME: <input type="text" name="name" required /> </label>
+    <label> NAME: <input type="text" name="name" autocomplete="name" required /> </label>
   </p>
   <p>
-    <label> EMAIL: <input type="email" name="email" required /> </label>
+    <label> EMAIL: <input type="email" name="email" autocomplete="email" required /> </label>
   </p>
   <p>
-    <label> MESSAGE: <textarea name="message" required></textarea></label>
+    <label> MESSAGE: <textarea name="message" autocomplete="off" required></textarea></label>
   </p>
   <p>
-    <button type="submit" aria-label="Send message" id="pokus">SEND MESSAGE</button>
+    <button type="submit" aria-label="Send message" class="ripple">SEND MESSAGE</button>
   </p>
   <div id="form-status">THANKS FOR MESSAGE</div>
 </form>

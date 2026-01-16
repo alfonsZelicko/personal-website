@@ -46,6 +46,7 @@ h6 {
 @include max-md() {
   h1 {
     font-size: 2em;
+    margin-top: 0;
   }
   h2 {
     font-size: 1.8em;
@@ -70,7 +71,7 @@ h6 {
 
 a {
   position: relative;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-link-rgb);
   text-decoration: none;
 

@@ -9,7 +9,7 @@ regularly explore new tools out of curiosity; some appear in the
 
 ## Frontend Stack
 
-- **Primary**: **TypeScript**/JavaScript, **React** (16.8+), HTML/CSS (SCSS, Less)
+- **Primary**: **TypeScript[^1]**/JavaScript, **React[^2]** (16.8+), HTML/CSS (SCSS, Less)
 - **Secondary/Legacy**: Svelte, Angular, htmx, **jQuery** (3.0+)
 - **Supporting tools**: **Material UI**, Tailwind, Bootstrap, TanStack, **Nx**, Cypress, Jest, ...
 
@@ -74,3 +74,19 @@ future selves.
 ---
 
 {{< mdfile file="blocks/workmethod.md" >}}
+
+[^1]:
+    On really huge projects it can be a little painful to use it due to a slow transpilation
+    process, but in version 7.0 it will be the transpiler rewritten in [Go](https://go.dev/). It
+    will be
+    [MUCH faster](https://byteiota.com/typescript-7-native-port-10x-faster-builds-land-in-early-2026/)
+    and meanwhile TC39 is thinking about
+    [Type Anotations](https://github.com/tc39/proposal-type-annotations) so who wants to live with
+    JS should learn TS for sure :-)
+
+[^2]:
+    In a past interview, I was questioned on UI optimization using
+    [useCallback](https://react.dev/reference/react/useCallback) and
+    [useMemo](https://react.dev/reference/react/useMemo). However, with the advent of the
+    [React Compiler](https://react.dev/learn/react-compiler), I now consider manual memoization
+    management an obsolete architectural overhead.

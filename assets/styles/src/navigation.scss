@@ -233,7 +233,7 @@ html:has(#contrast-toggle:checked) {
     transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: rgba(128, 128, 128, 0.1);
+      background-color: var(--color-bg-hover);
     }
 
     &:first-of-type {
