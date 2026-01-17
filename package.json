@@ -3,13 +3,13 @@
   "private": true,
   "scripts": {
     "start": "hugo server",
-    "dev": "hugo server",
-    "dev:open": "hugo server --disableFastRender --noHTTPCache --open",
+    "dev": "start http://localhost:1313 && hugo server  --cleanDestinationDir",
+    "dev:no-cache": "start http://localhost:1313 && hugo server --disableFastRender --noHTTPCache --cleanDestinationDir",
     "build": "hugo --minify --gc",
-    "format": "prettier --write .",
-    "check": "prettier --check ."
+    "format": "prettier --write ."
   },
   "devDependencies": {
+    "open-cli": "^8.0.0",
     "prettier": "^3.7.4",
     "prettier-plugin-go-template": "^0.0.15"
   }

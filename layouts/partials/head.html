@@ -17,15 +17,6 @@
 
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  <!-- Preconnect to Google Fonts for faster loading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- Load fonts with font-display: swap for better performance -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Noto+Sans+Mono&family=Special+Elite&display=swap"
-    rel="stylesheet" />
-
   {{ $options := (dict "targetPath" "css/style.min.css" "outputStyle" "compressed") }}
   {{ $style := resources.Get "styles/style.scss" | toCSS $options | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />

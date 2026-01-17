@@ -1,6 +1,5 @@
 <script>
   const sendToGiscus = config => {
-    console.log('wtf');
     const iframe = document.querySelector("iframe.giscus-frame");
     if (iframe?.contentWindow) {
       iframe.contentWindow.postMessage({ giscus: { setConfig: config } }, "https://giscus.app");

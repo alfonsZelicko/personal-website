@@ -4,23 +4,9 @@
 
 hr {
   border: 0;
-  border-top: 1px solid var(--color-text-rgb);
+  border-top: 1px dashed var(--color-text-rgb);
 }
 
 .link {
   color: var(--color-link-rgb);
-}
-
-.block-experience {
-  h4 {
-    margin-bottom: 0.4rem;
-  }
-  p {
-    margin-top: 0;
-    margin-bottom: 0.8rem;
-  }
-  ul {
-    margin-top: 0;
-    margin-bottom: 2.4rem;
-  }
 }

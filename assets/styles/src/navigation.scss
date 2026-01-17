@@ -32,6 +32,28 @@
   z-index: 2;
 }
 
+// Prevent #id links to be scrolled under menu
+[id] {
+  scroll-margin-top: 80px;
+}
+
+.top-nav {
+  animation: nav-shadow linear both;
+  animation-timeline: scroll(root block);
+  animation-range: 10px 60px;
+  
+  border-bottom:1px solid var(--color-bg-rgb);
+}
+
+@keyframes nav-shadow {
+  from {
+    border-color: var(--color-bg-rgb);
+  }
+  to {
+    border-color: var(--color-quote-rgb)
+  }
+}
+
 //
 // Menu base
 //
@@ -113,21 +135,21 @@
   user-select: none;
 }
 
-.theme-icon-moon,
-.theme-char-moon {
+.theme-icon-sun,
+.theme-char-sun {
   opacity: 0;
   --theme-transform: translate(-50%, -50%) rotate(-90deg);
 }
 
 html:has(#theme-toggle:checked) {
-  .theme-icon-sun,
-  .theme-char-sun {
+  .theme-icon-moon,
+  .theme-char-moon {
     opacity: 0;
     --theme-transform: translate(-50%, -50%) rotate(90deg);
   }
 
-  .theme-icon-moon,
-  .theme-char-moon {
+  .theme-icon-sun,
+  .theme-char-sun {
     opacity: 1;
     --theme-transform: translate(-50%, -50%) rotate(0deg);
   }
@@ -179,7 +201,7 @@ html:has(#contrast-toggle:checked) {
 
     visibility: hidden;
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-25px);
 
     display: flex;
     flex-direction: column;
@@ -217,7 +239,7 @@ html:has(#contrast-toggle:checked) {
     #top-nav-items {
       visibility: visible;
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(-15px);
 
       .menu-arrow {
         opacity: 1;

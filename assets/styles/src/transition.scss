@@ -3,6 +3,78 @@
   navigation: auto;
 }
 
+
+/*
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading-rgb);
+  font-weight: 400;
+  margin: 3.2rem 0 1.4rem 0;
+  letter-spacing: 0.024em;
+  line-height: 1.1;
+  font-family: "Special Elite", system-ui;
+
+  span.headline-text {
+    display: inline-block;
+    transform: translateX(-1ch);
+    animation: headline-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 50px cover 150px;
+  }
+
+  a.headline-link {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-decoration: none;
+    transform-origin: center;
+    transform: rotateY(90deg);
+
+    animation: link-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 100px cover 150px;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+@keyframes link-reveal {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes headline-reveal {
+  from {
+    transform: translateX(-1ch);
+  }
+  to {
+    transform: translateX(0);
+  }
+}*/
+
+// Some cool scroll animation :-)
+/*p, h1, h2, h3, h4, h5, h6, blockquote, ul  {
+  animation: fadeIn linear both;
+  animation-timeline: view();
+  animation-range: cover 0% cover 15%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(.8) translateY(10vh);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}*/
+
 // Customize the animation
 /*::view-transition-old(root) {
   animation: 0.25s ease-out both fade-out;

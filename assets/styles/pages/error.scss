@@ -1,0 +1,81 @@
+@mixin glitch-keyframes($name, $t1-x, $t1-y, $t2-x, $t2-y, $t3-x, $t3-y, $skew) {
+  @keyframes #{$name} {
+    2%, 64% { transform: translate($t1-x, $t1-y) skew(0deg); }
+    4%, 60% { transform: translate($t2-x, $t2-y) skew(0deg); }
+    62% { transform: translate($t3-x, $t3-y) skew($skew); }
+  }
+}
+
+@include glitch-keyframes('glitch-0', -2px, -1px, -2px, 0, 2px, 0, 5deg);
+@include glitch-keyframes('glitch-1', -2px, -1px, 2px, -1px, 0, -1px, 5deg);
+@include glitch-keyframes('glitch-2', 2px, 3px, -2px, 0, 0, 0, 5deg);
+@include glitch-keyframes('glitchTop-0', -10px, -2px, 4px, 2px, -5px, -1px, 13deg);
+@include glitch-keyframes('glitchTop', 2px, -2px, -2px, 2px, 5px, -1px, -13deg);
+@include glitch-keyframes('glitchBottom', -2px, 0, -2px, 0, -10px, -5px, 21deg);
+
+.error {
+  text-align: center;
+
+  h1, h2, p.msg {
+    position: relative;
+
+    &:before, &:after {
+      content: attr(title);
+      position: absolute;
+    }
+
+    &:before {
+      animation: glitchTop 2s linear infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    }
+
+    &:after {
+      top: 0;
+      animation: glitchBottom 1.5s linear infinite;
+      clip-path: polygon(0 57%, 100% 57%, 100% 100%, 0 100%);
+    }
+  }
+
+  h1 {
+    font-size: 10rem;
+    margin-bottom: 0.5rem;
+    animation: glitch-2 1s linear infinite;
+
+    &:after {
+      left: 48px;
+      @media screen and (max-width: 800px) { left: 18px; }
+    }
+    
+    &::first-letter {
+      color: inherit;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    animation: glitch-1 1s linear infinite;
+    animation-delay: 0.2s;
+
+    &:before {
+      animation: glitchTop-0 4s linear infinite;
+      animation-delay: 0.3s;
+      clip-path: none;
+      opacity: 0.3;
+    }
+
+    &:after {
+      left: 65px;
+      @media screen and (max-width: 800px) { left: 33px; }
+    }
+  }
+
+  p.msg {
+    margin: 0;
+    animation: glitch-0 1s linear infinite;
+    animation-delay: 0.4s;
+
+    &:after {
+      left: 0;
+    }
+  }
+}

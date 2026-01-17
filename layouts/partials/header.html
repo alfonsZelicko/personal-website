@@ -72,7 +72,7 @@
                     titleOff: "Turn ON High Contrast",
                   },
                   {
-                    id: "menu",
+                    id: "menu-toggle",
                     storageKey: null,
                     titleOn: "Close Menu",
                     titleOff: "Open Menu",
@@ -84,9 +84,7 @@
 
                   if (storageKey) {
                     const saved = localStorage.getItem(storageKey);
-                    if (saved !== null) {
-                      toggle.checked = saved === "true";
-                    }
+                    saved && (toggle.checked = saved === "true");
                   }
 
                   const updateTitle = () => {
