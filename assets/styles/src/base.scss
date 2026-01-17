@@ -8,7 +8,7 @@
   --pal-text-low-l: rgb(#{$color-text-low-rgb});
   --pal-heading-low-l: rgb(#{$color-heading-low-rgb});
   --pal-link-low-l: rgb(#{$color-link-low-rgb});
-  --pal-link-act-low-l: rgb(#{$color-link-active-low-rgb});
+  --pal-link-act-low-l: oklch(from rgb(#{$color-link-low-rgb}) calc(l * 1.2) c h);
   --pal-code-txt-low-l: rgb(#{$color-code-text-low-rgb});
   --pal-code-bg-low-l: rgb(#{$color-code-bg-low-rgb});
   --pal-quote-low-l: rgb(#{$color-quote-low-rgb});
@@ -19,7 +19,7 @@
   --pal-text-low-d: rgb(#{$color-text-dark-low-rgb});
   --pal-heading-low-d: rgb(#{$color-heading-dark-low-rgb});
   --pal-link-low-d: rgb(#{$color-link-dark-low-rgb});
-  --pal-link-act-low-d: rgb(#{$color-link-active-dark-low-rgb});
+  --pal-link-act-low-d: oklch(from rgb(#{$color-link-dark-low-rgb}) calc(l * 1.1) c h);
   --pal-code-txt-low-d: rgb(#{$color-code-text-dark-low-rgb});
   --pal-code-bg-low-d: rgb(#{$color-code-bg-dark-low-rgb});
   --pal-quote-low-d: rgb(#{$color-quote-dark-low-rgb});
@@ -30,7 +30,7 @@
   --pal-text-high-l: rgb(#{$color-text-high-rgb});
   --pal-heading-high-l: rgb(#{$color-heading-high-rgb});
   --pal-link-high-l: rgb(#{$color-link-high-rgb});
-  --pal-link-act-high-l: rgb(#{$color-link-active-high-rgb});
+  --pal-link-act-high-l: oklch(from rgb(#{$color-link-high-rgb}) calc(l * 1.3) c h);
   --pal-code-txt-high-l: rgb(#{$color-code-text-high-rgb});
   --pal-code-bg-high-l: rgb(#{$color-code-bg-high-rgb});
   --pal-quote-high-l: rgb(#{$color-quote-high-rgb});
@@ -41,7 +41,7 @@
   --pal-text-high-d: rgb(#{$color-text-dark-high-rgb});
   --pal-heading-high-d: rgb(#{$color-heading-dark-high-rgb});
   --pal-link-high-d: rgb(#{$color-link-dark-high-rgb});
-  --pal-link-act-high-d: rgb(#{$color-link-active-dark-high-rgb});
+  --pal-link-act-high-d: oklch(from rgb(#{$color-link-dark-high-rgb}) calc(l * 1.1) c h);
   --pal-code-txt-high-d: rgb(#{$color-code-text-dark-high-rgb});
   --pal-code-bg-high-d: rgb(#{$color-code-bg-dark-high-rgb});
   --pal-quote-high-d: rgb(#{$color-quote-dark-high-rgb});
