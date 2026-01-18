@@ -118,7 +118,63 @@ weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
 - **link underline animation**: The basic underline fits the _philosophy of the basic web_, but it
   was too hard to resist adding something a little more elegant.
 
-## 4. The Stats
+## 4. Email Form
+
+I am using standard HTML form elements, with a simple css animation to make the form look more
+pleasing. Same _scss_ code is used to animate Lists (in [Notes](/notes) section) as on my _main_
+page as well.
+
+```scss
+%in-animation {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  transition-delay: calc((sibling-index()) * 50ms);
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+```
+
+For sending an email Iam using [Formspree](https://formspree.io/) service. It works well: the form
+is submitted via AJAX to the _Formspree_ endpoint (and resend as email to my mailbox), and the
+result is returned to the user. _Formspree_ also protects against spam bots.
+
+```js
+async function handleSubmit(event) {
+  event.preventDefault();
+  const data = new FormData(event.target);
+
+  try {
+    const response = await fetch(event.target.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    formStatus.innerHTML = response.ok ? "Thanks for message!" : `Oops! ${errorMessage}`;
+  } finally {
+    formStatus.classList.add("show-message");
+    form.reset();
+  }
+}
+```
+
+With no JS on the form will send the email and refresh the page. With JS enabled, the JS will send
+the email and show a success message.
+
+## 5. Notes
+
+[Notes](/notes) section is some kind of my personal journal/notes about technologies I found. I am
+using [Hugo](https://gohugo.io/) to generate static HTML pages. I added discussions to each note,
+using a Giscus comment widget. Every one hour I am generating stats into a JSON file and uploading
+it on my GitHub Gist, and the JS script reads it and enhances the page note info. With no JS you
+will just see no additional info about the note.
+
+## 6. The Stats
 
 - **Build Time**: ~25ms (Hugo is incredibly fast)
 - **Page Weight**: ~62 KB (it's 83x less than facebook welcome page)

@@ -1,72 +1,21 @@
 {{ define "content" }}
-  <style>
-    .home {
-      text-align: center;
-    }
-    .home h1 {
-      margin-bottom: 0;
-      &::first-letter {
-        color: inherit;
-      }
-    }
-    .home p {
-      font-family: "Special Elite", system-ui;
-      font-size: 2.4rem;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      color: var(--color-quote-rgb);
-    }
-    .home ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .home li {
-      display: inline-block;
-      position: relative;
+  {{ $responsive := resources.Get "styles/src/_responsive.scss" }}
+  {{ $transitions := resources.Get "styles/src/transitions.scss" }}
+  {{ $pageStyle := resources.Get "styles/pages/index.scss" }}
 
-      transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
-      transition-delay: calc(300ms + (sibling-index() * 80ms));
+  {{ if and $responsive $transitions $pageStyle }}
+    {{ $bundle := slice $responsive $transitions $pageStyle | resources.Concat "temp_main.scss" }}
+    {{ $compiled := $bundle | toCSS | minify }}
+      <style>
+        {{ $compiled.Content | safeCSS }}
+      </style>
+  {{ end }}
 
-      @starting-style {
-        opacity: 0;
-        transform: translateX(-10px);
-      }
-    }
-
-    .info {
-      transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-      transition-delay: calc((sibling-index()) * 150ms);
-
-      @starting-style {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-    }
-
-    .home li a {
-      margin: 0 0.6rem;
-    }
-
-    @media screen and (max-width: 800px) {
-      .home p {
-        font-size: 1.2em;
-      }
-
-      .home li a {
-        margin: 0 0.2rem;
-      }
-    }
-  </style>
 
   <section class="container centered">
     <div class="home">
-      <h1 class="info">{{ .Site.Params.author }}</h1>
-      <p class="info">{{ .Site.Params.info }}</p>
+      <h1>{{ .Site.Params.author }}</h1>
+      <p>{{ .Site.Params.info }}</p>
       {{ with .Site.Params.social }}
         <ul>
           {{ range sort . }}

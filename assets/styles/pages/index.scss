@@ -1,0 +1,58 @@
+.home {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0;
+
+    &::first-letter {
+      color: inherit;
+    }
+  }
+
+  p {
+    font-family: "Special Elite", system-ui;
+    font-size: 2.4rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: var(--color-quote-rgb);
+  }
+
+  h1, p {
+    @extend %in-animation;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+      display: inline-block;
+      position: relative;
+
+      transition: opacity 0.2s ease,
+      transform 0.2s ease;
+      transition-delay: calc(300ms + (sibling-index() * 80ms));
+
+      @starting-style {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+
+      a {
+        margin: 0 0.6rem;
+      }
+    }
+  }
+
+  @include max-md() {
+    p {
+      font-size: 1.2em;
+    }
+
+    li a {
+      margin: 0 0.2rem;
+    }
+  }
+}
+

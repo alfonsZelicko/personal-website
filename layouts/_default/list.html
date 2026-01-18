@@ -76,7 +76,7 @@
       /* I am not proud on this hack - somebody help me? :-) problem is, imho, with Hugo - ALWAYS adds full url from `baseurl` config
       `fetch('{{ "comments-stats.json" | absURL }}')` || `fetch('{{ "comments-stats.json" | relURL }}')` not working
        */
-      const statsUrl = window.location.origin + "/comments-stats.json";
+      const statsUrl = `https://gist.githubusercontent.com/alfonsZelicko/65494199809475c1dc9ca0731fc33e5b/raw/comments-stats.json`;
 
       fetch(statsUrl)
         .then(response => {

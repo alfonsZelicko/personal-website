@@ -47,10 +47,8 @@ jobs:
             }) 
             end' > static/comments-stats.json
 
-      - name: Commit and Push
+      - name: Update Gist
+        env:
+          GH_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          # force add -> in case it is in .gitignore - yes, i did it O:-)
-          git add -f static/comments-stats.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update comment stats" && git push)
+          gh gist edit <ID_TVÉHO_GISTU> --filename comments-stats.json static/comments-stats.json

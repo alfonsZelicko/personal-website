@@ -9,15 +9,7 @@
   p {
     margin-bottom: 1.5rem;
 
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease;
-    transition-delay: calc((sibling-index()) * 50ms);
-
-    @starting-style {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
+    @extend %in-animation;
   }
 
   label {

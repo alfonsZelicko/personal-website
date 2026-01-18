@@ -3,50 +3,50 @@
 //
 
 :root {
-  // Low Contrast - Light
+  /* Low Contrast - Light */
   --pal-bg-low-l: rgb(#{$color-bg-low-rgb});
   --pal-text-low-l: rgb(#{$color-text-low-rgb});
-  --pal-heading-low-l: rgb(#{$color-heading-low-rgb});
+  --pal-heading-low-l: oklch(from rgb(#{$color-text-low-rgb}) calc(l * 0.8) c h);
   --pal-link-low-l: rgb(#{$color-link-low-rgb});
   --pal-link-act-low-l: oklch(from rgb(#{$color-link-low-rgb}) calc(l * 1.2) c h);
   --pal-code-txt-low-l: rgb(#{$color-code-text-low-rgb});
   --pal-code-bg-low-l: rgb(#{$color-code-bg-low-rgb});
-  --pal-quote-low-l: rgb(#{$color-quote-low-rgb});
+  --pal-quote-low-l: oklch(from rgb(#{$color-text-low-rgb}) calc(l * 1.1) calc(c * 0.5) h);
   --pal-quote-vals-low-l: #{$color-quote-low-rgb};
 
-  // Low Contrast - Dark (Default)
+  /* Low Contrast - Dark */
   --pal-bg-low-d: rgb(#{$color-bg-dark-low-rgb});
   --pal-text-low-d: rgb(#{$color-text-dark-low-rgb});
-  --pal-heading-low-d: rgb(#{$color-heading-dark-low-rgb});
+  --pal-heading-low-d: oklch(from rgb(#{$color-text-dark-low-rgb}) calc(l * 1.15) c h);
   --pal-link-low-d: rgb(#{$color-link-dark-low-rgb});
   --pal-link-act-low-d: oklch(from rgb(#{$color-link-dark-low-rgb}) calc(l * 1.1) c h);
   --pal-code-txt-low-d: rgb(#{$color-code-text-dark-low-rgb});
   --pal-code-bg-low-d: rgb(#{$color-code-bg-dark-low-rgb});
-  --pal-quote-low-d: rgb(#{$color-quote-dark-low-rgb});
+  --pal-quote-low-d: oklch(from rgb(#{$color-text-dark-low-rgb}) calc(l * 0.8) calc(c * 0.8) h);
   --pal-quote-vals-low-d: #{$color-quote-dark-low-rgb};
 
-  // High Contrast - Light
+  /* High Contrast - Light */
   --pal-bg-high-l: rgb(#{$color-bg-high-rgb});
   --pal-text-high-l: rgb(#{$color-text-high-rgb});
-  --pal-heading-high-l: rgb(#{$color-heading-high-rgb});
+  --pal-heading-high-l: oklch(from rgb(#{$color-text-high-rgb}) calc(l * 0.7) c h);
   --pal-link-high-l: rgb(#{$color-link-high-rgb});
   --pal-link-act-high-l: oklch(from rgb(#{$color-link-high-rgb}) calc(l * 1.3) c h);
   --pal-code-txt-high-l: rgb(#{$color-code-text-high-rgb});
   --pal-code-bg-high-l: rgb(#{$color-code-bg-high-rgb});
-  --pal-quote-high-l: rgb(#{$color-quote-high-rgb});
+  --pal-quote-high-l: oklch(from rgb(#{$color-text-high-rgb}) calc(l * 1.4) 0 h);
   --pal-quote-vals-high-l: #{$color-quote-high-rgb};
 
-  // High Contrast - Dark
+  /* High Contrast - Dark */
   --pal-bg-high-d: rgb(#{$color-bg-dark-high-rgb});
   --pal-text-high-d: rgb(#{$color-text-dark-high-rgb});
-  --pal-heading-high-d: rgb(#{$color-heading-dark-high-rgb});
+  --pal-heading-high-d: oklch(from rgb(#{$color-text-dark-high-rgb}) calc(l * 1.2) c h);
   --pal-link-high-d: rgb(#{$color-link-dark-high-rgb});
   --pal-link-act-high-d: oklch(from rgb(#{$color-link-dark-high-rgb}) calc(l * 1.1) c h);
   --pal-code-txt-high-d: rgb(#{$color-code-text-dark-high-rgb});
   --pal-code-bg-high-d: rgb(#{$color-code-bg-dark-high-rgb});
-  --pal-quote-high-d: rgb(#{$color-quote-dark-high-rgb});
+  --pal-quote-high-d: oklch(from rgb(#{$color-text-dark-high-rgb}) calc(l * 0.7) 0 h);
   --pal-quote-vals-high-d: #{$color-quote-dark-high-rgb};
-  
+
   --pal-error-universal: rgb(#{$color-error-universal-rgb});
   --pal-background-hover: #{$color-background-hover};
 
