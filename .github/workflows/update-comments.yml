@@ -51,4 +51,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: |
-          gh gist edit <ID_TVÉHO_GISTU> --filename comments-stats.json static/comments-stats.json
+          gh gist edit 65494199809475c1dc9ca0731fc33e5b --filename comments-stats.json static/comments-stats.json
