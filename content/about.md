@@ -3,12 +3,12 @@ title: "About me"
 slug: "about"
 ---
 
-I’m **Alfons Zelicko**, a software developer specializing in **front-end** with **over 25 years of
-coding experience[^1]**. Having seen the industry evolve from basic scripts to complex automated
-systems, I’ve learned to prioritize tools that solve **real problems** over fleeting trends-always
-with a focus on **long-term maintainability**.
+I’m **Alfons Zelicko**, a software developer specializing in **front-end** with **over 18 years of
+[coding experience](/experience)[^1]**. Having seen the industry evolve from basic scripts to
+complex automated systems, I’ve learned to prioritize tools that solve **real problems** over
+fleeting trends-always with a focus on **long-term maintainability**.
 
-**I am looking to collaborate on:**
+### How I can help
 
 - **Architecture & Strategy:** Building robust front-end foundations for start-ups and teams.
 - **Specialized Micro-apps:** Developing focused, high-performance applications for specific needs.
@@ -82,7 +82,7 @@ This website also serves as my playground for testing new CSS features.
 **Every idea here is either my own or curated from the world of books and web.** I only use AI to
 polish the phrasing so my ‘Slavic English’ doesn’t disrupt the flow of the message. :-)
 
-[^1]: 18+ years as a professional.
+[^1]: 25+ years if we will count my education experience as well.
 
 [^2]:
     I absolutely love going for a walk with my colleagues along ropes and platforms 200 meters above

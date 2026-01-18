@@ -2,6 +2,10 @@
 
 table {
   border-collapse: collapse;
+  border-top: 2px solid var(--color-quote-rgb);
+  border-bottom: 2px solid var(--color-quote-rgb);
+  width: 100%;
+
   td,
   th {
     text-align: left;
@@ -10,15 +14,16 @@ table {
     font-size: 1.6rem;
     line-height: 1.2;
   }
+  th {
+    background-color: var(--color-bg-rgb);
+    text-align: center;
+    border-bottom: 2px solid var(--color-quote-rgb);
+  }
 
   tr {
-    &:first-child th {
-      border-top: 0;
+    &:nth-child(2n-1) {
+      background-color: oklch(from var(--color-bg-hover) l c h / 5%);
     }
-    &:last-child td {
-      border-bottom: 0;
-    }
-
     td:first-child,
     th:first-child {
       border-left: 0;

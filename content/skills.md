@@ -7,6 +7,19 @@ This section reflects technologies I’ve used in **real projects**, not everyth
 regularly explore new tools out of curiosity; some appear in the
 [Learning section](/experience/learning/), which I started documenting only recently.
 
+## TL;DR Summary
+
+| Area              | Technologies & Expertise                                                                 |
+| :---------------- | :--------------------------------------------------------------------------------------- |
+| **Frontend**      | **React, TypeScript/JavaScript**, HTML5/CSS3, Tailwind, @mui, Redux/Zustand/Jotay        |
+| **Backend**       | **Java, Spring Boot,** Hibernate, REST APIs/GraphQL, SQL, WildFly/JBoss                  |
+| **UI/UX**         | **User-Centric Design, Modern CSS** Responsive Design, Figma, Accessibility, Prototyping |
+| **Architecture**  | **Pragmatic Modularism,** Micro-services, Design Patterns                                |
+| **Ops & Culture** | **Agile, Mentorship,** CI/CD, Docker, Git, Onboarding, Clean Code, Enterprise Ecosystems |
+
+> I focus on building friendly, intuitive interfaces. I am not afraid to challenge requirements or
+> propose changes, but I always prioritize real business value and common sense.
+
 ## Frontend Stack
 
 - **Primary**: **TypeScript[^1]**/JavaScript, **React[^2]**, HTML/CSS (SCSS, Less)
