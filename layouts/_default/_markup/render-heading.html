@@ -1,5 +1,5 @@
 {{- $id := .Attributes.id | default (.Text | anchorize) -}}
 <h{{ .Level }} id="{{ $id }}">
-  <a href="{{ .Page.RelPermalink }}#{{ $id }}" class="headline-link" aria-hidden="true" tabindex="-1">> </a>
+  <a href="{{ .Page.RelPermalink }}#{{ $id }}" aria-hidden="true" tabindex="-1">> </a>
     {{ .Text | safeHTML }}
 </h{{ .Level }}>

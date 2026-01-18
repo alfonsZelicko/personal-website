@@ -22,14 +22,14 @@ navigable even if you **disable JavaScript entirely**.
   somewhere, ofc) and the `:checked` CSS pseudo-class, I built the theme switcher, contrast toggle,
   and mobile menu without any UI logic in JS.
 
-  ```scss
-  // Simplified example of how it works
-  html:has(#theme-toggle:checked) {
-    --bg-color: #{$color-bg-dark-low-rgb};
-    --text-color: #{$color-text-dark-low-rgb};
-    ...
-  }
-  ```
+```scss
+// Simplified example of how it works
+html:has(#theme-toggle:checked) {
+  --bg-color: #{$color-bg-dark-low-rgb};
+  --text-color: #{$color-text-dark-low-rgb};
+  ...
+}
+```
 
 ## 2. JS only as a Progressive Enhancement
 
@@ -37,21 +37,21 @@ navigable even if you **disable JavaScript entirely**.
   to handle proper accessibility titles and aria-labels) only to "remember" user preferences in
   localStorage. If it fails, the site simply defaults to the "warm dark" mode. No big deal.
 
-  ```js
-  (() => {
-    ["theme", "contrast"].forEach(key => {
-      const el = document.getElementById(`${key}-toggle`);
-      if (!el) return;
+```js
+(() => {
+  ["theme", "contrast"].forEach(key => {
+    const el = document.getElementById(`${key}-toggle`);
+    if (!el) return;
 
-      const saved = localStorage.getItem(key);
-      if (saved !== null) el.checked = saved === "true";
+    const saved = localStorage.getItem(key);
+    if (saved !== null) el.checked = saved === "true";
 
-      el.addEventListener("change", () => {
-        localStorage.setItem(key, el.checked);
-      });
+    el.addEventListener("change", () => {
+      localStorage.setItem(key, el.checked);
     });
-  })();
-  ```
+  });
+})();
+```
 
 > feel free to 'inspire yourself' from this approach - we need less JS on the web :-)
 
@@ -59,36 +59,36 @@ navigable even if you **disable JavaScript entirely**.
   Extracting the address requires JavaScript execution or simulated user interaction, so even
   relatively advanced bots (e.g. using Puppeteer or Playwright) face additional friction.
 
-  ```html
-  <span id="mail-vault" class="link"> zelicko [dot] alfons [at] gmail [dot] com </span>
+```html
+<span id="mail-vault" class="link"> zelicko [dot] alfons [at] gmail [dot] com </span>
 
-  <script>
-    (() => {
-      const el = document.getElementById("mail-vault");
-      if (!el) return;
+<script>
+  (() => {
+    const el = document.getElementById("mail-vault");
+    if (!el) return;
 
-      el.textContent = "[REVEAL EMAIL ADDRESS]";
-      el.style.cursor = "pointer";
-      el.setAttribute("role", "button");
-      el.setAttribute("aria-label", "Reveal email address");
+    el.textContent = "[REVEAL EMAIL ADDRESS]";
+    el.style.cursor = "pointer";
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", "Reveal email address");
 
-      el.addEventListener(
-        "click",
-        () => {
-          const p = ["gmail", "com", "alfons", "zelicko"];
-          const addr = `${p[3]}.${p[2]}@${p[0]}.${p[1]}`;
+    el.addEventListener(
+      "click",
+      () => {
+        const p = ["gmail", "com", "alfons", "zelicko"];
+        const addr = `${p[3]}.${p[2]}@${p[0]}.${p[1]}`;
 
-          const a = document.createElement("a");
-          a.href = `mailto:${addr}`;
-          a.textContent = addr;
+        const a = document.createElement("a");
+        a.href = `mailto:${addr}`;
+        a.textContent = addr;
 
-          el.replaceWith(a);
-        },
-        { once: true }
-      );
-    })();
-  </script>
-  ```
+        el.replaceWith(a);
+      },
+      { once: true }
+    );
+  })();
+</script>
+```
 
 ## 3. Design: Less Noise, More SVG
 
@@ -110,11 +110,13 @@ weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
 - **view-transition**: I added this CSS property to make page transitions smoother. The default fade
   effect works well enough for me. It’s a relatively new CSS feature, and in browsers that don’t
   support it, the page behaves as usual.
-  ```css
-  @view-transition {
-    navigation: auto;
-  }
-  ```
+
+```css
+@view-transition {
+  navigation: auto;
+}
+```
+
 - **link underline animation**: The basic underline fits the _philosophy of the basic web_, but it
   was too hard to resist adding something a little more elegant.
 
@@ -143,6 +145,7 @@ is submitted via AJAX to the _Formspree_ endpoint (and resend as email to my mai
 result is returned to the user. _Formspree_ also protects against spam bots.
 
 ```js
+// with no JS will be the page reloaded after submitting the form
 async function handleSubmit(event) {
   event.preventDefault();
   const data = new FormData(event.target);
@@ -163,18 +166,34 @@ async function handleSubmit(event) {
 }
 ```
 
-With no JS on the form will send the email and refresh the page. With JS enabled, the JS will send
-the email and show a success message.
-
 ## 5. Notes
 
 [Notes](/notes) section is some kind of my personal journal/notes about technologies I found. I am
 using [Hugo](https://gohugo.io/) to generate static HTML pages. I added discussions to each note,
-using a Giscus comment widget. Every one hour I am generating stats into a JSON file and uploading
-it on my GitHub Gist, and the JS script reads it and enhances the page note info. With no JS you
-will just see no additional info about the note.
+using a [Giscus](https://giscus.app/) comment widget. Every one hour I am generating stats into a
+JSON file and uploading it on my [GitHub Gist](https://gist.github.com/), and the JS script reads it
+and enhances the page note info. With no JS you will just see no additional info about the note.
 
-## 6. The Stats
+## 6. Hugo \_markups
+
+I rly like how Hugo works with Markdown files. It's very simple and intuitive. But from time to time
+I need to add some custom HTML into the basic HTML Hugo created. For example, I added a link to this
+heading with a small arrow to make it more eye-catching.
+
+```go-html-template
+{{/* layouts/_default/_markup/render-heading.html */}}
+{{- $id := .Attributes.id | default (.Text | anchorize) -}}
+<h{{ .Level }} id="{{ $id }}">
+  <a href="{{ .Page.RelPermalink }}#{{ $id }}" aria-hidden="true" tabindex="-1">> </a>
+    {{ .Text | safeHTML }}
+</h{{ .Level }}>
+```
+
+In same way I used `--color-link-rgb` color for `::first-letter` in `<h1>` element, but this
+decision was a little hard to me. Link color used on a non-link element is a breaking some basic
+rules of accessibility... but it is helping to make the page more readable.
+
+## 7. The Stats
 
 - **Build Time**: ~25ms (Hugo is incredibly fast)
 - **Page Weight**: ~62 KB (it's 83x less than facebook welcome page)

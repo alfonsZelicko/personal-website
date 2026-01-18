@@ -10,3 +10,7 @@ hr {
 .link {
   color: var(--color-link-rgb);
 }
+
+li::marker {
+  color: oklch(from var(--color-link-rgb) calc(l * 0.7) c h);
+}
