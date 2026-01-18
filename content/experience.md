@@ -11,16 +11,18 @@ completion**.
 During the years I developed a **prefered dev environment** - more about
 [here](/notes/2026-01-02-dev-environment).
 
+> This web is still under construction, so more content will be added soon...
+
 ## TL;DR Summary
 
-| Period             | Role                     | Company / Project          | Key Stack                                   |
-| :----------------- | :----------------------- | :------------------------- | :------------------------------------------ |
-| **2024 – Present** | Sabbatical / Explorer    | **AI & LLM Orchestration** | **Python**, Django, TTS, htmx               |
-| **2021 – 2024**    | Senior Frontend Engineer | **ChyronHego**             | **React**, **JS/TS**, **Nx** (Monorepos)    |
-| **2018 – 2021**    | Solution Architect / Dev | **Nuvia a.s.**             | **Java/WildFly**, Industry 4.0, SQL, DevOps |
-| **2012 – 2018**    | Full-stack Freelancer    | **Digital Nomad**          | PHP/JS, SEO, **Graphic Design**             |
-| **2010 – 2012**    | Software Engineer        | **Red-Hat**                | JBoss, Java, Linux, QA Automation           |
-| **2008 – 2009**    | Intern / Programmer      | **Stormware - Pohoda**     | PHP, JS, HTML, CSS, MySQL                   |
+| Period             | Role                                                                     | Company / Project          | Key Stack                                   |
+| :----------------- | :----------------------------------------------------------------------- | :------------------------- | :------------------------------------------ |
+| **2024 – Present** | Sabbatical / Explorer                                                    | **AI & LLM Orchestration** | **Python**, Django, TTS, htmx               |
+| **2021 – 2024**    | Senior Frontend Engineer                                                 | **ChyronHego**             | **React**, **JS/TS**, **Nx** (Monorepos)    |
+| **2018 – 2021**    | [Solution Architect / Dev](/notes/2026-01-18-nuvia-industrial-evolution) | **Nuvia a.s.**             | **Java/WildFly**, Industry 4.0, SQL, DevOps |
+| **2012 – 2018**    | Full-stack Freelancer                                                    | **Digital Nomad**          | PHP/JS, SEO, **Graphic Design**             |
+| **2010 – 2012**    | Software Engineer                                                        | **Red-Hat**                | JBoss, Java, Linux, QA Automation           |
+| **2008 – 2009**    | Intern / Programmer                                                      | **Stormware - Pohoda**     | PHP, JS, HTML, CSS, MySQL                   |
 
 ## The Journey
 
@@ -60,6 +62,7 @@ _2018–2021_ ~ **Industry 4.0 & Monitoring Systems**
 - Created real-time visualization systems for manufacturing plants, enabling international rollout.
 - Maintained and refactored databases for nuclear waste repositories with strict data integrity.
 - Defined FE/BE boundaries and introduced DevOps workflows to replace manual processes.
+- More detailed info about work for Nuvia [HERE](/notes/2026-01-18-nuvia-industrial-evolution).
 
 > The [DAQIS website](https://daqis.cz/) is a piece of my 'legacy' work—built fast with minimal
 > tools, yet its long-term survival speaks for itself. It’s screaming for an English version, a
@@ -81,11 +84,17 @@ _2012–2018_ ~ **Global**
 
 _2010–2012_ ~ **JBoss Ecosystem**
 
-- Debugged and reproduced complex issues in large-scale enterprise systems.
-- Learned disciplined testing and documentation in an open-source environment.
-
-> One month here surpassed years of prior experience; at the time, Red Hat was voted Best Employer
-> in CZ.
+- **Professional Growth:** This was my transition from "writing code" to professional software
+  engineering. I learned the complete development lifecycle within a massive open-source ecosystem.
+- **Team Synergy:** I gained experience in how global teams communicate, use professional
+  toolchains, and handle complex code reviews.
+- **Discipline & Quality:** I focused on debugging and reproducing complex issues in large-scale
+  enterprise systems. It taught me the importance of disciplined testing, rigorous documentation,
+  and why "it works on my machine" is never enough.
+- **Open Source Mindset:** I learned how to contribute to shared projects where every line of code
+  is visible and must meet high community standards.
+- **Last but not least:** I learned how important and refreshing it is to have a healthy and
+  creative corporate/team culture.
 
 ### Stormware (Pohoda) | Software Engineer (Intern)
 
@@ -98,10 +107,6 @@ _2008–2009_ ~ **ERP Systems & Web Integration**
   ensuring seamless user interaction within the ERP ecosystem.
 - **Quality Assurance:** Responsible for rigorous testing of newly developed modules to maintain
   high stability in production environments.
-
-> My first real exposure to professional software engineering at scale. While still at university, I
-> learned that building great products is as much about communication and strategy as it is about
-> writing code.
 
 ---
 

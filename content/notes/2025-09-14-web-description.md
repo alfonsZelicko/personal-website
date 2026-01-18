@@ -1,6 +1,6 @@
 ---
 date: "2025-09-14"
-title: "Website Technological Description"
+title: "Manifest: Website Technological Description"
 slug: "web-description"
 categories: ["philosophy", "guide"]
 tags: []
@@ -173,6 +173,8 @@ using [Hugo](https://gohugo.io/) to generate static HTML pages. I added discussi
 using a [Giscus](https://giscus.app/) comment widget. Every one hour I am generating stats into a
 JSON file and uploading it on my [GitHub Gist](https://gist.github.com/), and the JS script reads it
 and enhances the page note info. With no JS you will just see no additional info about the note.
+
+> This solution is a little "cute over-engineering," but I rly wanted to try it out O:-)
 
 ## 6. Hugo \_markups
 
