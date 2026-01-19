@@ -15,6 +15,28 @@
   }
 }
 
+/* 
+  usage: @include pulse(var(--color-link-rgb));
+  
+  element:hover {
+    animation: pulse .8s;
+  }
+*/
+@mixin pulse($from-color) {
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 oklch(from #{$from-color} l c h / 40%);
+    }
+    100% {
+      box-shadow: 0 0 0 .7em transparent;
+    }
+  }
+}
+
+.hover-pulse {
+  animation: pulse11 .8s;
+}
+
 // Some cool scroll animation :-)
 /*p, h1, h2, h3, h4, h5, h6, blockquote, ul  {
   animation: fadeIn linear both;
