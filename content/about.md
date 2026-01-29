@@ -4,7 +4,7 @@ slug: "about"
 ---
 
 I’m **Alfons Zelicko**, a software developer specializing in **front-end** with **over 18 years of
-[coding experience](/experience)[^1]**. Having seen the industry evolve from basic scripts to
+[coding&nbsp;experience](/experience)[^1]**. Having seen the industry evolve from basic scripts to
 complex automated systems, I’ve learned to prioritize tools that solve **real problems** over
 fleeting trends-always with a focus on **long-term maintainability**.
 

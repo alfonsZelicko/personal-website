@@ -24,7 +24,8 @@ regularly explore new tools out of curiosity; some appear in the
 
 - **Primary**: **TypeScript[^1]**/JavaScript, **React[^2]**, HTML/CSS (SCSS, Less)
 - **Secondary/Legacy**: Svelte, Angular, htmx, **jQuery**
-- **Supporting tools**: **Material UI**, Tailwind, Bootstrap, TanStack, **Nx**, Cypress, Jest, ...
+- **Supporting tools**: **Material UI[^3]**, Tailwind, Bootstrap, TanStack, **Nx**, Cypress, Jest,
+  ...
 
 I keep a broad overview of the frontend ecosystem to choose the
 [right tool for the team](http://mikhailian.mova.org/node/284), not the latest trend. I generally
@@ -122,3 +123,8 @@ Approach for delivering elegant, maintainable code that adds lasting value.
     [useMemo](https://react.dev/reference/react/useMemo). However, with the advent of the
     [React Compiler](https://react.dev/learn/react-compiler), I now consider manual memoization
     management an obsolete architectural overhead.
+
+[^3]:
+    Material UI is a great library, but it needs to be used as it was designed. Any deviation from
+    the [Material Design manifesto](https://m1.material.io/) leads to inconsistency and is
+    relatively costly. For a robust interface with many components, performance can become an issue.

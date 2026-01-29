@@ -104,6 +104,7 @@ a {
   font-weight: 400;
   color: var(--color-link-rgb);
   text-decoration: none;
+  transition: color 0.2s cubic-bezier(0.8, 0, 0.2, 1);
 
   &::after {
     content: "";
@@ -112,9 +113,7 @@ a {
     bottom: 0;
     width: 100%;
     height: 1px;
-    background-color: var(--color-link-active-rgb);
-    //background: currentColor;
-    //background: oklch(from currentColor l c h / 50%);
+    background-color: currentColor;
     transform: translateX(-50%) scaleX(0);
     transition: transform 0.2s cubic-bezier(0.8, 0, 0.2, 1);
 

@@ -15,14 +15,14 @@ During the years I developed a **prefered dev environment** - more about
 
 ## TL;DR Summary
 
-| Period             | Role                                                                     | Company / Project          | Key Stack                                   |
-| :----------------- | :----------------------------------------------------------------------- | :------------------------- | :------------------------------------------ |
-| **2024 – Present** | Sabbatical / Explorer                                                    | **AI & LLM Orchestration** | **Python**, Django, TTS, htmx               |
-| **2021 – 2024**    | Senior Frontend Engineer                                                 | **ChyronHego**             | **React**, **JS/TS**, **Nx** (Monorepos)    |
-| **2018 – 2021**    | [Solution Architect / Dev](/notes/2026-01-18-nuvia-industrial-evolution) | **Nuvia a.s.**             | **Java/WildFly**, Industry 4.0, SQL, DevOps |
-| **2012 – 2018**    | Full-stack Freelancer                                                    | **Digital Nomad**          | PHP/JS, SEO, **Graphic Design**             |
-| **2010 – 2012**    | Software Engineer                                                        | **Red-Hat**                | JBoss, Java, Linux, QA Automation           |
-| **2008 – 2009**    | Intern / Programmer                                                      | **Stormware - Pohoda**     | PHP, JS, HTML, CSS, MySQL                   |
+| Period             | Role                                                                     | Company / Project                               | Key Stack                                   |
+| :----------------- | :----------------------------------------------------------------------- | :---------------------------------------------- | :------------------------------------------ |
+| **2024 – Present** | Sabbatical / Explorer                                                    | **AI & LLM Orchestration**                      | **Python**, Django, TTS, htmx               |
+| **2021 – 2024**    | Senior Frontend Engineer                                                 | [ChyronHego](https://chyron.com/)               | **React**, **JS/TS**, **Nx** (Monorepos)    |
+| **2018 – 2021**    | [Solution Architect / Dev](/notes/2026-01-18-nuvia-industrial-evolution) | [Nuvia a.s.](https://www.nuvia.com/cs/)         | **Java/WildFly**, Industry 4.0, SQL, DevOps |
+| **2012 – 2018**    | Full-stack Freelancer                                                    | **Digital Nomad**                               | PHP/JS, SEO, **Graphic Design**             |
+| **2010 – 2012**    | Software Engineer                                                        | [Red-Hat](https://www.redhat.com/en)            | JBoss, Java, Linux, QA Automation           |
+| **2008 – 2009**    | Intern / Programmer                                                      | [Stormware - Pohoda](https://www.stormware.cz/) | PHP, JS, HTML, CSS, MySQL                   |
 
 ## The Journey
 

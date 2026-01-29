@@ -9,9 +9,9 @@ params:
   metakeywords: "alfons, zelicko, alfons zelicko, personal website"
 ---
 
-I decided to treat this portfolio as a technical statement rather than just a business card. In a
-world of multi-megabyte JavaScript bundles, I wanted to see how far I could go with "dumb" HTML and
-clever CSS.
+> I decided to treat this portfolio as a technical statement rather than just a business card. In a
+> world of multi-megabyte JavaScript bundles, I wanted to see how far I could go with "dumb" HTML
+> and clever CSS.
 
 ## 1. Switching dark/light mode
 

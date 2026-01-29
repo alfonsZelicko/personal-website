@@ -53,11 +53,14 @@
         color: var(--color-link-rgb);
         border: 1px solid var(--color-link-rgb);
 
+        animation: pulse 3s infinite;
+        animation-delay: 1s;
+
         &:hover {
-          animation: pulse .8s;
           background-color: var(--color-link-rgb);
           color: var(--color-bg-rgb);
           font-weight: bold;
+          animation: none;
         }
         
         &:after {

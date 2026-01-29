@@ -12,7 +12,8 @@ params:
 ---
 
 > I don't expect anyone to actually read this. It is mostly a personal reflection—a diary entry and
-> a way to say thank you to the people at Nuvia a.s. who gave me the opportunity to work with them.
+> a way to say thank-you to the people at Nuvia a.s. who gave me the opportunity to work with them.
+> In the future I will try to write an article about every job experience I had.
 
 ## Context and Role
 
