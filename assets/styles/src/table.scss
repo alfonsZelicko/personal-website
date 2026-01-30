@@ -16,7 +16,8 @@ table {
   }
   th {
     background-color: var(--color-bg-rgb);
-    text-align: center;
+    /* "!important" is needed to override the `goldenmark` (md renderer) settings"*/
+    text-align: center !important;
     border-bottom: 2px solid var(--color-quote-rgb);
   }
 
