@@ -9,7 +9,7 @@ params:
   metakeywords: "framerowk, learning, library, quick learning"
 ---
 
-### My Framework Stress-Test
+## My Framework Stress-Test
 
 I stopped chasing every new framework long ago. Instead, I try to understand the "soul" of the
 technology. Whether it's the latest frontend hype or a new backend engine, I always look for the
@@ -26,7 +26,7 @@ the tools change.
 
 > You've probably guessed by now—I'm mainly talking about front-end here.
 
-#### How I learn new technology
+## How I learn new technology
 
 1. **Why & What:** Why does it exist? What pain point does it solve? (Don't touch the code yet).
 2. **The "Hate-Test":** Search for _"Why [Tech] sucks"_ on Reddit/X. Find the architectural

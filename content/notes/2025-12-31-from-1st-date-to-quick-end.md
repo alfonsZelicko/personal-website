@@ -25,7 +25,7 @@ modern framework.
 
 {{< img src="new-framework-promise.png" w="420" alt="meme - new framework - inspired by IT" caption="Another new solution for old bugs!" >}}
 
-### Phase 1: Honeymoon (Delete 15 000 lines of code!)
+## Phase 1: Honeymoon (Delete 15 000 lines of code!)
 
 My journey started with excitement. I saw a talk from
 [DjangoCon 2022](https://www.youtube.com/watch?v=3GObi93tjZI). David Guillo was talking how they
@@ -37,7 +37,7 @@ It sounded like salvation. Finally, a framework made to fix mistakes of all prev
 No TypeScript overhead, no state on frontend. Just you and your backend. So I tried it with my own
 [framework stress test](/notes/new-tech-in-eight-steps#my-framework-stress-test).
 
-### Phase 2: First cracks in the wall
+## Phase 2: First cracks in the wall
 
 > But then you start building something more than "Hello World". And it starts to be hard.
 
@@ -49,7 +49,7 @@ When you need that one click updates three different parts of page which are not
 "simplicity" starts to hurt. You must use `hx-swap-oob` (out-of-band), which is basically a "GOTO"
 command for HTML. Or you start making strange "HTML puzzles" on server which breaks all clean code.
 
-#### ...but let's talk real:
+### ...but let's talk real:
 
 1.  **"OOB" (Out-of-Band) Hell**
 
@@ -84,7 +84,7 @@ command for HTML. Or you start making strange "HTML puzzles" on server which bre
     is broken. \<htmx\/\> communicates errors like old married couples after 20 years – it says
     nothing[^3]...
 
-### Phase 3: Codebase shock and waking up
+## Phase 3: Codebase shock and waking up
 
 I started to doubt – what am I doing wrong... But then I found texts and videos which confirmed I am
 not crazy:
@@ -98,7 +98,7 @@ not crazy:
 3. Author himself in essay [\<htmx\/\> sucks](https://htmx.org/essays/htmx-sucks/) says it is an
    "ugly hack".
 
-### Phase 4: Synthesis
+## Phase 4: Synthesis
 
 My verdict? \<htmx\/\> is great demo, but dangerous product.
 
@@ -110,7 +110,7 @@ My verdict? \<htmx\/\> is great demo, but dangerous product.
 
   {{< img w="500" src="frontend-evolution.png" alt="evolution of FE" caption="Last few years we just fight for the fight..." >}}
 
-### Conclusion: Back to brain
+## Conclusion: Back to brain
 
 Don't be drunk from memes. \<htmx\/\> is not revolution. It is a nostalgic trip which reminded us
 that HTML is powerful, but also showed us why we actually built modern frameworks.

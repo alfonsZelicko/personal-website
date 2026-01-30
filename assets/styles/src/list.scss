@@ -19,7 +19,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.4rem 0;
+      padding: 0.4rem 1rem;
       border-bottom: 1px solid color-mix(in srgb, var(--color-quote-rgb) 20%, transparent);
       position: relative;
       z-index: 1;
@@ -35,7 +35,7 @@
         text-overflow: ellipsis;
       }
 
-      > span:not(.additional-info) {
+      > span.date {
         flex: 0 0 5.5rem;
         margin-left: 1rem;
         text-align: right;
@@ -46,7 +46,7 @@
 
       span.additional-info {
         position: absolute;
-        right: 12rem;
+        right: 13rem;
         opacity: 0;
         transform: translateX(10px);
         transition: all 0.2s ease-in-out;
