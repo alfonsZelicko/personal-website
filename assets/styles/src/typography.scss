@@ -106,7 +106,7 @@ a {
   text-decoration: none;
   transition: color 0.2s cubic-bezier(0.8, 0, 0.2, 1);
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -124,13 +124,26 @@ a {
     }
   }
 
+  &[href^="http"]:not([href*="zelicko.dev"]) {
+    margin-right: 0.35em;
+    
+    &::after {
+      position: absolute;
+      content: "↗";
+      font-size: 0.6em;
+      margin-left: 0.15em;
+      margin-top: -0.35em;
+      color: currentColor;
+    }
+  }
+
   &:hover,
   &:focus {
     color: var(--color-link-active-rgb);
     text-decoration: none;
 
-    &::after,
-    &:focus-visible::after {
+    &::before,
+    &:focus-visible::before {
       transform: translateX(-50%) scaleX(1);
     }
   }

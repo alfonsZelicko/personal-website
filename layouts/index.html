@@ -14,7 +14,12 @@
 
   <section class="container centered">
     <div class="home">
-      <h1>{{ .Site.Params.author }}</h1>
+      <h1>
+        {{ $words := split .Site.Params.author " " }}
+        {{ range $i, $word := $words }}
+          <span>{{ substr $word 0 1 }}</span>{{ substr $word 1 }}{{ if lt (add $i 1) (len $words) }}{{ end }}
+        {{ end }}
+      </h1>
       <p>{{ .Site.Params.info }}</p>
       {{ with .Site.Params.social }}
         <ul>
