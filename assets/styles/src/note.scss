@@ -23,6 +23,7 @@ article.note {
       font-weight: 100;
     }
     a::before {
+      all: unset;
       content: "#";
     }
   }

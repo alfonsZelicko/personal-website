@@ -3,7 +3,7 @@
 }
 // Enable View Transitions for multi-page navigation
 @view-transition {
-navigation: auto;
+  navigation: auto;
 }
 
 %in-animation {
@@ -17,13 +17,13 @@ navigation: auto;
   }
 }
 
-  /* 
-    usage: @include pulse(var(--color-link-rgb));
-    
-    element:hover {
-      animation: pulse .8s;
-    }
-  */
+/* 
+  usage: @include pulse(var(--color-link-rgb));
+  
+  element:hover {
+    animation: pulse .8s;
+  }
+*/
 @mixin pulse($from-color) {
   @keyframes pulse {
     0%,

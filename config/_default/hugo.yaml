@@ -3,6 +3,7 @@ title: "Alfons Zelicko"
 languageCode: "en"
 timeZone: "Europe/Prague"
 canonifyURLs: false
+trailingSlash: "always"
 
 markup:
   defaultMarkdownHandler: "goldmark"
