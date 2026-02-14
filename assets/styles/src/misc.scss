@@ -14,3 +14,32 @@ hr {
 li::marker {
   color: oklch(from var(--color-link-rgb) calc(l * 0.7) c h);
 }
+
+// Scrollbar styling
+// Firefox
+html {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(from var(--color-text-rgb) l c h / 50%) transparent;
+}
+
+// Chrome, Edge, and Safari
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: oklch(from var(--color-text-rgb) l c h / 50%);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  // Darken the scrollbar thumb slightly on hover
+  background-color: oklch(from var(--color-text-rgb) l c h / 80%)
+}

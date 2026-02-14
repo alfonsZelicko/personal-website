@@ -28,8 +28,10 @@
   right: 0;
   left: 0;
   top: 0;
-  background: var(--color-bg-rgb);
   z-index: 2;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 // Prevent #id links to be scrolled under menu
@@ -38,20 +40,7 @@
 }
 
 .top-nav {
-  animation: nav-shadow linear both;
-  animation-timeline: scroll(root block);
-  animation-range: 10px 60px;
-  
-  border-bottom:1px solid var(--color-bg-rgb);
-}
-
-@keyframes nav-shadow {
-  from {
-    border-color: var(--color-bg-rgb);
-  }
-  to {
-    border-color: var(--color-quote-rgb)
-  }
+  border-bottom:1px solid oklch(from var(--color-bg-rgb) l c h / 50%);
 }
 
 //

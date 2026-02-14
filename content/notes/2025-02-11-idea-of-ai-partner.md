@@ -2,8 +2,8 @@
 title: "Idea of AI Partner"
 date: 2026-02-11T14:55:03+01:00
 slug: "2025-02-11-idea-of-ai-partner"
-categories: []
-tags: ["programming", "design"]
+categories: ["programming", "design"]
+tags: []
 draft: true
 ---
 

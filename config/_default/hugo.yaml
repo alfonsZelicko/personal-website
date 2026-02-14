@@ -17,8 +17,8 @@ markup:
     renderer:
       unsafe: true
   tableOfContents:
-    startLevel: 2
-    endLevel: 4
+    startLevel: 1
+    endLevel: 6
     ordered: true
 
 outputs:

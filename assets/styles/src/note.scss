@@ -65,6 +65,21 @@ nav.toc {
   @media (min-width: $container-max-width) {
     padding-left: 1rem;
     border-left: 1px solid var(--color-quote-rgb);
+    
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--color-link-active-rgb);
+      width: 1px;
+      max-height: calc(100% - 5px);
+
+      transform-origin: top;
+      transform: scaleY(0);
+
+      animation: scroll-progress linear both;
+      animation-timeline: scroll(root block);
+    }
 
     h2 {
       font-size: 1.4rem;
@@ -123,21 +138,21 @@ nav.toc {
   }
 }
 
-//
-// CSS-only Scroll Spy Implementation
-// Based on Sara Soueidan's approach using scroll-target-group
-// https://www.sarasoueidan.com/blog/css-scrollspy/
-//
+@keyframes scroll-progress {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
 
 @supports (scroll-target-group: auto) {
-  // Make the TOC nav a scroll marker group container
   nav.toc {
     scroll-target-group: auto;
 
-    // Style the active link when its target is in view
     a:target-current {
       opacity: 1;
-      font-weight: 600;
       color: var(--color-link-active-rgb);
       padding-left: 0.5rem;
       margin-left: -0.5rem;
@@ -145,7 +160,6 @@ nav.toc {
   }
 }
 
-// Fallback for browsers that don't support scroll-target-group
 @supports not (scroll-target-group: auto) {
   nav.toc a {
     opacity: 0.7;
