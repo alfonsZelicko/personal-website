@@ -1,9 +1,26 @@
-// Variables and mixins are imported globally in style.scss
+.container.page:has(article.note) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  position: relative;
+
+  @media (min-width: $container-max-width) {
+    grid-template-columns: $blogpost-width minmax(0, 1fr);
+    align-items: start;
+    max-width: $container-max-width;
+  }
+}
 
 article.note {
   max-width: $blogpost-width;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+
+  @media (min-width: $container-max-width) {
+    margin: 0;
+    min-width: 0;
+  }
 
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased !important;
@@ -16,15 +33,126 @@ article.note {
       margin: 0;
     }
   }
+
   .note-categories,
   .note-tags {
     a {
       color: var(--color-quote-rgb);
       font-weight: 100;
     }
-    a::before {
-      all: unset;
-      content: "#";
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+aside.toc-container {
+  display: none;
+
+  @media (min-width: $container-max-width) {
+    display: block;
+    position: sticky;
+    top: calc(60px + 2rem);
+    height: fit-content;
+    max-height: calc(100vh - (4rem + 2rem));
+    overflow-y: auto;
+  }
+}
+
+nav.toc {
+  @media (min-width: $container-max-width) {
+    padding-left: 1rem;
+    border-left: 1px solid var(--color-quote-rgb);
+
+    h2 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 0 0 1rem 0;
+      color: var(--color-text-rgb);
+      font-family: "Noto Sans Mono", monospace;
+      //color: var(--color-quote-rgb);
+    }
+
+    ul,
+    ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+      line-height: 1.4;
+
+      &::marker {
+        content: none;
+      }
+
+      a {
+        display: block;
+        color: var(--color-text-rgb);
+        text-decoration: none;
+        font-size: 1.4rem;
+        opacity: 0.7;
+        transition: all 0.2s ease;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+
+        &:hover {
+          opacity: 1;
+          color: var(--color-link-rgb);
+        }
+
+        &::after, &::before {
+          display: none;
+        }
+      }
+
+      ul,
+      ol {
+        margin-top: 0.4rem;
+        padding-left: 1.2rem;
+      }
+    }
+  }
+}
+
+//
+// CSS-only Scroll Spy Implementation
+// Based on Sara Soueidan's approach using scroll-target-group
+// https://www.sarasoueidan.com/blog/css-scrollspy/
+//
+
+@supports (scroll-target-group: auto) {
+  // Make the TOC nav a scroll marker group container
+  nav.toc {
+    scroll-target-group: auto;
+
+    // Style the active link when its target is in view
+    a:target-current {
+      opacity: 1;
+      font-weight: 600;
+      color: var(--color-link-active-rgb);
+      padding-left: 0.5rem;
+      margin-left: -0.5rem;
+    }
+  }
+}
+
+// Fallback for browsers that don't support scroll-target-group
+@supports not (scroll-target-group: auto) {
+  nav.toc a {
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+      color: var(--color-link-rgb);
     }
   }
 }

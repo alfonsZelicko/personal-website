@@ -7,7 +7,7 @@
   <section class="container page">
     <article class="note">
       <header>
-        <h1>{{ .Title }}</h1>
+        <h1 id="top">{{ .Title }}</h1>
 
         <div class="note-meta">
           <p><strong>Date:</strong> {{ .Date.Format "January 2, 2006" }}</p>
@@ -17,7 +17,7 @@
               {{ with .GetTerms "categories" }}
                 {{ $catLinks := slice }}
                 {{ range .ByTitle }}
-                  {{ $catLinks = $catLinks | append (printf `<a href="%s">%s</a>` .RelPermalink .LinkTitle) }}
+                  {{ $catLinks = $catLinks | append (printf `<a href="%s">#%s</a>` .RelPermalink .LinkTitle) }}
                 {{ end }}
                 <span>
                   {{ delimit $catLinks ", " | safeHTML }}
@@ -32,7 +32,7 @@
               {{ $tagLinks := slice }}
               {{ range .Params.tags }}
                 {{ $url := printf "/tags/%s/" (. | urlize) }}
-                {{ $tagLinks = $tagLinks | append (printf `<a href="%s">%s</a>` $url .) }}
+                {{ $tagLinks = $tagLinks | append (printf `<a href="%s">#%s</a>` $url .) }}
               {{ end }}
 
 
@@ -46,14 +46,6 @@
 
       <hr />
 
-      {{ if .TableOfContents }}
-        <nav class="toc">
-          <h2>Table of Contents</h2>
-          {{ .TableOfContents }}
-        </nav>
-        <hr />
-      {{ end }}
-
       <div class="note-content">
         {{ .Content }}
       </div>
@@ -61,11 +53,25 @@
       <hr />
       <nav>
         <a href="/notes/">← Back to Notes</a>
+        <a href="#top">Back to Top ↑</a>
       </nav>
+
+      {{ if ne .Params.comments false }}
+        <hr />
+        {{ partial "giscus.html" . }}
+      {{ end }}
     </article>
-    {{ if ne .Params.comments false }}
-      <hr />
-      {{ partial "giscus.html" . }}
+
+    {{ if .TableOfContents }}
+      <aside class="toc-container">
+        <nav class="toc">
+          <h2>Table of Contents</h2>
+          <ol>
+            <li><a href="#top">{{ .Title }}</a></li>
+          </ol>
+          {{ .TableOfContents }}
+        </nav>
+      </aside>
     {{ end }}
   </section>
 {{ end }}

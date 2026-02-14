@@ -90,7 +90,34 @@ html:has(#theme-toggle:checked) {
 </script>
 ```
 
-## 3. Design: Less Noise, More SVG
+## 3. Pure CSS Table of Contents
+
+I wanted a sticky table of contents that highlights the current section as you scroll. Usually, this
+requires an `IntersectionObserver` in JavaScript. However, keeping with the "dumb HTML, clever CSS"
+theme, I used the modern (and experimental) CSS scroll-state features.
+
+- **Sticky positioning**: The TOC is placed in a semantic `<aside>` element within a CSS Grid
+  layout. It uses `position: sticky` to stay visible while reading long notes.
+- **Scroll Spy**: Using `@supports (scroll-target-group: auto)`, I implemented a highlight mechanism
+  that triggers when a heading enters the viewport, without a single line of JS.
+  - Output of this simple and clear technique you can check on the right site of this article.
+
+```scss
+nav.toc {
+  scroll-target-group: auto;
+
+  a:target-current {
+    opacity: 1;
+    font-weight: 600;
+    color: var(--color-link-active-rgb);
+  }
+}
+```
+
+> **Note**: This is a cutting-edge CSS feature. In browsers that don't support it yet, the TOC
+> remains fully functional as a static list of links - perfect progressive enhancement.
+
+## 4. Design: Less Noise, More SVG
 
 When a website has almost no _traditional graphics_, every single remaining element carries more
 weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
@@ -120,7 +147,7 @@ weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
 - **link underline animation**: The basic underline fits the _philosophy of the basic web_, but it
   was too hard to resist adding something a little more elegant.
 
-## 4. Email Form
+## 5. Email Form
 
 I am using standard HTML form elements, with a simple css animation to make the form look more
 pleasing. Same _scss_ code is used to animate Lists (in [Notes](/notes) section) as on my _main_
@@ -166,7 +193,7 @@ async function handleSubmit(event) {
 }
 ```
 
-## 5. Notes
+## 6. Notes
 
 [Notes](/notes) section is some kind of my personal journal/notes about technologies I found. I am
 using [Hugo](https://gohugo.io/) to generate static HTML pages. I added discussions to each note,
@@ -176,7 +203,7 @@ and enhances the page note info. With no JS you will just see no additional info
 
 > This solution is a little "cute over-engineering," but I rly wanted to try it out O:-)
 
-## 6. Hugo \_markups
+## 7. Hugo \_markups
 
 I rly like how Hugo works with Markdown files. It's very simple and intuitive. But from time to time
 I need to add some custom HTML into the basic HTML Hugo created. For example, I added a link to this
@@ -195,7 +222,7 @@ In same way I used `--color-link-rgb` color for `::first-letter` in `<h1>` eleme
 decision was a little hard to me. Link color used on a non-link element is a breaking some basic
 rules of accessibility... but it is helping to make the page more readable.
 
-## 7. The Stats
+## 8. The Stats
 
 - **Build Time**: ~25ms (Hugo is incredibly fast)
 - **Page Weight**: ~62 KB (it's 83x less than facebook welcome page)
