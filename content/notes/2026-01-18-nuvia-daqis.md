@@ -39,20 +39,6 @@ technical setup:
 This change wasn't just about "working from home"—it was a practical upgrade to our architecture
 that later allowed other teams to work in a hybrid model.
 
-## Architecture: Pragmatic Modularism
-
-The DAQIS stack was built on **Java (Spring Boot)** running on **WildFly** (and else), with a
-**Bootstrap** and **jQuery** frontend. A key part of the architecture was our use of specialized
-"collectors."
-
-In industrial environments, every machine or robot is unique. We needed a way to communicate with
-various PLCs or legacy systems—sometimes machines just saved data to CSV files/OPC servers, and it
-would be too expensive for the client to change that.
-
-Instead of forcing a single standard, we built dedicated collection components for each source. It
-was a kind of "grandfather of microservices" approach, used long before the word became a buzzword.
-This decoupled the unstable world of factory hardware from our main application logic and UI.
-
 ### Organizing the Team (FE/BE Split)
 
 The biggest change wasn't the technology, but how we worked. I pushed for a clear separation between

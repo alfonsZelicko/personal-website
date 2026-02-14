@@ -46,6 +46,14 @@
 
       <hr />
 
+      {{ if .TableOfContents }}
+        <nav class="toc">
+          <h2>Table of Contents</h2>
+          {{ .TableOfContents }}
+        </nav>
+        <hr />
+      {{ end }}
+
       <div class="note-content">
         {{ .Content }}
       </div>
