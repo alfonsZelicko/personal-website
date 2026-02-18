@@ -7,3 +7,58 @@
     {{ .Content }}
   </article>
 </section>
+<style>
+  .footnotes > ol > li p {
+    color: oklch(from currentColor l c h / 50%);
+    transition: color 0.3s ease-out;
+  }
+
+  .footnotes li.active-footnote p {
+    color: oklch(from currentColor l c h / 100%);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("a.footnote-ref");
+    const allFootnotes = document.querySelectorAll(".footnotes > ol > li");
+
+    const clear = () => allFootnotes.forEach(li => li.classList.remove("active-footnote"));
+
+    function setupAutoClearOnScroll() {
+      const onScroll = () => {
+        if (!document.querySelector(".active-footnote")) return;
+        clear();
+        window.removeEventListener("scroll", onScroll);
+      };
+      window.addEventListener("scroll", onScroll);
+    }
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const id = new URL(link.href, location.href).hash.slice(1);
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (!target) return;
+
+        clear();
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            const entry = entries[0];
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                target.classList.add("active-footnote");
+                setupAutoClearOnScroll();
+              }, 500);
+              obs.disconnect();
+            }
+          },
+          { threshold: 0.3 }
+        );
+
+        observer.observe(target);
+      });
+    });
+  });
+</script>
