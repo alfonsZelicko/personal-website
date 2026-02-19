@@ -9,13 +9,13 @@ regularly explore new tools out of curiosity; some appear in the
 
 ## TL;DR Summary
 
-| Area              | Technologies & Expertise                                                                 |
-| :---------------- | :--------------------------------------------------------------------------------------- |
-| **Frontend**      | **React, TypeScript/JavaScript**, HTML5/CSS3, Tailwind, @mui, Redux/Zustand/Jotay        |
-| **Backend**       | **Java, Spring Boot,** Hibernate, REST APIs/GraphQL, SQL, WildFly/JBoss                  |
-| **UI/UX**         | **User-Centric Design, Modern CSS** Responsive Design, Figma, Accessibility, Prototyping |
-| **Architecture**  | **Pragmatic Modularism,** Micro-services, Design Patterns                                |
-| **Ops & Culture** | **Agile, Mentorship,** CI/CD, Docker, Git, Onboarding, Clean Code, Enterprise Ecosystems |
+| Area              | Technologies & Expertise                                                                  |
+| :---------------- | :---------------------------------------------------------------------------------------- |
+| **Frontend**      | **React, TypeScript/JavaScript**, HTML5/CSS3, Tailwind, @mui, Redux/Zustand/Jotay         |
+| **Backend**       | Java, Spring Boot, **NodeJS, Python**, REST APIs/GraphQL/gRPC, SQL/MongoDB, WildFly/JBoss |
+| **UI/UX**         | **User-Centric Design, Modern CSS** Responsive Design, Figma, Accessibility, Prototyping  |
+| **Architecture**  | **Pragmatic Modularism**, Micro-services, Design Patterns                                 |
+| **Ops & Culture** | Agile, Mentorship, CI/CD, Docker, Git, Onboarding, Clean Code, Enterprise Ecosystems      |
 
 > I focus on building friendly, intuitive interfaces. I am not afraid to challenge requirements or
 > propose changes, but I always prioritize real business value and common sense.
@@ -29,8 +29,7 @@ regularly explore new tools out of curiosity; some appear in the
 
 I keep a broad overview of the frontend ecosystem to choose the
 [right tool for the team](http://mikhailian.mova.org/node/284), not the latest trend. I generally
-prefer PWAs over React Native, though I plan to evolve some personal projects into native mobile
-apps.
+prefer PWAs to React Native, though I plan to evolve some personal projects into native mobile apps.
 
 > I have a genuine appreciation for maintaining legacy applications from the “pre-modern” era.
 > Greenfield projects are cute, but I’m the guy you call when the reality of legacy code hits and
@@ -38,31 +37,26 @@ apps.
 
 ## Back-End & Architecture
 
-- **Languages**: Primarily **Python** and **TypeScript/JS (Node.js)**, with strong experience in
-  Java (Spring Boot)
+- **Languages**: Primarily **Python** and **TypeScript/JS** (**Node.js**[^4] - NestJS/Express.js),
+  with strong experience in Java (Spring Boot, Maven)
 - **Foundations**: Earlier work in Pascal, C/C++, and PHP
 
 While I can deliver backend services, my focus is now frontend-oriented architecture—API design,
 integration, and meaningful error handling rather than backend-heavy development.
 
-> I can deliver Node.js services, but I still believe **JavaScript belongs where God intended**: on
-> the client side. The recurring
-> [NPM supply chain attacks](https://www.blackduck.com/blog/recent-npm-software-supply-chain-attack-security-lessons.html)
-> only reinforce my caution regarding JS on the server ]:-)
-
-## Data & Persistence
+### Data & Persistence
 
 I treat databases as replaceable components and focus on portable data models that work across
 relational, NoSQL, and cloud systems, avoiding vendor lock-in unless performance truly requires it.
 
-> While MongoDB is my go-to choice, I’m genuinely drawn to Redis—finding a project that utilizes it
-> would definitely catch my eye more than a traditional PostgreSQL stack.
+> While **MongoDB is my go-to choice**, I’m genuinely drawn to Redis—finding a project that utilizes
+> it would definitely catch my eye more than a traditional PostgreSQL stack.
 
 ## Infrastructure & Deployment
 
 - **Scripting**: Bash, Batch (.bat), OS-agnostic
 - **CI/CD**: GitHub Actions, GitLab CI, Jenkins, TeamCity
-- **Tools**: Docker, Nginx, Apache, basic AWS
+- **Tools**: Docker, Nginx, Apache, basic AWS, Sonar Qube/Qodana or CodeQL
 
 Not a DevOps specialist, but fully self-sufficient with pipelines and deployments—preferably as
 little as possible.
@@ -79,17 +73,12 @@ allow me to focus on usability, maintainability, and **pragmatic technical decis
 ## Team & Process Leadership
 
 - **Team leadership**: Mentoring, onboarding, decision-making
-- **Process**: Scrum, Waterfall, lifecycle ownership
-- **Team stability**: Reducing bus factor, improving knowledge sharing
+- **Process**: Scrum[^5], Waterfall, lifecycle ownership
+- **Team stability**: Reducing bus factor, improving knowledge sharing[^6]
 - **Stakeholders**: Roadmaps, consulting, execution
 
 I aim for stable teams with shared ownership, no single points of failure, and _code written for our
 future selves_.
-
-> I use Scrum to align teams, then trim it down once things are running smoothly. No point in
-> ceremonies that cost more time than they save.
-
----
 
 ## Working Method
 
@@ -128,3 +117,18 @@ Approach for delivering elegant, maintainable code that adds lasting value.
     Material UI is a great library, but it needs to be used as it was designed. Any deviation from
     the [Material Design manifesto](https://m1.material.io/) leads to inconsistency and is
     relatively costly. For a robust interface with many components, performance can become an issue.
+
+[^4]:
+    I can deliver Node.js services, but I still believe **JavaScript belongs where God intended**:
+    on the client side. The recurring
+    [NPM supply chain attacks](https://www.blackduck.com/blog/recent-npm-software-supply-chain-attack-security-lessons.html)
+    only reinforce my caution regarding JS on the server ]:-)
+
+[^5]:
+    I use Scrum to align teams, then trim it down once things are running smoothly. No point in
+    ceremonies that cost more time than they save.
+
+[^6]:
+    Based on documentation - in these days it is possible to have everything up to date thx to AI
+    tools, and by implementing some processes like Post-mortems, Pair programming (if we have time
+    :-)), Code Reviews, ...

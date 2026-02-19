@@ -67,7 +67,7 @@ ferratas[^2]. Hiking and cycling are also a big part of my free time.
 
 ## Website
 
-This site was built [without JavaScript](/notes/web-description/) and with minimal graphics[^3],
+This site was built [without JavaScript](/notes/web-description/)[^3] and with minimal graphics[^4],
 inspired by early web simplicity and content-first icons like
 [The Best Motherfucking Website](https://thebestmotherfucking.website/).
 
@@ -88,4 +88,8 @@ polish the phrasing so my ‘Slavic English’ doesn’t disrupt the flow of the
     I absolutely love going for a walk with my colleagues along ropes and platforms 200 meters above
     the ground, with a view of the Alps.
 
-[^3]: Ye - I used more CSS than is necessary for proper work of the web, but I was unable to resist.
+[^3]:
+    ok – on few places as a
+    [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)
+
+[^4]: Ye - I used more CSS than is necessary for proper work of the web, but I was unable to resist.

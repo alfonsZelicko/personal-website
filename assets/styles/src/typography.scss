@@ -127,7 +127,7 @@ a {
     }
   }
 
-  &[href^="http"]:not([href*="zelicko.dev"]) {
+  &[href*="http"]:not([href*="zelicko.dev"]) {
     margin-right: 0.35em;
     
     &::after {
@@ -137,6 +137,11 @@ a {
       margin-left: 0.15em;
       margin-top: -0.35em;
       color: currentColor;
+    }
+
+    /* I need to add more space, if behind link is a not link from markdown text */
+    &:has(+ sup[id*="fnref"]) {
+      margin-right: 1rem;
     }
   }
 
@@ -284,6 +289,7 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   margin: 2.4rem -2rem;
+  //background-color: rgb(188,168,88) !important;
 
   @include max-md() {
     margin: 2.4rem 0;
