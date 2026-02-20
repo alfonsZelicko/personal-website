@@ -7,6 +7,10 @@
     {
       "source": "/(.*).css",
       "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
     }
   ],
   "build": {
