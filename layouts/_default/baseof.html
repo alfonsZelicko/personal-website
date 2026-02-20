@@ -12,5 +12,52 @@
 
       {{ partial "footer.html" . }}
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll("a.footnote-ref");
+        const allFootnotes = document.querySelectorAll(".footnotes > ol > li");
+        const clear = () => allFootnotes.forEach(li => li.classList.remove("active-footnote"));
+
+        links.forEach(link => {
+          link.addEventListener("click", () => {
+            const id = link.hash?.slice(1) ?? new URL(link.href, location.href).hash.slice(1);
+            const target = document.getElementById(id);
+            if (!target) return;
+
+            clear();
+
+            let scrollTimer;
+            let highlighted = false;
+
+            const onScroll = () => {
+              clearTimeout(scrollTimer);
+              scrollTimer = setTimeout(highlightIfVisible, 150);
+            };
+
+            const attachAutoClear = () => {
+              window.removeEventListener("scroll", onScroll);
+              const onNextScroll = () => {
+                clear();
+                window.removeEventListener("scroll", onNextScroll);
+              };
+              window.addEventListener("scroll", onNextScroll);
+            };
+
+            const highlightIfVisible = () => {
+              if (highlighted) return;
+              const rect = target.getBoundingClientRect();
+              if (rect.top < window.innerHeight && rect.bottom > 0) {
+                highlighted = true;
+                target.classList.add("active-footnote");
+                setTimeout(attachAutoClear, 300);
+              }
+            };
+
+            window.addEventListener("scroll", onScroll);
+            setTimeout(highlightIfVisible, 100);
+          });
+        });
+      });
+    </script>
   </body>
 </html>

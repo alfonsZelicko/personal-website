@@ -7,16 +7,6 @@
     {{ .Content }}
   </article>
 </section>
-<style>
-  .footnotes > ol > li p {
-    color: oklch(from currentColor l c h / 50%);
-    transition: color 0.3s ease-out;
-  }
-
-  .footnotes li.active-footnote p {
-    color: oklch(from currentColor l c h / 100%);
-  }
-</style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {

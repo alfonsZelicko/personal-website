@@ -162,6 +162,15 @@ p {
   text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.05);
 }
 
+.footnotes > ol > li p {
+  color: oklch(from currentColor l c h / 50%);
+  transition: color 0.3s ease-out;
+}
+
+.footnotes li.active-footnote p {
+  color: oklch(from currentColor l c h / 100%);
+}
+
 blockquote:not(.alert) {
   border-left: 2px solid var(--color-quote-rgb);
   padding-left: 1.6rem;
