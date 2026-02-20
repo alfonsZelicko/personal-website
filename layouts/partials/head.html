@@ -40,7 +40,7 @@
     <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ site.Title }}" />
   {{ end }}
 
-
+  {{/* with @view-transition { navigation: auto; } fonts are "slowly" changing (FOUT) - this is solution */}}
   <link rel="preload" as="font" href="/css/fonts/SpecialElite-Regular.woff2" type="font/woff2" crossorigin />
   <link rel="preload" as="font" href="/css/fonts/NotoSansMono-Regular.woff2" type="font/woff2" crossorigin />
   <link rel="preload" as="font" href="/css/fonts/AnonymousPro-Regular.woff2" type="font/woff2" crossorigin />
