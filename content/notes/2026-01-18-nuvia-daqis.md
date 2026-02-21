@@ -1,5 +1,5 @@
 ---
-title: "Industrial Evolution: Scaling DAQIS at Nuvia a.s."
+title: "Scaling DAQIS at Nuvia a.s."
 date: 2026-01-18T18:25:00+01:00
 slug: "2026-01-18-nuvia-industrial-evolution"
 categories: ["design", "programming", "work"]
@@ -33,7 +33,8 @@ During a crisis with a tight deadline, I proposed a solution to work remotely by
 technical setup:
 
 - We separated development and testing environments from production.
-- We created dedicated servers and databases for remote access.
+- We created dedicated servers and databases for remote access (the same databases we were able to
+  use to show our DEMO product)
 - We kept critical production systems strictly on-site while allowing development to happen via VPN.
 
 This change wasn't just about "working from home"—it was a practical upgrade to our architecture
@@ -50,7 +51,7 @@ Frontend and Backend responsibilities:
 **The result:** Faster delivery, easier onboarding for new people, and fewer UI bugs. We stopped
 wasting the time of senior backend devs on CSS positioning.
 
-## Visualization: Making Data Speak to Management
+## Making Data Speak to Management
 
 What started as a request for a simple, low-cost status report evolved into the company's premier
 showcase tool. Through proactive communication with the stakeholder, I pushed beyond the original
@@ -135,6 +136,6 @@ I eventually left because I felt the product's potential was limited by these no
 barriers, but the experience was invaluable for my growth. It taught me to value readability over
 "academic perfection" and to always consider the business impact of my technical decisions.
 
-> The [DAQIS website](https://daqis.cz/) is a small artifact from that time—built fast and simple,
-> but still functional years later. It’s a reminder that long-term value often comes from pragmatic
-> decisions made under pressure.
+> The [DAQIS website](https://daqis.cz/) is a small artifact from that time—built fast (2 days) and
+> simple, but still functional years later. Czech mutation ONLY is a nice example of actual "bysnis
+> strategy" O;-(

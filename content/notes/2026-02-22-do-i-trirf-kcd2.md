@@ -90,13 +90,18 @@ For example, check out these moments (minimal spoilers, mostly just the "vibe"):
 The quests are designed to BE INTERESTING. Nothing like "go here and bring", or "go here and steal
 that"... From time to time it is starting as a simple kind... but it almost never is. NPC's are
 making fun of you, they flirt with you, they are trying to steal from you... The interaction feels
-like natural.
+like natural. Nobody is trying to pretend you are some kind of "badass bro".
 
-While playing, you will finally understand why the Decameron was such an important book of that
-time. If you spend your time reading random books in the game, you can find how people treated
-illnesses, cooked meals, and much more. The immersion is insane. The moment when you finally clean
-your body and clothes from dirt and blood after a hard fight, and can finally sleep in a REAL BED...
-it feels like a true reward.
+> No culture wars, no indoctrination into the “correct mindset.” Simply — you are in the Middle Ages
+> now, survive and serve your lord.
+
+- While playing, you will finally understand why the Decameron was such an important book of that
+  time.
+- If you spend your time reading random books in the game, you can find how people treated
+  illnesses, cooked meals, and much more. The immersion is insane.
+- The moment when you finally clean your body and clothes from dirt and blood after a hard fight,
+  and can finally sleep in a REAL BED... it feels like a true reward.
+- Going up to market and buy few egs and beacon to make yourself a dinner!
 
 ## Would I recommend it?
 
