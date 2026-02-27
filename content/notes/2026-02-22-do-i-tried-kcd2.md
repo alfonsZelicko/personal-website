@@ -1,9 +1,9 @@
 ---
-title: "So I finally tried KDC2"
+title: "So I finally tried KCD2"
 date: 2026-02-20T18:49:14+01:00
 slug: "2026-02-22-i-try-kdc2"
-categories: ["games", "philosophy", "design"]
-tags: ["kingdom come deliverance 2, gaming, kcd2"]
+categories: ["philosophy", "design"]
+tags: ["games"]
 draft: false
 ---
 

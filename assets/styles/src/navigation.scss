@@ -163,6 +163,21 @@ html:has(#contrast-toggle:checked) {
     width: 100%;
     height: 100%;
   }
+
+  /* cannot control the menu icon state -> this is not working well :-( */
+/*  .top-nav-right:has(#menu-toggle:checked)  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+  }*/
 }
 
 .menu-arrow {

@@ -9,11 +9,11 @@ params:
   metakeywords: "alfons, zelicko, alfons zelicko, personal website"
 ---
 
-> I decided to treat this portfolio as a technical statement rather than just a business card. In a
-> world of multi-megabyte JavaScript bundles, I wanted to see how far I could go with "dumb" HTML
-> and clever CSS.
+> I decided to treat this personal website as a technical statement rather than just a business
+> card. In a world of multi-megabyte JavaScript bundles, I wanted to see how far I could go with
+> "dumb" HTML and clever CSS.
 
-## 1. Switching dark/light mode
+## Switching dark/light mode
 
 The primary goal was **Progressive Enhancement**. The website is fully functional, readable, and
 navigable even if you **disable JavaScript entirely**.
@@ -31,7 +31,7 @@ html:has(#theme-toggle:checked) {
 }
 ```
 
-## 2. JS only as a Progressive Enhancement
+## JS only as a Progressive Enhancement
 
 - **Persistent State**: I added a tiny vanilla JS script (which could be 14 lines, but I made it 52
   to handle proper accessibility titles and aria-labels) only to "remember" user preferences in
@@ -90,7 +90,7 @@ html:has(#theme-toggle:checked) {
 </script>
 ```
 
-## 3. Pure CSS Table of Contents
+## Pure CSS Table of Contents
 
 I wanted a sticky table of contents that highlights the current section as you scroll. Usually, this
 requires an `IntersectionObserver` in JavaScript. However, keeping with the "dumb HTML, clever CSS"
@@ -115,9 +115,9 @@ nav.toc {
 ```
 
 > **Note**: This is a cutting-edge CSS feature. In browsers that don't support it yet, the TOC
-> remains fully functional as a static list of links - perfect progressive enhancement.
+> remains fully functional as a static list of links - your IE browser is not my problem! :-))
 
-## 4. Design: Less Noise, More SVG
+## Design: Less Noise, More SVG
 
 When a website has almost no _traditional graphics_, every single remaining element carries more
 weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
@@ -147,7 +147,7 @@ weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
 - **link underline animation**: The basic underline fits the _philosophy of the basic web_, but it
   was too hard to resist adding something a little more elegant.
 
-## 5. Email Form
+## Email Form
 
 I am using standard HTML form elements, with a simple css animation to make the form look more
 pleasing. Same _scss_ code is used to animate Lists (in [Notes](/notes) section) as on my _main_
@@ -193,7 +193,7 @@ async function handleSubmit(event) {
 }
 ```
 
-## 6. Notes
+## Notes
 
 [Notes](/notes) section is some kind of my personal journal/notes about technologies I found. I am
 using [Hugo](https://gohugo.io/) to generate static HTML pages. I added discussions to each note,
@@ -203,7 +203,7 @@ and enhances the page note info. With no JS you will just see no additional info
 
 > This solution is a little "cute over-engineering," but I rly wanted to try it out O:-)
 
-## 7. Hugo \_markups
+## Hugo \_markups
 
 I rly like how Hugo works with Markdown files. It's very simple and intuitive. But from time to time
 I need to add some custom HTML into the basic HTML Hugo created. For example, I added a link to this
@@ -213,7 +213,7 @@ heading with a small arrow to make it more eye-catching.
 {{/* layouts/_default/_markup/render-heading.html */}}
 {{- $id := .Attributes.id | default (.Text | anchorize) -}}
 <h{{ .Level }} id="{{ $id }}">
-  <a href="{{ .Page.RelPermalink }}#{{ $id }}" aria-hidden="true" tabindex="-1">> </a>
+  <a href="{{ .Page.RelPermalink }}#{{ $id }}" aria-hidden="true" tabindex="-1"># </a>
     {{ .Text | safeHTML }}
 </h{{ .Level }}>
 ```
@@ -222,7 +222,7 @@ In same way I used `--color-link-rgb` color for `::first-letter` in `<h1>` eleme
 decision was a little hard to me. Link color used on a non-link element is a breaking some basic
 rules of accessibility... but it is helping to make the page more readable.
 
-## 8. The Stats
+## The Stats
 
 - **Build Time**: ~25ms (Hugo is incredibly fast)
 - **Page Weight**: ~62 KB (it's 83x less than facebook welcome page)

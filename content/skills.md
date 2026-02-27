@@ -11,7 +11,7 @@ regularly explore new tools out of curiosity; some appear in the
 
 | Area              | Technologies & Expertise                                                                  |
 | :---------------- | :---------------------------------------------------------------------------------------- |
-| **Frontend**      | **React, TypeScript/JavaScript**, HTML5/CSS3, Tailwind, @mui, Redux/Zustand/Jotay         |
+| **Frontend**      | **React, TypeScript/JavaScript**, HTML5/CSS3, Tailwind, @mui, Redux/Zustand/Jotai         |
 | **Backend**       | Java, Spring Boot, **NodeJS, Python**, REST APIs/GraphQL/gRPC, SQL/MongoDB, WildFly/JBoss |
 | **UI/UX**         | **User-Centric Design, Modern CSS** Responsive Design, Figma, Accessibility, Prototyping  |
 | **Architecture**  | **Pragmatic Modularism**, Micro-services, Design Patterns                                 |

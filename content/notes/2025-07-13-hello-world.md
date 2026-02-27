@@ -30,12 +30,18 @@ I'm planning to add:
 
 - Comment system (mby?)
   - ✔ implement [giscus.app](https://giscus.app/)
-  - ✔ contribute on custom theme for my web :-/
-- Tags support
+  - ✔ contribute on custom theme for my web
+  - ✔ adding pure CSS content table in notes
+  - ✔ adding automatic CV generation
+    - from [zelicko.dev/resume](zelicko.dev/resume)
+    - output as PDF on [zelicko.dev/resume.pdf](zelicko.dev/resume.pdf)
+  - ✔ add some [cool 404 page](/invalid-link)
+  - ✔ add a [contact form](/contact) to prevent email scrapping
+- ~~Tags support~~
 - ~~Full-text search (with JS)~~
 
-> ~~theme for the discussions: transparent?/two colors?/add new param for external css source? ->
-> the last one would be perfect - i will see what will say authors about this idea~~
+> ~~theme for the discussions: transparent?/two colors?/add new param for external CSS source? ->
+> the last one would be perfect - I will see what will say authors about this idea~~
 
 > UPDATE: ok - after some reading of docs I found
 > [this already done solution](https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-theme)

@@ -49,12 +49,12 @@ pragmatically and incrementally.
 
 - TypeScript (5+ years), JavaScript (15+ years), React (6+ years)
 - HTML5, CSS3, SCSS, Less (18+ years)
-- Nx monorepos, shared component libraries
-- Performance-sensitive UI and animation systems
+- Nx monorepos, multiple other frontend frameworks/libraries
+- Performance-sensitive UI and animation systems, user-oriented design
 
 ### Backend & Architecture
 
-- Node.js (5+ years), Java / Spring Boot (4+ years), Python (1+ year)
+- Node.js (5+ years), Java / Spring Boot (4+ years), Python (1 year)
 - Clean Architecture, DDD, Long-lived system design
 - Legacy evolution and modernization strategies
 
@@ -72,7 +72,7 @@ pragmatically and incrementally.
 ### Sabbatical & AI Exploration | 2024 – Present
 
 - Exploring AI-assisted development workflows and LLM orchestration.
-- Building automation tools with Python, Django, and htmx.
+- Building automation tools with Python, Django, and <htmx/>.
 - Experimenting with protocol-driven and UI-light interaction models.
 - Improved personal development throughput by ~**20–40%**.
 
@@ -98,6 +98,7 @@ pragmatically and incrementally.
   redesign responsibilities.
 - This significantly reduced development time, maintenance cost, and reliance on fragile UI hacks.
 - Gradually automated deployment processes to reduce manual steps and operational risk.
+- more about: https://www.zelicko.dev/notes/2026-01-18-nuvia-industrial-evolution/
 
 ---
 
@@ -111,7 +112,7 @@ pragmatically and incrementally.
 
 ---
 
-### Red Hat | Software Engineer | 2010 – 2012
+### Red Hat | Software Engineer (Intern, Regular) | 2010 – 2012
 
 - Worked in large, distributed open-source teams.
 - Debugged complex issues in the JBoss ecosystem.
@@ -131,8 +132,8 @@ pragmatically and incrementally.
 
 ## Education
 
-- **FIT VUT Brno** — Applied Informatics
-- **VSP Jihlava** — Informatics & Management
+- **FIT VUT Brno\*** — Applied Informatics
+- **VSP Jihlava\*** — Informatics & Management
 - **SUŠG Jihlava** — Graphic Design (Typography, UI/UX)
 - **SPŠT Třebíč** — Electronic Computer Systems
 
