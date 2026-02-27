@@ -13,27 +13,6 @@ params:
 > In the last few years there are a lot of new CSS features I want to talk about. Most of them are
 > strongly supported, but it would be a nice approach to always make some reasonable fallbacks...
 
-### Corner shape
-
-`corner-shape` is a new CSS property that allows you to specify the shape of the corners of an
-element.
-
-[Video](https://www.youtube.com/watch?v=kmfBt1gBAXQ),
-[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/corner-shape),
-[CanIUse](https://caniuse.com/?search=corner-shape).
-
-```css
-.box {
-  border-radius: 1.2rem;
-  corner-shape: squircle;
-}
-```
-
-<button style="border-radius: 2rem;corner-shape: squircle; padding: 1rem 2rem;background: orange; border: none">corner-shape:
-squircle;</button> vs.
-<button style="border-radius: 1rem; padding: 1rem 2rem;background: orange; border: none">corner-shape:
-none;</button>
-
 ### Animation timeline
 
 `animation-timeline` is a new CSS property that allows you to specify the timeline for an animation.
@@ -150,6 +129,66 @@ formats - it is a very strong tool.
   background-color: oklch(var(--primary-color) l c h / 50%); //-> rgba(255, 0, 0, 0.5)
 }
 ```
+
+### Corner shape
+
+`corner-shape` is a new CSS property that allows you to specify the shape of the corners of an
+element.
+
+[Video](https://www.youtube.com/watch?v=kmfBt1gBAXQ),
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/corner-shape),
+[CanIUse](https://caniuse.com/?search=corner-shape).
+
+```css
+.box {
+  border-radius: 1.2rem;
+  corner-shape: squircle;
+}
+```
+
+<style>
+    .btn {
+        padding: 2rem 4rem;
+        background: orange;
+        border: none;
+        transition: all 0.2s ease;
+    }
+    .message {
+        border-radius: 1rem;
+        /**/
+
+        anchor-name: --card;
+    }
+
+    .message::before {
+        scale: 0;
+        content: "1";
+        position: absolute;
+        position-anchor: --card;
+        position-area: top right;
+        translate: -50% 50%;
+        background: red;
+        color: white;
+        height: 2rem;
+        width: 2rem;
+        transition: all 0.2s ease;
+        border-radius: 50%;
+    }
+
+    .message:hover {
+        border-top-right-radius: 1.5rem;
+        corner-top-right-shape: scoop;
+    }
+    .message:hover::before {
+        scale: 1;
+    }
+</style>
+
+<button class="btn" style="border-radius: 2rem; corner-shape: squircle;">corner-shape:
+squircle;</button> vs. <button class="message btn">hover me! (corner-shape: none)</button>
+
+The button with the hover effect can be realized just as a "border" for the badge, but in this case
+it rly changing its shape.
 
 ### Layer
 

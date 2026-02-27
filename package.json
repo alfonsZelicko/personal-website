@@ -6,7 +6,8 @@
     "dev": "start http://localhost:1313 && hugo server  --cleanDestinationDir",
     "dev:no-cache": "start http://localhost:1313 && hugo server --disableFastRender --noHTTPCache --cleanDestinationDir",
     "build": "hugo --minify --gc",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "new-note": "hugo new notes/2026-02-26-new-note.md"
   },
   "devDependencies": {
     "open-cli": "^8.0.0",
