@@ -10,6 +10,7 @@
         <h1 id="top">{{ .Title }}</h1>
 
         <div class="note-meta">
+          <p><strong>Reading time:</strong> {{ .ReadingTime }} minutes</p>
           <p><strong>Date:</strong> {{ .Date.Format "January 2, 2006" }}</p>
           {{ if .Params.categories }}
             <p class="note-categories">

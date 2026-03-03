@@ -1,0 +1,6 @@
+<details class="demo-code">
+  <summary>
+    {{ .Get 0 | default "Show DEMO code" }}
+  </summary>
+  {{ .Inner | markdownify }}
+</details>

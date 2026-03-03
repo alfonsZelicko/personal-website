@@ -289,6 +289,18 @@ blockquote.alert-danger {
   }
 }
 
+details {
+  summary {cursor: pointer;}
+  
+  &.demo-code {
+    color: var(--color-link-rgb);
+    
+    &:hover {
+      color: var(--color-link-active-rgb);
+    }
+  }
+}
+
 //
 // Code
 //

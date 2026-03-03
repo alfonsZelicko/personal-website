@@ -13,6 +13,8 @@ params:
 > In the last few years there are a lot of new CSS features I want to talk about. Most of them are
 > strongly supported, but it would be a nice approach to always make some reasonable fallbacks...
 
+> Ofc I can talk even about things like position: flex/grid, but I am not going to do it here.
+
 ### Animation timeline
 
 `animation-timeline` is a new CSS property that allows you to specify the timeline for an animation.
@@ -57,8 +59,6 @@ corner of this site.
     a:target-current {
       opacity: 1;
       color: var(--color-link-active-rgb);
-      padding-left: 0.5rem;
-      margin-left: -0.5rem;
     }
   }
 }
@@ -111,25 +111,6 @@ You can wind here usage of `sibling-index()` - and here is even `sibling-count()
 }
 ```
 
-### New color models
-
-`oklch()` is a new CSS function that converts a color from sRGB to the OKLAB color space. It is
-useful for creating color palettes. I strongly recommend paying attention to these new color
-formats - it is a very strong tool.
-
-[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch),
-[video](https://www.youtube.com/watch?v=4Ypuns-Jq20&t=369),
-[CanIUse](https://caniuse.com/?search=oklch), [DEMO](https://codepen.io/argyleink/pen/YzdEapM).
-
-```scss
---primary-color: red;
-
-.red-element {
-  color: oklch(var(--primary-color) calc(l - 0.25) c h); //little darker red
-  background-color: oklch(var(--primary-color) l c h / 50%); //-> rgba(255, 0, 0, 0.5)
-}
-```
-
 ### Corner shape
 
 `corner-shape` is a new CSS property that allows you to specify the shape of the corners of an
@@ -150,14 +131,17 @@ element.
     .btn {
         padding: 2rem 4rem;
         background: orange;
-        border: none;
+        border: 3px solid color-mix(saddlebrown, transparent 50%); /*to demonstrate shape change*/
         transition: all 0.2s ease;
+    }
+    .btn:not(.message){
+        border-radius: 2rem;
+        corner-shape: squircle;
     }
     .message {
         border-radius: 1rem;
-        /**/
-
         anchor-name: --card;
+        cursor: pointer;
     }
 
     .message::before {
@@ -167,28 +151,77 @@ element.
         position-anchor: --card;
         position-area: top right;
         translate: -50% 50%;
-        background: red;
+        background: firebrick;
         color: white;
-        height: 2rem;
-        width: 2rem;
+        height: 2.5rem;
+        width: 2.5rem;
         transition: all 0.2s ease;
         border-radius: 50%;
     }
 
-    .message:hover {
-        border-top-right-radius: 1.5rem;
+    .message:focus {
+        border-top-right-radius: 2rem;
         corner-top-right-shape: scoop;
     }
-    .message:hover::before {
+    .message:focus::before {
         scale: 1;
     }
 </style>
 
-<button class="btn" style="border-radius: 2rem; corner-shape: squircle;">corner-shape:
-squircle;</button> vs. <button class="message btn">hover me! (corner-shape: none)</button>
+<button class="btn">corner-shape: squircle;</button> vs.<button class="message btn">click me!
+(corner-shape: none)</button>
 
-The button with the hover effect can be realized just as a "border" for the badge, but in this case
-it rly changing its shape.
+{{< code-detail >}}
+
+```html
+<button class="btn">corner-shape: squircle;</button> vs.<button class="message btn">
+  click me! (corner-shape: none)
+</button>
+```
+
+```scss
+.btn {
+  padding: 2rem 4rem;
+  background: orange;
+  border: 3px solid saddlebrown; /*to demonstrate shape change*/
+  transition: all 0.2s ease;
+  &:not(.message) {
+    border-radius: 2rem;
+    corner-shape: squircle;
+  }
+}
+.message {
+  border-radius: 1rem;
+  anchor-name: --card;
+
+  &::before {
+    scale: 0;
+    content: "1";
+    position: absolute;
+    position-anchor: --card;
+    position-area: top right;
+    translate: -50% 50%;
+    background: firebrick;
+    color: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+  }
+
+  /*not hover, cause of mobile devices*/
+  &:focus {
+    border-top-right-radius: 2rem;
+    corner-top-right-shape: scoop;
+  }
+
+  &:focus::before {
+    scale: 1;
+  }
+}
+```
+
+{{< /code-detail >}}
 
 ### Layer
 
@@ -231,6 +264,26 @@ html {
 }
 ```
 
+### New color models
+
+`oklch()` is a new CSS function that converts a color from sRGB to the OKLAB color space. It is
+useful for creating color palettes. I strongly recommend paying attention to these new color
+formats - it's a very strong tool. Here is a lot of options: `lch()`, `oklch()`, `lab()`, `oklab()`,
+`rgb()`, `rgba()`, `hsl()`, `hsla()`, `hwb()`, `hwba()`, `color()`...
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch),
+[video](https://www.youtube.com/watch?v=4Ypuns-Jq20&t=369),
+[CanIUse](https://caniuse.com/?search=oklch), [DEMO](https://codepen.io/argyleink/pen/YzdEapM).
+
+```scss
+--primary-color: red;
+
+.red-element {
+  color: oklch(from var(--primary-color) calc(l - 0.25) c h); //little darker red
+  background-color: oklch(from var(--primary-color) l c h / 50%); //-> rgba(255, 0, 0, 0.5)
+}
+```
+
 ### Color mixing
 
 `color-mix()` allows you to mix two colors together. Here is actualy a lot of new CSS functions that
@@ -247,38 +300,36 @@ can make the code more clean and readable... you should check them out!
 }
 ```
 
-### Search tag
-
-Did you realize here is an element `<search />` that is not in the HTML standard? It is a new
-element that allows you to create a search form. It adds a aria-label to the input and a button. If
-you use it, you don't need to add the `aria-label` (...) yourself.
-
-_DEMO:_
-
-<search>
-  <form style="border: 1px solid var(--color-quote-rgb); padding: 1rem">
-    <label for="search">Search</label>
-    <input type="search" name="search" id="search" />
-    <button type="submit">Search</button>
-  </form>
-</search>
-
-```html
-<search>
-  <form>
-    <label for="search">Search</label>
-    <input type="search" name="search" id="search" />
-    <button type="submit">Search</button>
-  </form>
-</search>
-```
-
 ### Details tag
 
 Yes - this was one of my first experiments with jQuery back in the days. It is a new element that
-allows you to create a collapsible section - without JS!
+allows you to create a collapsible section - without JS! Real implementation is a bit tricky, the
+browser using shadow elements, but here is a way how to animate it properly :-)
 
 _DEMO:_
+
+<style>
+    :root {
+      interpolate-size: allow-keywords;
+    }
+    details[name="accordion"] {
+      overflow: hidden;
+    }
+    details[name="accordion"] *{
+      margin: 0;
+    }
+    details[name="accordion"]::details-content{
+      height: 0;
+      transition:
+        height 0.2s,
+        content-visibility 0.2s;
+
+      transition-behavior: allow-discrete;
+    }
+  details[name="accordion"][open]::details-content {
+    height: auto;
+  }
+</style>
 
 <div style="border: 1px solid var(--color-quote-rgb); padding: 1rem">
 <details name="accordion">
@@ -295,8 +346,7 @@ _DEMO:_
 </details>
 </div>
 
-... you can use some nice [proper css](https://codepen.io/sfearl1/pen/YPXxmqP) to make it look
-nice...
+{{< code-detail >}}
 
 ```html
 <details name="accordion">
@@ -312,6 +362,43 @@ nice...
   <p>I am a collapsible section 03</p>
 </details>
 ```
+
+```scss
+:root {
+  interpolate-size: allow-keywords; /*we want to use keywords in the CSS */
+}
+details[name="accordion"] {
+  overflow: hidden;
+  &[name="accordion"] {
+    &::details-content {
+      height: 0;
+      transition:
+        height 0.2s,
+        content-visibility 0.2s;
+      transition-behavior: allow-discrete;
+    }
+    &[open]::details-content {
+      height: auto;
+    }
+  }
+  * {
+    margin: 0;
+  }
+}
+```
+
+> `transition-behavior: allow-discrete`; enables transitions for otherwise non-animatable properties
+> like `display`. On close, the visual transition (e.g. shrinking `height` to 0) runs first, and the
+> element is only hidden (`display: none`) after the transition completes.<br>
+> [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-behavior),
+> [CanIUse](https://caniuse.com/?search=transition-behavior).
+
+> `interpolate-size: allow-keywords;` means that we can use keywords in the CSS - like
+> `height: auto` - and the browser will interpolate the value -> **we can animate it!**<br>
+> [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/interpolate-size),
+> [CanIUse](https://caniuse.com/?search=interpolate-size).
+
+{{< /code-detail >}}
 
 ### Text trimming
 

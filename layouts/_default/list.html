@@ -39,7 +39,7 @@
         <li>
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 
-          <span class="additional-info" data-path="{{ .RelPermalink }}"></span>
+          <span class="additional-info" data-path="{{ .RelPermalink }}">{{ .ReadingTime }} min read</span>
           <span class="date">{{ .Date.Format "2006-01-02" }}</span>
         </li>
       {{ else }}
@@ -92,13 +92,14 @@
             let path = el.getAttribute("data-path") || "";
             path = path.startsWith("/") ? path.slice(1) : path;
             const commentCount = stats[path] && stats[path].comments ? stats[path].comments : 0;
-            el.innerText = `(${commentCount} comments)`;
+            const origin = el.innerText;
+            el.innerText = `(${commentCount} comments, ${origin})`;
           });
         })
         .catch(e => {
           console.error("Error during loading comments count:", e);
           document.querySelectorAll(".additional-info").forEach(el => {
-            el.style.display = "none";
+            // el.style.display = "none";
           });
         });
     })();
