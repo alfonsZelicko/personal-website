@@ -15,11 +15,6 @@ params:
 
 > Ofc I can talk even about things like position: flex/grid, but I am not going to do it here.
 
-### Align content
-
-`align-content` is a new CSS property that allows you to specify the alignment of multiple lines of
-text within a block container.
-
 ### Animation timeline
 
 `animation-timeline` is a new CSS property that allows you to specify the timeline for an animation.
