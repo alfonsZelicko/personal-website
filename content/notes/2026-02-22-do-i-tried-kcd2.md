@@ -77,6 +77,22 @@ a pot of food. A real, edible, cooked, life-saving pot of food. That’s basical
 next several hours. The story didn’t progress. No epic quests. No grand achievements. I just
 survived. And honestly? It was hilarious.
 
+## Usually I have one play style
+
+... but in this case I was forced to change my game style. No more "badass nigga", because most of
+the fun is from the moments when you are not. When you are drunk, your charismatic interactions are
+different and mostly hilarious - especially when you fail. The Skyrim stealth archer is a option
+just until the moment you will meet someone. Then is bow useless. Just a real life.
+
+![Why I killed horse](https://i.ytimg.com/vi/JNitCGnq_dA/maxresdefault.jpg)
+
+{{< code-detail "I just want to hug her!">}}![I am just huging her](https://i.ytimg.com/vi/wlYAJNV8GMg/maxresdefault.jpg)
+{{< /code-detail >}}
+{{< code-detail "She is not my wife?!">}}![She is not my wife?!](https://i.ytimg.com/vi/EWuACBI-4us/maxresdefault.jpg)
+{{< /code-detail >}}
+{{< code-detail "Strange meeting">}}![Karel Sip](https://static1.thegamerimages.com/wordpress/wp-content/uploads/2025/02/karel-arrowhead-kingdom-come-deliverance-2.jpg)
+{{< /code-detail >}}
+
 ## Quests, quests, and more lore!
 
 The main storyline is fantastic—go find out for yourself! I haven't had this much fun playing a PC

@@ -15,6 +15,11 @@ params:
 
 > Ofc I can talk even about things like position: flex/grid, but I am not going to do it here.
 
+### Align content
+
+`align-content` is a new CSS property that allows you to specify the alignment of multiple lines of
+text within a block container.
+
 ### Animation timeline
 
 `animation-timeline` is a new CSS property that allows you to specify the timeline for an animation.
@@ -42,11 +47,14 @@ scrolling position). **It can pretty easily remove the need of usin `Intersectio
 }
 ```
 
+Output of this code you can see in the _Table of contents_ in the top right corner of this site, if
+you are not on the phone.
+
 ### Scroll target group
 
 `scroll-target-group` is a new CSS property that allows you to group elements that are linked to the
 same target. This is how I realized the active state in the _Table of contents_ in the top right
-corner of this site.
+corner of this site if you are not on the phone :-)
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-target-group),
 [CanIUse](https://caniuse.com/?search=scroll-target-group).
@@ -131,6 +139,7 @@ element.
     .btn {
         padding: 2rem 4rem;
         background: orange;
+        margin: 2rem;
         border: 3px solid color-mix(saddlebrown, transparent 50%); /*to demonstrate shape change*/
         transition: all 0.2s ease;
     }
@@ -155,33 +164,35 @@ element.
         color: white;
         height: 2.5rem;
         width: 2.5rem;
+        font-size: 2rem;
         transition: all 0.2s ease;
         border-radius: 50%;
     }
 
-    .message:focus {
+    .message:focus,.message:hover {
         border-top-right-radius: 2rem;
         corner-top-right-shape: scoop;
     }
-    .message:focus::before {
+    .message:focus::before,.message:hover::before {
         scale: 1;
     }
 </style>
 
-<button class="btn">corner-shape: squircle;</button> vs.<button class="message btn">click me!
-(corner-shape: none)</button>
+<button class="btn">corner-shape: squircle;</button> vs.<button class="message btn">click/hover
+me!</button>
 
 {{< code-detail >}}
 
 ```html
-<button class="btn">corner-shape: squircle;</button> vs.<button class="message btn">
-  click me! (corner-shape: none)
+<button class="btn">corner-shape: squircle;</button> or.<button class="message btn">
+  click/hover me!
 </button>
 ```
 
 ```scss
 .btn {
   padding: 2rem 4rem;
+  margin: 2rem;
   background: orange;
   border: 3px solid saddlebrown; /*to demonstrate shape change*/
   transition: all 0.2s ease;
@@ -210,13 +221,13 @@ element.
   }
 
   /*not hover, cause of mobile devices*/
-  &:focus {
+  &:focus,
+  &:hover {
     border-top-right-radius: 2rem;
     corner-top-right-shape: scoop;
-  }
-
-  &:focus::before {
-    scale: 1;
+    &::before {
+      scale: 1;
+    }
   }
 }
 ```
@@ -367,7 +378,7 @@ _DEMO:_
 :root {
   interpolate-size: allow-keywords; /*we want to use keywords in the CSS */
 }
-details[name="accordion"] {
+details {
   overflow: hidden;
   &[name="accordion"] {
     &::details-content {

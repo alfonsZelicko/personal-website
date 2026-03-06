@@ -10,7 +10,7 @@ params:
   metakeywords: "htmx, react, framework, web development, critique"
 ---
 
-{{< img src="htmx.png" alt="Love on 1st view" caption="I felt nostalgia for something I lost." >}}
+![meme - htmx](https://martijndashorst.com/uploads/htmx-meme.png)
 
 Do you know the meme? In 2010 we had PHP and jQuery and everything was simple... and mess. Then came
 2012 and JS wanted to do all the "V" in [MVC](https://en.wikipedia.org/wiki/Model–view–controller).
@@ -23,7 +23,9 @@ somewhere in hell just doesn't make sense...
 ... And then **\<htmx\/\>** appeared. It promised exactly what we all wanted: fast, easy to use,
 modern framework.
 
-{{< img src="new-framework-promise.png" w="420" alt="meme - new framework - inspired by IT" caption="Another new solution for old bugs!" >}}
+<p align="center">
+  <img src="https://pbs.twimg.com/media/EeF50erWkAocGLO.jpg" />
+</p>
 
 ## Phase 1: Honeymoon (Delete 15 000 lines of code!)
 
