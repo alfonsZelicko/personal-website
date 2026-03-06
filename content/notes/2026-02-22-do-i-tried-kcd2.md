@@ -7,12 +7,8 @@ tags: ["games"]
 draft: false
 ---
 
-> I am not a huge fan of gaming. Not really. I have a few games I like to play from time to time,
-> but mostly I am unable to find something I would willingly play for more than a few hours. But
-> this time...
-
-> This is not a review. It's more like a showcase of a few moments from my playthrough to convince
-> you to try this one! :-)
+> This is not a review. It's more like a few moments from my playthrough to convince you to try this
+> one! :-)
 
 ## How it caught my attention
 
@@ -25,6 +21,8 @@ It’s a strictly Czech cultural phenomenon, so it’s hard to explain what’s 
 short: it's a guy with a strong "redneck" accent repairing an old tractor—a Lakatos. Slovak
 production, and not a very smart design. Mechanics and programmers can feel him as a lost brother,
 especially when he blames the entire world for this injustice.
+
+{{< img alt="Why I killed horse" src="https://i.ytimg.com/vi/JNitCGnq_dA/maxresdefault.jpg" >}}
 
 And then it happened: I saw a video from KCD2 where a technician repairs an old astronomical clock
 and bitches in exactly the same way! SAME WORDS! A brilliant cultural reference. Right then, I
@@ -46,6 +44,8 @@ instantly felt it.
 
 ...and by "it," I mean hunger. I decided to try Hardcore mode. I thought, “How bad can it be?” The
 game answered immediately—with my stomach growling like a dying bear.
+
+{{< img src="henry-vs-geralt.jpg" alt="henry from skalitz vs geralt of rivia" >}}
 
 After wandering around the village in absolute desperation, I managed to pull off the heist of the
 century: I stole a sausage from someone’s pocket. A glorious, greasy beacon of hope. I was saved. I
@@ -84,13 +84,8 @@ the fun is from the moments when you are not. When you are drunk, your charismat
 different and mostly hilarious - especially when you fail. The Skyrim stealth archer is a option
 just until the moment you will meet someone. Then is bow useless. Just a real life.
 
-![Why I killed horse](https://i.ytimg.com/vi/JNitCGnq_dA/maxresdefault.jpg)
-
-{{< code-detail "I just want to hug her!">}}![I am just huging her](https://i.ytimg.com/vi/wlYAJNV8GMg/maxresdefault.jpg)
-{{< /code-detail >}}
+{{< img src="https://i.ytimg.com/vi/wlYAJNV8GMg/maxresdefault.jpg" alt="henry from skalitz vs geralt of rivia" alt="I am just huging her">}}
 {{< code-detail "She is not my wife?!">}}![She is not my wife?!](https://i.ytimg.com/vi/EWuACBI-4us/maxresdefault.jpg)
-{{< /code-detail >}}
-{{< code-detail "Strange meeting">}}![Karel Sip](https://static1.thegamerimages.com/wordpress/wp-content/uploads/2025/02/karel-arrowhead-kingdom-come-deliverance-2.jpg)
 {{< /code-detail >}}
 
 ## Quests, quests, and more lore!
@@ -107,6 +102,8 @@ The quests are designed to BE INTERESTING. Nothing like "go here and bring", or 
 that"... From time to time it is starting as a simple kind... but it almost never is. NPC's are
 making fun of you, they flirt with you, they are trying to steal from you... The interaction feels
 like natural. Nobody is trying to pretend you are some kind of "badass bro".
+
+{{< img alt="Karel Sip" src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2025/02/karel-arrowhead-kingdom-come-deliverance-2.jpg">}}
 
 > No culture wars, no indoctrination into the “correct mindset.” Simply — you are in the Middle Ages
 > now, survive and serve your lord.

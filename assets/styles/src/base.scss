@@ -76,15 +76,15 @@
   @include apply-palette('low-l');
 }
 
-html:has(#theme-toggle:checked) {
+@include low-d() {
   @include apply-palette('low-d');
 }
 
-html:has(#contrast-toggle:checked) {
+@include high-l() {
   @include apply-palette('high-l');
 }
 
-html:has(#contrast-toggle:checked):has(#theme-toggle:checked) {
+@include high-d() {
   @include apply-palette('high-d');
 }
 
@@ -96,6 +96,7 @@ html:has(#contrast-toggle:checked):has(#theme-toggle:checked) {
 *:after,
 *:before {
   box-sizing: inherit;
+  transition: all 0.15s ease-out;
 }
 
 html {

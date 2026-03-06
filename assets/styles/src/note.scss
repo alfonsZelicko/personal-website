@@ -46,6 +46,21 @@ article.note {
     display: flex;
     justify-content: space-between;
   }
+  
+  img.note-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px;
+    box-shadow: 0 0 15px color-mix(var(--color-text-rgb), transparent 80%);
+    
+    @include low-d() {
+      box-shadow: 0 0 15px transparent !important;
+    }
+
+    @include high-d() {
+      box-shadow: 0 0 15px transparent !important;
+    }
+  }
 }
 
 aside.toc-container {

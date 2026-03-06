@@ -1,6 +1,7 @@
 // Hugo-compatible imports
 @import "normalize.scss";
 
+@import "src/_global_mixins.scss";
 @import "src/_vars.scss";
 @import "src/_responsive.scss";
 @import "src/base.scss";

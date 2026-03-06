@@ -1,0 +1,38 @@
+@mixin low-d() {
+  $current: &;
+  @if $current {
+    html:has(#theme-toggle:checked) & {
+      @content;
+    }
+  } @else {
+    html:has(#theme-toggle:checked) {
+      @content;
+    }
+  }
+}
+
+@mixin high-l() {
+  $current: &;
+  @if $current {
+    html:has(#contrast-toggle:checked) & {
+      @content;
+    }
+  } @else {
+    html:has(#contrast-toggle:checked) {
+      @content;
+    }
+  }
+}
+
+@mixin high-d() {
+  $current: &;
+  @if $current {
+    html:has(#contrast-toggle:checked):has(#theme-toggle:checked) & {
+      @content;
+    }
+  } @else {
+    html:has(#contrast-toggle:checked):has(#theme-toggle:checked) {
+      @content;
+    }
+  }
+}

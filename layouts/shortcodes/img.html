@@ -1,21 +1,29 @@
 {{ $src := .Get "src" }}
-{{ $alt := .Get "alt" | default "Obrázek" }}
+{{ $classList := .Get "class-list" | default "note-image" }}
+{{ $alt := .Get "alt" | default "Picture" }}
 {{ $width := .Get "w" | default "800" }}
-{{ $resource := resources.Get (printf "images/notes/%s" $src) }}
+{{ $isExternal := or (hasPrefix $src "http://") (hasPrefix $src "https://") }}
+{{ $finalSrc := "" }}
+{{ $error := false }}
 
-{{ if $resource }}
-  {{ $optimized := $resource.Resize (printf "%sx webp" $width) }}
-  {{ $maxWidth := printf "%spx" $width }}
+{{ if $isExternal }}
+  {{ $finalSrc = $src }}
+{{ else }}
+  {{ with resources.Get (printf "images/notes/%s" $src) }}
+    {{ $optimized := .Resize (printf "%sx webp" $width) }}
+    {{ $finalSrc = $optimized.RelPermalink }}
+  {{ else }}
+    {{ $error = true }}
+  {{ end }}
+{{ end }}
+
+{{ if $error }}
+  <p style="color: var(--color-error-rgb);">Error: Picture <b>{{ $src }}</b> not found!</p>
+{{ else }}
   <figure style="{{ printf "max-width: %spx; margin: 1em auto;" $width | safeCSS }}">
-    <img
-      src="{{ $optimized.RelPermalink }}"
-      alt="{{ $alt }}"
-      style="width: 100%; height: auto; border-radius: 8px;"
-      loading="lazy" />
+    <img src="{{ $finalSrc }}" alt="{{ $alt }}" class="{{ $classList }}" loading="lazy" />
     {{ with .Get "caption" }}
       <figcaption style="text-align: center; font-size: 0.9em; color: #666;">{{ . }}</figcaption>
     {{ end }}
   </figure>
-{{ else }}
-  <p style="color: var(--color-error-rgb);">Error: Picture <b>{{ $src }}</b> not found!</p>
 {{ end }}
