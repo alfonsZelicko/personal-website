@@ -13,13 +13,6 @@ params:
 > In the last few years there are a lot of new CSS features I want to talk about. Most of them are
 > strongly supported, but it would be a nice approach to always make some reasonable fallbacks...
 
-> Ofc I can talk even about things like position: flex/grid, but I am not going to do it here.
-
-### Align content
-
-`align-content` is a new CSS property that allows you to specify the alignment of multiple lines of
-text within a block container.
-
 ### Animation timeline
 
 `animation-timeline` is a new CSS property that allows you to specify the timeline for an animation.
