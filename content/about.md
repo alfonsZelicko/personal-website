@@ -73,7 +73,7 @@ inspired by early web simplicity and content-first icons like
 
 This website also serves as my playground for testing new CSS features.
 
-## Disclaimer
+### Disclaimer
 
 > Often, halfway through a movie, I realize I forgot to turn on subtitles. I don’t really need them
 > to understand, but when it comes to writing creative or nuanced English - not just “technical

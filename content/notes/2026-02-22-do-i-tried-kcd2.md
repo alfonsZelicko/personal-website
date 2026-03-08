@@ -3,7 +3,7 @@ title: "So I finally tried KCD2"
 date: 2026-02-20T18:49:14+01:00
 slug: "2026-02-22-i-try-kdc2"
 categories: ["philosophy", "design"]
-tags: ["games"]
+tags: ["games", "design"]
 draft: false
 ---
 
@@ -68,14 +68,14 @@ one completely missed a deer. The second one, miraculously, hit. Victory! I triu
 the deer… only to discover that I couldn’t eat raw meat. Fantastic.
 
 Then, in the distance, I spotted a human figure. After about twenty minutes of being hopelessly lost
-in the woods, I nearly cried with joy. Civilization! Directions! Help!
+in the woods[^1], I nearly cried with joy. Civilization! Directions! Help!
 
 Nope. Bandit.
 
 Somehow, against all odds, I managed to defeat him. Even better—I found his camp. And in that camp…
 a pot of food. A real, edible, cooked, life-saving pot of food. That’s basically how it went for the
 next several hours. The story didn’t progress. No epic quests. No grand achievements. I just
-survived. And honestly? It was hilarious.
+survived. And honestly? It was hilarious[^2].
 
 ## Usually I have one play style
 
@@ -90,6 +90,9 @@ just until the moment you will meet someone. Then is bow useless. Just a real li
 
 ## Quests, quests, and more lore!
 
+> After years of Bethesda hegemony in RPG industry, with quest-design aka "go here and kill" The
+> Witcher series brought a new era: INTERESTING SIDE QUESTS!
+
 The main storyline is fantastic—go find out for yourself! I haven't had this much fun playing a PC
 game in a long time. The game manages to be epic and grounded at the same time.
 
@@ -98,10 +101,10 @@ For example, check out these moments (minimal spoilers, mostly just the "vibe"):
 - SPOILER [Free the Dry Devil](https://www.youtube.com/watch?v=2dyuIMl_LIM)
 - Not a SPOILER, but [Zizka becomes The Zizka](https://www.youtube.com/watch?v=MWsCfOv1Zsc)
 
-The quests are designed to BE INTERESTING. Nothing like "go here and bring", or "go here and steal
-that"... From time to time it is starting as a simple kind... but it almost never is. NPC's are
-making fun of you, they flirt with you, they are trying to steal from you... The interaction feels
-like natural. Nobody is trying to pretend you are some kind of "badass bro".
+The quests are designed to BE INTERESTING. From time to time it is starting as a simple kind... but
+it almost never is. NPC's feels alive[^3], they are making fun of you, they flirt with you, they are
+trying to steal from you... The interaction feels like natural. Nobody is trying to pretend you are
+some kind of "badass bro".
 
 {{< img alt="Karel Sip" src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2025/02/karel-arrowhead-kingdom-come-deliverance-2.jpg">}}
 
@@ -137,3 +140,15 @@ Despite those minor flaws, this is the kind of game that changes the industry. I
 Just like it’s hard to play Skyrim and enjoy the combat after you’ve played Elden Ring, or hard to
 settle for a linear story after Baldur’s Gate 3... it is now very hard to enjoy a "living world" in
 any other RPG after KCD2.
+
+[^1]:
+    Few times I was almost decided to start the game again, or load my last autosave position... but
+    My honor stopped me always.
+
+[^2]:
+    Ye - as a negative perk I chose "food not working well" - now imagine the feeling of the another
+    goy on internet, who took "sleepwalking" and wanted to visit the Mill on the bottom of the map
+    with similar destiny... and AFTER FINALLY arrived here - he were going to sleep, just to wake up
+    near Trosky Castle again :-D :-D
+
+[^3]: But yes, the repetitive faces/voices are little annoying after a while.
