@@ -110,16 +110,6 @@ body {
   display: flex;
   color: var(--color-text-rgb);
   background-color: var(--color-bg-rgb);
-  font-family: "Noto Sans Mono", monospace;
-  font-size: 1.8em;
-  font-weight: 400;
-  letter-spacing: 0.032em;
-  line-height: 1.8em;
-
-  @include max-md() {
-    font-size: 1.4em;
-    line-height: 1.6em;
-  }
 }
 
 img {

@@ -4,6 +4,10 @@
   .list-filter {
     width: 100%;
     text-align: center;
+    
+    a {
+      font-family: "Noto Sans Mono", monospace;
+    }
 
     a:not(.active) {
       color: var(--color-text-rgb);
@@ -23,6 +27,7 @@
       border-bottom: 1px solid color-mix(in srgb, var(--color-quote-rgb) 20%, transparent);
       position: relative;
       z-index: 1;
+      font-family: "Noto Sans Mono", monospace;
 
       @extend %in-animation;
 
