@@ -14,6 +14,8 @@ fleeting trends-always with a focus on **long-term maintainability**.
 - **Specialized Micro-apps:** Developing focused, high-performance applications for specific needs.
 - **Technical Consultancy:** Solving complex UI/UX challenges and performance bottlenecks.
 - **Long-term Roles:** Open to dedicated partnerships in deeply collaborative environments.
+- **Senior Leadership:** I enjoy working in Senior or Lead roles, where I can help shape the
+  technical vision and support the growth of the team.
 
 > While it might be outside my comfort zone, I prefer projects involving technologies I haven’t
 > mastered yet. In front-end, we often just find 'new ways to solve old problems'—so the prospect of
@@ -28,7 +30,7 @@ I build interfaces that are **robust, responsive, and intuitive**. My approach i
 the final product feels effortless for the user.
 
 Beyond client work, I constantly prototype new ideas—see my latest experiments on the
-[learning page](/learning).
+[learning page](/experience/learning).
 
 > My greatest satisfaction comes when software feels intuitive and useful for users.
 

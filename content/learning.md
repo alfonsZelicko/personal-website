@@ -46,20 +46,26 @@ section is "not done, and mostly it will be not" – it's just a
   multi-voice narration.
   - **Multimodel Translation**: Building a system that selects AI models based on literary genre for
     nuanced translation.
+    - STATUS: [BETA] - DeepL works, GoogleAI works, GPT -> still wants some money from me, omg - not
+      tested yet
   - **Context-Aware Direction:** The system doesn't just "read"; it acts (well - it can) as a
     director. It extracts character metadata to assign specific voices and contextual emotional
     cues. If a character is described as lisping or shouting in the text, the engine automatically
     generates prompts to adapt the speech patterns accordingly.
+    - STATUS: this is not working well yet, so I did not provide the code on my GIT - if you are
+      interested - write me! :-)
   - **Multimodel Orchestration:** Using genre-specific LLMs for translation and high-fidelity TTS
     (like Coqui/Google TTS Studio) for final audio production.
+    - STATUS: DONE! (Soon I will add engine for ElevenLabs)
   - **Designet for poor:** I am using 'everyday free credits' – the system can continue from where
     it ends before the last "error".
-  - **The Roadmap:** Currently wrapping the workflow into a one Django-based app with integrated
+  - ~~**The Roadmap:** Currently wrapping the workflow into a one Django-based app with integrated
     credit/payment systems—mostly as a playground to see how far I can push automated content
-    creation before I get bored.
+    creation before I get bored.~~ Currently wrapping the workflow into FastAPI/Strawbery server and
+    planing to create some React/SvelteKit(?) app for nice UI.
   - [Project repository](https://github.com/alfonsZelicko/python-ebook-reader) - if you want to
     join - tell me – I will push recent changes on server.
-    - _Django+htmx_:&nbsp;★★★★☆, _google-cloud_:&nbsp;★★★☆☆, _OpenAI_:&nbsp;★★★★☆,
+    - ~~_Django+htmx_:&nbsp;★★★★☆~~, _google-cloud_:&nbsp;★★★★★, _OpenAI_:&nbsp;★★★★☆,
       _PyTorch_:&nbsp;★★★☆☆, _COQUI_:&nbsp;★★☆☆☆
 
 - **VibeCoding & The Drunk Senior:** I am actively exploring LLM-driven development, but I treat the
@@ -80,7 +86,7 @@ section is "not done, and mostly it will be not" – it's just a
   - **Pretty fast evolution:** I’m generally skeptical of every “new and definitely better than
     ever” release, even though real progress is clearly happening. My star system here can be pretty
     outdated, and it's very personal. Keep it in mind.
-    - _copilot_: ★★★☆☆, _openAI_: ★★☆☆☆, _Claude_: ★★★★☆,
+    - _copilot_: ★★★☆☆, _openAI_: ★★☆☆☆, _Claude_: ★★★★☆, _Gemini_: ★★★★☆
 
 - **The Hardware Renaissance:** Surprisingly, I’ve rediscovered a love for hardware through
   **Raspberry Pi**. Although electronics bored me in high school, I now find joy in building
