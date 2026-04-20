@@ -1,11 +1,13 @@
 <section class="container page">
   <article>
     <header>
-      <h1>{{ .Title }}</h1>
+      <h1 id="top">{{ .Title }}</h1>
     </header>
 
     {{ .Content }}
   </article>
+
+  {{ partial "toc.html" . }}
 </section>
 
 <script>

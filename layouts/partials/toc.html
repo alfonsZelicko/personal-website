@@ -1,0 +1,11 @@
+{{ if and .TableOfContents (ge (len (findRE "<h[1-6]" .Content)) 3) }}
+  <aside class="toc-container">
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#top">{{ .Title }}</a></li>
+      </ol>
+      {{ .TableOfContents }}
+    </nav>
+  </aside>
+{{ end }}

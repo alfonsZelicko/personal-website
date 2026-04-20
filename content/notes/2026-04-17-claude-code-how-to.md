@@ -12,15 +12,16 @@ params:
 
 > Written from official docs and community wisdom (April 2026). Things move fast — check
 > [code.claude.com/docs](https://code.claude.com/docs) for the latest, because by the time you read
-> this something has probably already changed.
+> this something has probably already changed - but it's good to know that I have plan to have it
+> actual... just to stay actual :-)
 
 ---
 
 ## A) IDE Integration and Plugins
 
-**Claude Code is primarily a terminal tool.** You run it in your terminal inside your repo, and
-that's actually its superpower — it sees the whole project, not just whatever file you happen to
-have open. Revolutionary, right?
+**Claude Code is primarily a terminal tool.** You run it straight from your terminal inside your
+repo, and that’s kind of its superpower — it actually sees the whole project, not just the one
+lonely file you’ve got open. Wild concept, I know.
 
 ### Recommended Setup
 
@@ -36,9 +37,11 @@ have open. Revolutionary, right?
 When you run Claude Code inside your IDE's terminal, it links itself to the editor. Instead of
 reading suggestions in a chat window and then manually transcribing them like it's 2019, Claude
 proposes **inline diffs** directly in your files. You accept or reject them. Everything flows
-through Git, so you get a clean history of what the AI actually did to your codebase.
+through Git, so you get a clean history of what the AI actually did to your codebase! <3
 
 ### Useful MCP Servers (connect via `claude mcp add`)
+
+> If you dont know what I am talking about - I highly recommend to learn about it
 
 - **Playwright** – browser automation and testing
 - **GitHub MCP** – read issues, post PR comments directly from Claude Code

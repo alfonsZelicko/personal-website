@@ -29,8 +29,8 @@ I build interfaces that are **robust, responsive, and intuitive**. My approach i
 **pragmatic engineering**: collaborating closely with clients to uncover actual needs and ensuring
 the final product feels effortless for the user.
 
-Beyond client work, I constantly prototype new ideas—see my latest experiments on the
-[learning page](/experience/learning).
+> Beyond client work, I constantly prototype new ideas—see my latest experiments on the
+> [learning page](/experience/learning).
 
 > My greatest satisfaction comes when software feels intuitive and useful for users.
 
@@ -64,8 +64,8 @@ are people such as [Yuval Noah Harari](https://www.ynharari.com/book/sapiens-2) 
 > chair with a glass of water, while someone like Niall Ferguson sits opposite in a leather armchair
 > with a cup of Earl Grey, and they argue about whether the West is good or bad…
 
-I also like playing TTRPG games, some video games, and I do climbing – indoor walls, rocks, and via
-ferratas[^2]. Hiking and cycling are also a big part of my free time.
+> I also like playing TTRPG games, some video games, and I do climbing – indoor walls, rocks, and
+> via ferratas[^2]. Hiking and cycling are also a big part of my free time.
 
 ## Website
 
@@ -73,16 +73,16 @@ This site was built [without JavaScript](/notes/web-description/)[^3] and with m
 inspired by early web simplicity and content-first icons like
 [The Best Motherfucking Website](https://thebestmotherfucking.website/).
 
-This website also serves as my playground for testing new CSS features.
+> This website also serves as my playground for testing new CSS features.
 
 ### Disclaimer
 
-> Often, halfway through a movie, I realize I forgot to turn on subtitles. I don’t really need them
-> to understand, but when it comes to writing creative or nuanced English - not just “technical
-> documentation”-I still feel the friction.
+Often, halfway through a movie, I realize I forgot to turn on subtitles. I don’t really need them to
+understand, but when it comes to writing creative or nuanced English - not just “technical
+documentation”-I still feel the friction.
 
-**Every idea here is either my own or curated from the world of books and web.** I only use AI to
-polish the phrasing so my ‘Slavic English’ doesn’t disrupt the flow of the message. :-)
+> **Every idea here is either my own or curated from the world of books and web.** I only use AI to
+> polish the phrasing so my ‘Slavic English’ doesn’t disrupt the flow of the message. :-)
 
 [^1]: 25+ years if we will count my education experience as well.
 

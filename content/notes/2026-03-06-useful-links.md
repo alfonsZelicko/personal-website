@@ -29,9 +29,11 @@ These are the tools I use almost every day to check compatibility, documentation
 - [DevDocs](https://devdocs.io/) – Offline-capable combined API documentation browser for dozens of
   languages and frameworks.
 - [Regex101](https://regex101.com/) – The best online regex tester with live explanation and a
-  debugger.
+  debugger. In AI era mby little obsolete, but it is good to have some backup.
 - [Explainshell](https://explainshell.com/) – Paste any shell command and get a breakdown of what
   each part does - back in the days it was cool! Today we have AI, but I want to have it here.
+- [Excalidraw](https://excalidraw.com/) - A simple tool for creating a quick mind maps, diagrams,
+  etc. ... effective during conversations on tinder date, etc. ... 8-)
 
 ---
 
@@ -83,12 +85,13 @@ Cool, weird, or extremely specific tools that might come in handy one day.
 - [Champagne](https://champagne.pages.dev/) – A very minimalist, "brutalist" approach to web design
   inspiration.
 - [CSS Layout Generator](https://layout.bradwoods.io/) – Visually build complex CSS layouts (Grid,
-  Flexbox).
+  Flexbox). Yes. From time to time I am using it :-))
 - [Tally](https://tally.so/) – The simplest way to create forms (looks like Notion).
 - [Realtime Colors](https://www.realtimecolors.com/) – Test color palettes on a real website mockup
   instantly.
 - [Radio Garden](https://radio.garden/) – Spin a 3D globe and tune into live radio stations from
-  anywhere in the world. Oddly addictive.
+  anywhere in the world. Oddly addictive. Cool on parties - to show what kind of music listening
+  different people in different countries...
 - [Google Earth Web](https://earth.google.com/web/) – No install needed. Fly around the planet,
   explore 3D cities, check Street View.
 - [Shademap](https://shademap.app/) – Simulate sun position and shadows anywhere on Earth at any
