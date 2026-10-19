@@ -21,7 +21,7 @@ Alfons Zelicko's personal website built with [Hugo](https://gohugo.io).
 
 ```bash
 # Install Prettier and plugins for proper Hugo template formatting
-pnpm install
+pnpm i
 
 # Start development server
 pnpm dev
@@ -39,6 +39,10 @@ the static files, run `pnpm build` or manually `hugo --minify --gc -b <domain>`.
 The built files will be in the `public` folder, ready for deployment.
 
 For more commands read `project.json` - Scripts section.
+
+### TODO
+
+Migrate to `Vite+`
 
 ### License
 

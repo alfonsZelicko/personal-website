@@ -23,8 +23,20 @@
   src: url('./fonts/AnonymousPro-Regular.woff2') format('woff2');
 }
 
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./fonts/Roboto-Variable.woff2') format('woff2');
+}
+
 body {
   font-family: "Noto Sans Mono", monospace;
+}
+
+blockquote p {
+  font-family: "Roboto", sans-serif;
 }
 
 //
