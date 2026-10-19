@@ -59,5 +59,19 @@
         });
       });
     </script>
+    {{ if .Store.Get "hasMermaid" }}
+      <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@12/dist/mermaid.esm.min.mjs";
+
+        const isDark = document.getElementById("theme-toggle")?.checked ?? false;
+
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: isDark ? "redux-dark-color" : "redux-color",
+          fontFamily: "Arial, sans-serif",
+          fontSize: 25,
+        });
+      </script>
+    {{ end }}
   </body>
 </html>

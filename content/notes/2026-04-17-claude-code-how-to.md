@@ -3,7 +3,7 @@ title: "Claude Code – a practical guide for developers"
 date: 2026-04-17T01:08:01+02:00
 slug: "17-04-2026-claude-code-how-to"
 categories: ["programming", "guide"]
-tags: []
+tags: ["AI", "Agentic Coding", "MCP"]
 draft: false
 params:
   metadescription: ""
