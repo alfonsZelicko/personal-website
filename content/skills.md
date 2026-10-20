@@ -9,12 +9,13 @@ regularly explore new tools out of curiosity; some appear in the
 
 ## TL;DR Summary
 
-| Area                        | Core Focus & Expertise                                               |
-| :-------------------------- | :------------------------------------------------------------------- |
-| **Frontend**                | **React, TypeScript/JS**, CSS/SCSS, Next.JS, Vite/Webpack            |
-| **Backend**                 | **NodeJS, Python**, BunnyJS, Java (Spring, Maven), REST/GraphQL/gRPC |
-| **Product**                 | Strategic Engineering, Pragmatic Architecture, Industry 4.0          |
-| **DevOps&nbsp;&&nbsp;Team** | Mentorship, CI/CD, Docker, Agile Leadership                          |
+| Area                        | Core Focus & Expertise                                                |
+| :-------------------------- | :-------------------------------------------------------------------- |
+| **Frontend**                | **React, TypeScript/JS**, CSS/SCSS, Next.JS, Vite/Webpack             |
+| **Backend**                 | **NodeJS, Python**, BunnyJS, Java (Spring, Maven), REST/GraphQL/gRPC  |
+| **Agentic Coding & AI**     | **Cursor, n8n Orchestration**, Local Models (Ollama/Qwen), Claude/GPT |
+| **Product**                 | Strategic Engineering, Pragmatic Architecture, Industry 4.0           |
+| **DevOps&nbsp;&&nbsp;Team** | Mentorship, CI/CD, Docker, Agile Leadership                           |
 
 > I focus on building friendly, intuitive interfaces. I am not afraid to challenge requirements or
 > propose changes, but I always prioritize real business value and common sense.
@@ -23,15 +24,29 @@ regularly explore new tools out of curiosity; some appear in the
 
 ## Detailed Tech Stack
 
+### AI-Driven Workflow & Agentic Orchestration
+
+With the rapid evolution of development environments, my day-to-day focus has shifted away from
+writing raw syntax line-by-line toward system architecture, prompt/spec orchestration, and automated
+verification loops.
+
+- **IDE & AI Workspace:** **Cursor** (primary driver for AI integration), JetBrains/IntelliJ
+  (legacy/transitioning)
+- **Local & Cloud Models:** **Ollama** (hosting local lightweight models like Qwen 7B for rapid
+  feedback loops), Claude, Gemini, GPT-4o
+- **Automated Workflows:** **n8n** for orchestrating task refinement, ticket parsing, acceptance
+  criteria verification, and test execution pipeline automation
+
 ### Frontend Ecosystem
 
 I keep a broad overview of the frontend ecosystem to choose the
-[right tool for the team](http://mikhailian.mova.org/node/284), not the latest trend.
+[right tool for the team](http://mikhailian.mova.org/node/284), not the latest trend. Today, syntax
+matters less than robust architecture and spec accuracy.
 
-- **Languages:** **TypeScript[^1]**/JavaScript, HTML5/CSS3 (SCSS, Less)
-- **Libraries:** **React[^2]**, Redux, Zustand, Jotai, TanStack, NextJS
+- **Languages:** **TypeScript [^1]**/JavaScript, HTML5/CSS3 (SCSS, Less)
+- **Libraries:** **React [^2]**, Redux, Zustand, Jotai, TanStack, NextJS
 - **UI & Styling:** **Material UI[^3]**, Tailwind, @mui, Bootstrap, Responsive Design
-- **Secondary/Legacy:** Svelte, Angular, htmx, **jQuery**
+- **Secondary /Legacy:** Svelte, Angular, htmx, **jQuery**
 - **Tooling:** **Nx**, Cypress, npm/yarn/pnpm, Vite/Webpack, Jest, Figma, Accessibility, Prototyping
 
 > I have a genuine appreciation for maintaining legacy applications from the “pre-modern” era.
@@ -41,7 +56,7 @@ I keep a broad overview of the frontend ecosystem to choose the
 ### Back-End & Data Architecture
 
 While I can deliver backend services, my focus is now frontend-oriented architecture—API design,
-integration, and meaningful error handling.
+integration, model orchestration, and meaningful error handling.
 
 - **Primary Languages:** **Python** and **TypeScript/JS** (**Node.js**[^4] - NestJS/Express.js,
   BunnyJS)
@@ -54,7 +69,7 @@ integration, and meaningful error handling.
 Not a DevOps specialist, but fully self-sufficient with pipelines and deployments—preferably as
 little manual work as possible.
 
-- **CI/CD:** GitHub Actions, GitLab CI, Jenkins, TeamCity
+- **CI /CD:** GitHub Actions, GitLab CI, Jenkins, TeamCity
 - **Containerization:** Docker, Nginx, Apache
 - **Security & Quality:** Sonar Qube/Qodana, CodeQL
 - **Cloud & Scripting:** Basic AWS, Bash, Batch (.bat)
@@ -80,7 +95,7 @@ future selves_.
 - **Leadership:** Mentoring, onboarding, reducing "bus factor" [^6].
 - **Process:** Scrum[^5], Waterfall, lifecycle ownership, roadmaps.
 
----
+  ***
 
 ## Working Method & Ethics
 

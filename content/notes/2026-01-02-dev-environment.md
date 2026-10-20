@@ -13,6 +13,11 @@ params:
     standing desk, developer setup"
 ---
 
+> A quick note: this article is a _little outdated_, of course. I’m planning to
+> [introduce my current stack](../2026-10-20-my-actual-dev-environment/) in the future, which is
+> mostly built around AI automation. I still develop my pet projects by hand, but these days it’s
+> mostly a guilty pleasure.
+
 My development philosophy centers on **efficiency** and **deep integration**. I prefer tools that
 work out of the box and allow me to focus on writing code rather than configuring the editor for
 hours.

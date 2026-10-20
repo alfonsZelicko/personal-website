@@ -9,7 +9,7 @@ truly master the domain. For me, it’s about sustained growth and **seeing thin
 completion**.
 
 During the years I developed a **prefered dev environment** - more about
-[here](/notes/2026-01-02-dev-environment).
+[here](/notes/2026-10-20-my-actual-dev-environment/).
 
 ## TL;DR Summary
 
