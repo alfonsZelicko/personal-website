@@ -3,10 +3,15 @@ title: "About me"
 slug: "about"
 ---
 
-I’m **Alfons Zelicko**, a software developer specializing in **front-end** with **over 18 years of
-[coding&nbsp;experience](/experience)[^1]**. Having seen the industry evolve from basic scripts to
-complex automated systems, I’ve learned to prioritize tools that solve **real problems** over
-fleeting trends-always with a focus on **long-term maintainability**.
+<!-- prettier-ignore-start -->
+{{< about-with-portrait >}}
+I’m **Alfons Zelicko**, a software developer specializing in
+**front-end** with **over 18 years of [coding&nbsp;experience](/experience)[^1]**. Having seen the
+industry evolve from basic scripts to complex automated systems, I’ve learned to prioritize tools
+that solve **real problems** over fleeting trends-always with a focus on **long-term
+maintainability**.
+{{< /about-with-portrait >}}
+<!-- prettier-ignore-end -->
 
 ### How I can help
 

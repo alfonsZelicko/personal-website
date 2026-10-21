@@ -1,0 +1,66 @@
+{{/* {{ $portraitLight := resources.Get "images/alfons-light.png" }}*/}}
+{{ $portraitDark := resources.Get "images/alfons-dark.png" }}
+
+
+<style>
+  .image-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .image-text__content {
+    flex: 1;
+  }
+
+  .image-text img {
+    display: block;
+    width: 25%;
+    height: auto;
+  }
+
+  @media (max-width: 600px) {
+    .image-text {
+      flex-direction: column;
+    }
+
+    .image-text img {
+      width: 100%;
+    }
+  }
+
+  /*** IF I WANT DIFFERENT PORTRAITS FOR LIGHT AND DARK THEME ***/
+  /*.image-text__portrait--dark {
+    display: none !important;
+  }
+
+  body:has(#theme-toggle:checked) .image-text__portrait--light {
+    display: none;
+  }
+
+  body:has(#theme-toggle:checked) .image-text__portrait--dark {
+    display: block !important;
+  }*/
+  /*** ELSE IF ***/
+
+  /*.image-text__portrait--light {*/
+  /*  display: none !important;*/
+  /*}*/
+
+  /*** END ***/
+
+  /*body:has(#theme-toggle:checked)*/
+  .image-text img {
+    box-shadow: 0 0 15px color-mix(var(--color-text-rgb), transparent 80%);
+  }
+</style>
+
+<div class="image-text">
+  <div class="image-text__content">
+    {{ .Inner | markdownify }}
+  </div>
+
+  {{/* <img class="image-text__portrait--light" src="{{ $portraitLight.RelPermalink }}" alt="Alfons" />*/}}
+
+  <img class="image-text__portrait--dark" src="{{ $portraitDark.RelPermalink }}" alt="Alfons" />
+</div>

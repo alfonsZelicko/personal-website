@@ -2,7 +2,7 @@
 title: "Jak pracovat se softwarovými agenty"
 date: 2026-10-19T13:30:00+02:00
 tags: ["AI", "Agentic Coding", "MCP"]
-categories: ["programming", "guide", "CZ", "tools"]
+categories: ["programming", "guide", "CZ"]
 ---
 
 > Nedávno jsem psal o tom, jak pracuji s Claudem. Vývoj AI nástrojů se ale mění tak rychle, že se
