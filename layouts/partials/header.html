@@ -1,4 +1,6 @@
 {{ $keepItSimple := .Site.Params.keepItSimple }}
+
+
 <section class="container navigation">
   <nav class="top-nav">
     <div class="top-nav-left">
@@ -6,22 +8,33 @@
         {{ .Site.Title }}
       </a>
     </div>
+
     <div class="top-nav-right">
-      <input hidden type="checkbox" id="menu-toggle" />
       <input hidden type="checkbox" id="theme-toggle" checked />
       <input hidden type="checkbox" id="contrast-toggle" />
+
       {{ with .Site.Menus.main }}
-        <label for="menu-toggle" class="mobile-menu">
+        <button
+          type="button"
+          class="mobile-menu"
+          popovertarget="top-nav-items"
+          aria-controls="top-nav-items"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+          title="Open Menu">
           {{ if $keepItSimple }}
             Menu
           {{ else }}
             {{ partial "icons/menu.html" . }}
           {{ end }}
-        </label>
-        <ul id="top-nav-items" class="top-nav-list">
+        </button>
+
+        <ul id="top-nav-items" class="top-nav-list" popover="auto">
           {{ partial "icons/arrow.html" . }}
+
           {{ range sort . }}
             {{ $isActive := false }}
+
             {{ if eq $.Page.RelPermalink .URL }}
               {{ $isActive = true }}
             {{ else if and (ne .URL "/") (hasPrefix $.Page.RelPermalink .URL) }}
@@ -29,10 +42,14 @@
             {{ else if and (eq .URL "/") (eq $.Page.Type "homepage") }}
               {{ $isActive = true }}
             {{ end }}
+
+
             <li class="top-nav-item {{ if $isActive }}is-active{{ end }}">
               <a class="top-nav-link" href="{{ .URL }}">{{ .Name }}</a>
             </li>
           {{ end }}
+
+
           <li class="top-nav-item">
             <label
               class="top-nav-link theme-toggle"
@@ -45,6 +62,7 @@
                 {{ partial "icons/sun.html" . }}{{ partial "icons/moon.html" . }}
               {{ end }}
             </label>
+
             <label
               class="top-nav-link contrast-toggle"
               for="contrast-toggle"
@@ -56,58 +74,59 @@
                 {{ partial "icons/contrast.html" . }}
               {{ end }}
             </label>
-            <script>
-              (() => {
-                [
-                  {
-                    id: "theme-toggle",
-                    storageKey: "isDarkTheme",
-                    titleOn: "Switch to Light mode",
-                    titleOff: "Switch to Dark mode",
-                  },
-                  {
-                    id: "contrast-toggle",
-                    storageKey: "isLowContrast",
-                    titleOn: "Turn OFF High Contrast",
-                    titleOff: "Turn ON High Contrast",
-                  },
-                  {
-                    id: "menu-toggle",
-                    storageKey: null,
-                    titleOn: "Close Menu",
-                    titleOff: "Open Menu",
-                  },
-                ].forEach(({ id, storageKey, titleOn, titleOff }) => {
-                  const toggle = document.getElementById(id);
-                  const label = document.querySelector(`label[for="${id}"]`);
-                  if (!toggle || !label) return;
-
-                  if (storageKey) {
-                    const saved = localStorage.getItem(storageKey);
-                    saved && (toggle.checked = saved === "true");
-                  }
-
-                  const updateTitle = () => {
-                    label.title = toggle.checked ? titleOn : titleOff;
-                  };
-
-                  updateTitle();
-
-                  toggle.addEventListener("change", () => {
-                    storageKey && localStorage.setItem(storageKey, toggle.checked);
-                    updateTitle();
-
-                    window.dispatchEvent(
-                      new CustomEvent("app:prefs-changed", {
-                        detail: { source: id, newValue: toggle.checked },
-                      })
-                    );
-                  });
-                });
-              })();
-            </script>
           </li>
         </ul>
+
+        <script>
+          (() => {
+            // Theme and contrast preferences
+            [
+              ["theme-toggle", "isDarkTheme", "Switch to Light mode", "Switch to Dark mode"],
+              ["contrast-toggle", "isLowContrast", "Turn OFF High Contrast", "Turn ON High Contrast"],
+            ].forEach(([id, key, titleOn, titleOff]) => {
+              const toggle = document.getElementById(id);
+              const label = document.querySelector(`label[for="${id}"]`);
+              if (!toggle || !label) return;
+
+              const saved = localStorage.getItem(key);
+              if (saved !== null) toggle.checked = saved === "true";
+
+              const update = () => {
+                label.title = toggle.checked ? titleOn : titleOff;
+              };
+
+              update();
+              toggle.addEventListener("change", () => {
+                localStorage.setItem(key, toggle.checked);
+                update();
+
+                window.dispatchEvent(
+                  new CustomEvent("app:prefs-changed", {
+                    detail: { source: id, newValue: toggle.checked },
+                  })
+                );
+              });
+            });
+
+            // Popover and hamburger animation
+            const menu = document.getElementById("top-nav-items");
+            const button = document.querySelector('[popovertarget="top-nav-items"]');
+            const animation = button?.querySelector("#menu-icon-animation");
+
+            if (!menu || !button || !animation) return;
+
+            const hamburger = "M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7";
+            const cross = "M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7";
+
+            menu.addEventListener("toggle", ({ newState }) => {
+              const open = newState === "open";
+
+              button.setAttribute("aria-expanded", open);
+              animation.setAttribute("values", `${open ? hamburger : cross};${open ? cross : hamburger}`);
+              animation.beginElement();
+            });
+          })();
+        </script>
       {{ end }}
     </div>
   </nav>

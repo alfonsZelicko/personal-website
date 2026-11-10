@@ -28,7 +28,7 @@
   @keyframes pulse {
     0%,
     50% {
-      box-shadow: 0 0 0 0 oklch(from #{$from-color} l c h / 20%);
+      box-shadow: 0 0 0 0 oklch(from #{$from-color} l c h / 70%);
     }
     100% {
       box-shadow: 0 0 0 .7em oklch(from #{$from-color} l c h / 0%);

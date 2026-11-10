@@ -13,10 +13,25 @@
   top: 50%;
   left: 50%;
   transform: var(--theme-transform, translate(-50%, -50%));
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   color: var(--color-text-rgb);
+}
+
+%toggle-base {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: relative;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 //
@@ -25,16 +40,12 @@
 
 .container.navigation {
   position: sticky;
-  right: 0;
-  left: 0;
-  top: 0;
+  inset: 0 0 auto 0;
   z-index: 2;
-
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
-// Prevent #id links to be scrolled under menu
 [id] {
   scroll-margin-top: 80px;
 }
@@ -67,12 +78,26 @@
   gap: 24px;
   z-index: 100;
 
+  &[popover] {
+    position: static;
+    inset: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: visible;
+    color: inherit;
+    background: transparent;
+    box-shadow: none;
+    max-width: none;
+    max-height: none;
+    width: auto;
+  }
+
   .is-active > a {
     color: var(--color-link-active-rgb);
   }
 }
 
-// Desktop: toggles side by side in one menu item
 .top-nav-item:has(.theme-toggle):has(.contrast-toggle) {
   display: flex;
   align-items: center;
@@ -80,42 +105,23 @@
 }
 
 //
-// Theme toggle
+// Theme & Contrast toggles
 //
 
-.theme-toggle,
-.contrast-toggle {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  position: relative;
-
-  &:hover {
-    opacity: 0.7;
-  }
-}
-
-.theme-icon,
-.theme-char,
-.contrast-icon,
-.contrast-char {
-  @extend %theme-center;
+.theme-toggle, .contrast-toggle  {
+  @extend %toggle-base;
 }
 
 .theme-icon,
 .contrast-icon {
+  @extend %theme-center;
   width: 20px;
   height: 20px;
 }
 
 .theme-char,
 .contrast-char {
+  @extend %theme-center;
   font-size: 24px;
   user-select: none;
 }
@@ -126,24 +132,26 @@
   --theme-transform: translate(-50%, -50%) rotate(-90deg);
 }
 
-html:has(#theme-toggle:checked) {
-  .theme-icon-moon,
-  .theme-char-moon {
-    opacity: 0;
-    --theme-transform: translate(-50%, -50%) rotate(90deg);
+html {
+  &:has(#theme-toggle:checked) {
+    .theme-icon-moon,
+    .theme-char-moon {
+      opacity: 0;
+      --theme-transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .theme-icon-sun,
+    .theme-char-sun {
+      opacity: 1;
+      --theme-transform: translate(-50%, -50%) rotate(0deg);
+    }
   }
 
-  .theme-icon-sun,
-  .theme-char-sun {
-    opacity: 1;
-    --theme-transform: translate(-50%, -50%) rotate(0deg);
-  }
-}
-
-html:has(#contrast-toggle:checked) {
-  .contrast-icon,
-  .contrast-char {
-    --theme-transform: translate(-50%, -50%) rotate(180deg);
+  &:has(#contrast-toggle:checked) {
+    .contrast-icon,
+    .contrast-char {
+      --theme-transform: translate(-50%, -50%) rotate(180deg);
+    }
   }
 }
 
@@ -156,24 +164,10 @@ html:has(#contrast-toggle:checked) {
   cursor: pointer;
 
   .hb {
+    display: block;
     width: 100%;
     height: 100%;
   }
-
-  /* cannot control the menu icon state -> this is not working well :-( */
-/*  .top-nav-right:has(#menu-toggle:checked)  &::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    content: "";
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.8);
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
-  }*/
 }
 
 .menu-arrow {
@@ -182,68 +176,33 @@ html:has(#contrast-toggle:checked) {
 
 @include max-md() {
   .mobile-menu {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     width: 28px;
     height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    appearance: none;
     color: var(--color-text-rgb);
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-link-active-rgb);
+      outline-offset: 4px;
+    }
 
     &:not(:has(svg)) {
       width: auto;
       height: auto;
-    }
-  }
-
-  .top-nav-list {
-    transition:
-      opacity 0.3s ease-out,
-      transform 0.3s ease-out,
-      visibility 0.3s;
-
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-25px);
-
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-
-    padding-left: 0;
-
-    background-color: var(--color-bg-rgb);
-    border-top: 1px solid var(--color-border-rgb);
-    border-bottom: 1px solid var(--color-border-rgb);
-    box-shadow: 0 0 25px color-mix(in srgb, black 10%, transparent);
-  }
-
-  .menu-arrow {
-    display: block;
-    position: absolute;
-    top: -8px;
-    right: 26px;
-    width: 16px;
-    height: 8px;
-    color: var(--color-border-rgb);
-    filter: drop-shadow(0 -1px 0 var(--color-border-rgb));
-    opacity: 0;
-    transition:
-      opacity 0.3s ease-out,
-      color 0.2s ease-in-out;
-  }
-
-  .top-nav-right:has(#menu-toggle:checked) {
-    #top-nav-items {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(-15px);
-
-      .menu-arrow {
-        opacity: 1;
-      }
     }
   }
 
@@ -262,7 +221,6 @@ html:has(#contrast-toggle:checked) {
       border-top: none;
     }
 
-    // When multiple toggles are in one menu item, display them side by side
     &:has(.theme-toggle):has(.contrast-toggle) {
       display: flex;
       justify-content: center;
@@ -278,13 +236,71 @@ html:has(#contrast-toggle:checked) {
     .top-nav-link.theme-toggle {
       width: 100%;
     }
-  }
-  .top-nav-item:last-child {
-    border-top: 1px solid var(--color-border-rgb);
+
+    &:last-child {
+      border-top: 1px solid var(--color-border-rgb);
+    }
   }
 
   .top-nav-link {
     display: block;
     padding: 16px 24px;
+    text-align: center;
+  }
+
+  .menu-arrow {
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 26px;
+    width: 16px;
+    height: 8px;
+    color: var(--color-border-rgb);
+    filter: drop-shadow(0 -1px 0 var(--color-border-rgb));
+    opacity: 1;
+    transition:
+      opacity 0.3s ease-out,
+      color 0.2s ease-in-out;
+  }
+
+  .top-nav-list[popover] {
+    position: fixed;
+    top: $main-nav-height;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    max-width: none;
+    /*this two are here to show scroll, if mobile menu is too small, but need to fix menu-arrow first */
+    //max-height: calc(100dvh - #{$main-nav-height});
+    //overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--color-bg-rgb);
+    border: 0;
+    border-top: 1px solid var(--color-border-rgb);
+    border-bottom: 1px solid var(--color-border-rgb);
+    box-shadow: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, display 0.2s allow-discrete;
+
+    &:not(:popover-open) {
+      display: none;
+    }
+
+    &:popover-open {
+      display: flex;
+      opacity: 1;
+    }
+
+    @starting-style {
+      &:popover-open {
+        opacity: 0;
+      }
+    }
   }
 }

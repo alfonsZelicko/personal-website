@@ -19,8 +19,11 @@ The primary goal was **Progressive Enhancement**. The website is fully functiona
 navigable even if you **disable JavaScript entirely**.
 
 - **The Checkbox Hack**: Using hidden `<input type="checkbox">` elements (and placing some labels
-  somewhere, ofc) and the `:checked` CSS pseudo-class, I built the theme switcher, contrast toggle,
-  and mobile menu without any UI logic in JS.
+  somewhere, ofc) and the `:checked` CSS pseudo-class, I built the theme switcher and contrast
+  toggle without any UI logic in JS.
+- **Native Popover API**: The mobile menu uses the native HTML Popover API. The `popover="auto"`
+  attribute and `popovertarget` handle opening, closing, light dismiss (clicking outside), and
+  Escape key automatically—without custom event handling.
 
 ```scss
 // Simplified example of how it works
@@ -123,9 +126,11 @@ When a website has almost no _traditional graphics_, every single remaining elem
 weight. I wanted to see how far I could go with just "dumb" HTML and clever CSS.
 
 - **SVG over Images**: Instead of loading heavy image assets, I used inline SVGs. To keep things
-  lightweight, I used native SMIL animations (`<animate>`) directly inside the SVG code. This means
-  no complex CSS keyframes or bulky JS libraries—just high-performance, native icon transitions like
-  the rotating sun or the morphing menu.
+  lightweight, I used native SMIL animations (`<animate>`) directly inside the SVG code. The menu
+  icon morphs between hamburger and cross by updating the SVG path animation when the Popover's
+  `toggle` event fires. JavaScript only synchronizes the icon with the menu state—opening and
+  closing the menu itself is handled natively by the browser. No complex CSS keyframes or bulky JS
+  libraries are needed.
 - **Visual Ergonomics**: I prioritized readability over flashiness. The typography (Noto Sans Mono
   and Anonymous Pro) evokes a terminal-like feel, and the "low contrast" mode uses a warm,
   paper-like cream background to reduce eye strain.
